@@ -1,2 +1,2 @@
 # M1Analysis
-Analysis for manuscript 1
+Analysis for Foresite manuscript 1

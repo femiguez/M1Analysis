@@ -1,0 +1,50 @@
+---
+title: "Notebook for APSIM Met files"
+output: html_notebook
+---
+
+```{r}
+library(apsimx) # recommended to install the latest version from github
+library(sf)
+library(readxl)
+```
+
+```{r}
+accola.iem <- get_iem_apsim_met(lonlat = c(-93.67, 41.98), dates = c("1990-01-01", "2020-12-31"), state = "IA", station = "IA0200")
+accola.pwr <- get_power_apsim_met(lonlat = c(-93.67, 41.98), dates = c("1990-01-01", "2020-12-31"))
+
+accola.met <- accola.iem
+accola.met$radn <- accola.pwr$radn
+```
+
+```{r}
+accola.2020 = accola.met[accola.met$year == 2020,]
+accola.2020$radn
+```
+
+```{r}
+accola.iem.2020 = accola.iem[accola.iem$year == 2020,]
+accola.iem.2020$radn
+```
+
+
+```{r}
+## Check the file
+check_apsim_met(accola.met)
+accola.met <- impute_apsim_met(accola.met)
+
+cmp1 <- compare_apsim_met(accola.iem, accola.pwr[,1:6], labels = c("IEM", "POWER"))
+
+plot(cmp1, met.var = "rain", plot.type = "ts", cumulative = TRUE)
+
+```
+
+```{r}
+attr(accola.met, "filename") <- "accola-1990-2020.met"
+write_apsim_met(accola.met, wrt.dir = "data/met")
+```
+
+```{r}
+
+```
+
