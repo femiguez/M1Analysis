@@ -6,7 +6,7 @@
 #### the command line can only be run from the current directory so 
 #### I need to copy files here
 
-library(apsimx) ### Need 1.979 for this script (from github)
+library(apsimx) ### Need 1.980 for this script (from github)
 library(sf)
 library(ggplot2)
 
@@ -27,6 +27,8 @@ edit_apsim("Accola_2765537_sfc.apsim",
            overwrite = TRUE)
 
 sim0 <- apsim("Accola_2765537_sfc.apsim", value = "report")
+
+names(sim0)
 
 sim0[which.max(sim0$soybean_yield),]
 ## The harvest date was 2018-09-01
@@ -61,23 +63,58 @@ op.kl <- optim_apsim("Accola_2765537_sfc.apsim",
 
 sim1 <- apsim("Accola_2765537_sfc.apsim", value = "report")
 
-op.kl <- optim_apsim("Accola_2765537_sfc.apsim", 
+inspect_apsim("Accola_2765537_sfc.apsim",
+              node = "Soil",
+              soil.child = "Water",
+              parm = "KL")
+
+kl.vals <- c(0.08, 0.079, 0.078, 0.077, 0.076, 0.075, 0.073, 0.07, 
+             0.068, 0.066, 0.062, 0.058, 0.054, 0.044, 0.036, 0.03)
+
+edit_apsim("Accola_2765537_sfc.apsim",
+           node = "Other",
+           parm.path = pp.kl[2],
+           value = kl.vals,
+           overwrite = TRUE)
+
+inspect_apsim("Accola_2765537_sfc.apsim",
+              node = "Soil",
+              soil.child = "Water",
+              parm = "KL")
+
+## Trying optimizing XF
+op.xf <- optim_apsim("Accola_2765537_sfc.apsim", 
                      data = yld.dat,
-                     parm.paths = c(pp.kl[2], pp.xf[2]),
-                     method = "L-BFGS-B",
-                     lower = c(0.01, 0.01), upper = c(1.001, 1.001))
-
-
-
-
-yld.dat2 <- data.frame(Date = as.Date("2018-09-01"),
-                       soybean_yield = 2000)
-
-op2 <- optim_apsim("Accola_2765537_sfc.apsim", 
-                  data = yld.dat2,
-                  parm.paths = pp.kl[2],
-                  method = "Brent",
-                  lower = 0.0001, 
-                  upper = 0.5)
+                     parm.paths = pp.xf[2],
+                     method = "Brent",
+                     lower = 0.01, 
+                     upper = 1.001)
 
 sim2 <- apsim("Accola_2765537_sfc.apsim", value = "report")
+
+### Plot
+ggplot() + 
+  geom_line(data = sim0, aes(x = Date, y = soybean_yield, color = "default"), size = 2) + 
+  geom_line(data = sim1, aes(x = Date, y = soybean_yield, color = "KL optimized"), size = 2) + 
+  geom_line(data = sim2, aes(x = Date, y = soybean_yield, color = "XF optimized"), size = 2) + 
+  xlim(as.Date(c("2018-06-01", "2018-11-15"))) + ylab("Yield (kg/ha)") + 
+  ggtitle("Yield optimization")
+ggsave("optim-yield.png")
+
+ggplot() + 
+  geom_line(data = sim0, aes(x = Date, y = leach_no3, color = "default"), size = 2) + 
+  geom_line(data = sim1, aes(x = Date, y = leach_no3, color = "KL optimized"), size = 2) + 
+  geom_line(data = sim2, aes(x = Date, y = leach_no3, color = "XF optimized"), size = 2) + 
+  xlim(as.Date(c("2018-06-01", "2018-11-15"))) + ylab("Nitrate leaching (kg/ha)") + 
+  ggtitle("Impact on NO3 leaching")
+ggsave("optim-yield-leach.png")
+
+
+ggplot() + 
+  geom_line(data = sim0, aes(x = Date, y = cumsum(leach_no3), color = "default"), size = 2) + 
+  geom_line(data = sim1, aes(x = Date, y = cumsum(leach_no3), color = "KL optimized"), size = 2) + 
+  geom_line(data = sim2, aes(x = Date, y = cumsum(leach_no3), color = "XF optimized"), size = 2) + 
+  xlim(as.Date(c("2018-06-01", "2018-11-15"))) + 
+  ylab("Cumulative nitrate leaching (kg/ha)") + 
+  ggtitle("Impact on cumulative NO3 leaching")
+ggsave("optim-cumulative-leach.png")
