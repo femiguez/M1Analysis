@@ -167,6 +167,52 @@ op.kl <- optim_apsim("Accola_2765537_sfc.apsim",
                      method = "Brent",
                      lower = 0.001, upper = 1.001)
 
+sim3 <- apsim("Accola_2765537_sfc.apsim", value = "report")
+
+sim3.2018 <- subset(sim3, Date > as.Date("2018-01-01") & Date < as.Date("2018-12-31"))
+(max.yield <- max(sim3.2018$soybean_yield))
+(n.leach <- sum(sim3.2018$leach_no3))
+
+file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.out",
+          to = "name_Accola_mukey_2765537_rot_sfc_sim_low_kl.out")
+
+file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.sum",
+          to = "name_Accola_mukey_2765537_rot_sfc_sim_low_kl.sum")
+
+kl.vals <- c(0.08, 0.079, 0.078, 0.077, 0.076, 0.075, 0.073, 0.07, 
+             0.068, 0.066, 0.062, 0.058, 0.054, 0.044, 0.036, 0.03)
+
+edit_apsim("Accola_2765537_sfc.apsim",
+           node = "Other",
+           parm.path = pp.kl[2],
+           value = kl.vals,
+           overwrite = TRUE)
+
+inspect_apsim("Accola_2765537_sfc.apsim",
+              node = "Soil",
+              soil.child = "Water",
+              parm = "KL")
+
+### Now for XF
+## Trying optimizing XF
+op.xf <- optim_apsim("Accola_2765537_sfc.apsim", 
+                     data = yld.datL,
+                     parm.paths = pp.xf[2],
+                     method = "Brent",
+                     lower = 0.01, 
+                     upper = 1.001)
+
+sim4 <- apsim("Accola_2765537_sfc.apsim", value = "report")
+
+sim4.2018 <- subset(sim4, Date > as.Date("2018-01-01") & Date < as.Date("2018-12-31"))
+(max.yield <- max(sim4.2018$soybean_yield))
+(n.leach <- sum(sim4.2018$leach_no3))
+
+file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.out",
+          to = "name_Accola_mukey_2765537_rot_sfc_sim_low_xf.out")
+
+file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.sum",
+          to = "name_Accola_mukey_2765537_rot_sfc_sim_low_xf.sum")
 
 
 
