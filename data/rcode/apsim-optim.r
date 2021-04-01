@@ -216,29 +216,3 @@ file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.sum",
 
 
 
-### Plot
-ggplot() + 
-  geom_line(data = sim0, aes(x = Date, y = soybean_yield, color = "default"), size = 2) + 
-  geom_line(data = sim1, aes(x = Date, y = soybean_yield, color = "KL optimized"), size = 2) + 
-  geom_line(data = sim2, aes(x = Date, y = soybean_yield, color = "XF optimized"), size = 2) + 
-  xlim(as.Date(c("2018-06-01", "2018-11-15"))) + ylab("Yield (kg/ha)") + 
-  ggtitle("Yield optimization")
-ggsave("optim-yield.png")
-
-ggplot() + 
-  geom_line(data = sim0, aes(x = Date, y = leach_no3, color = "default"), size = 2) + 
-  geom_line(data = sim1, aes(x = Date, y = leach_no3, color = "KL optimized"), size = 2) + 
-  geom_line(data = sim2, aes(x = Date, y = leach_no3, color = "XF optimized"), size = 2) + 
-  xlim(as.Date(c("2018-06-01", "2018-11-15"))) + ylab("Nitrate leaching (kg/ha)") + 
-  ggtitle("Impact on NO3 leaching")
-ggsave("optim-yield-leach.png")
-
-
-ggplot() + 
-  geom_line(data = sim0, aes(x = Date, y = cumsum(leach_no3), color = "default"), size = 2) + 
-  geom_line(data = sim1, aes(x = Date, y = cumsum(leach_no3), color = "KL optimized"), size = 2) + 
-  geom_line(data = sim2, aes(x = Date, y = cumsum(leach_no3), color = "XF optimized"), size = 2) + 
-  xlim(as.Date(c("2018-06-01", "2018-11-15"))) + 
-  ylab("Cumulative nitrate leaching (kg/ha)") + 
-  ggtitle("Impact on cumulative NO3 leaching")
-ggsave("optim-cumulative-leach.png")
