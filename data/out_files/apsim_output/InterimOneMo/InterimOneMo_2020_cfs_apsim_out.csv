@@ -1,0 +1,10 @@
+,title,field,mukey,rotation,year,soybean_yield,maize_yield,corn_buac,soy_buac,soybean_biomass,maize_biomass,fertiliser,surfaceom_c_init,surfaceom_c_end,leach_no3
+0,name_InterimOneMo_mukey_407623_rot_cfs_sim,InterimOneMo,407623,cfs,2020,0.0,0.0,0.0,0.0,0.0,288.68448,370.0,0.35436,4.26734,24.848209999999998
+1,name_InterimOneMo_mukey_407624_rot_cfs_sim,InterimOneMo,407624,cfs,2020,0.0,0.0,0.0,0.0,0.0,288.68448,370.0,0.35436,4.26734,24.848209999999998
+2,name_InterimOneMo_mukey_407636_rot_cfs_sim,InterimOneMo,407636,cfs,2020,0.0,0.0,0.0,0.0,0.0,288.91907,370.0,0.35436,4.27071,36.14282
+3,name_InterimOneMo_mukey_407649_rot_cfs_sim,InterimOneMo,407649,cfs,2020,0.0,0.0,0.0,0.0,0.0,288.67595,370.0,0.35436,4.26722,67.52322000000001
+4,name_InterimOneMo_mukey_407650_rot_cfs_sim,InterimOneMo,407650,cfs,2020,0.0,0.0,0.0,0.0,0.0,288.59335,370.0,0.35436,4.26603,67.59081
+5,name_InterimOneMo_mukey_407651_rot_cfs_sim,InterimOneMo,407651,cfs,2020,0.0,0.0,0.0,0.0,0.0,288.51687,370.0,0.35436,4.26493,58.63565
+6,name_InterimOneMo_mukey_407671_rot_cfs_sim,InterimOneMo,407671,cfs,2020,0.0,0.0,0.0,0.0,0.0,288.72345,370.0,0.35436,4.2679,81.50495000000001
+7,name_InterimOneMo_mukey_407690_rot_cfs_sim,InterimOneMo,407690,cfs,2020,0.0,0.0,0.0,0.0,0.0,288.58416,370.0,0.35436,4.2659,53.417139999999996
+8,name_InterimOneMo_mukey_407703_rot_cfs_sim,InterimOneMo,407703,cfs,2020,0.0,0.0,0.0,0.0,0.0,288.70261,370.0,0.35436,4.2676,46.03564

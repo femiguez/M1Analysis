@@ -1,0 +1,20 @@
+{
+    "site_name": "strips",
+    "field_name" : "kfinch",
+    "twi_file": "twi\\kfinch_twi.tif",
+    "ssurgo_file" : "ssurgo\\kfinch_ssurgo.geojson",
+    "met_file" : "kfinch-1990-2020.met",
+    "apsim_files" : "KfinchDefault",
+    "year": {
+        "2018": {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\biocentury\\KF\\2018\\shp\\kf_2018_007_foresite.dbf",
+            "rotation" : "sfc",
+            "crop" : "soybean"
+        },
+        "2019" : {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\biocentury\\KF\\2019\\shp\\kf_2019_007_foresite.dbf",
+            "rotation" : "cfs",
+            "crop" : "maize"
+        }
+    }
+}

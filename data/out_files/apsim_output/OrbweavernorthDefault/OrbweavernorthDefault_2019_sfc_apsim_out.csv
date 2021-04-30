@@ -1,0 +1,5 @@
+,title,field,mukey,rotation,year,soybean_yield,maize_yield,corn_buac,soy_buac,soybean_biomass,maize_biomass,fertiliser,surfaceom_c_init,surfaceom_c_end,leach_no3
+0,name_OrbweavernorthDefault_mukey_407650_rot_sfc_sim,OrbweavernorthDefault,407650,sfc,2019,4671.91943,0.0,0.0,80.01334,10161.15723,0.0,0.0,7941.33936,5142.625,65.94615
+1,name_OrbweavernorthDefault_mukey_407651_rot_sfc_sim,OrbweavernorthDefault,407651,sfc,2019,4667.1084,0.0,0.0,79.93094,10150.65039,0.0,0.0,8020.95654,5635.1709,48.0888
+2,name_OrbweavernorthDefault_mukey_407671_rot_sfc_sim,OrbweavernorthDefault,407671,sfc,2019,4671.92773,0.0,0.0,80.01347,10161.17773,0.0,0.0,8173.42383,5209.04004,72.12557
+3,name_OrbweavernorthDefault_mukey_407691_rot_sfc_sim,OrbweavernorthDefault,407691,sfc,2019,4661.20801,0.0,0.0,79.82989,10137.76172,0.0,0.0,8022.08447,5815.01172,43.60748

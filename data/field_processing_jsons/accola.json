@@ -1,0 +1,20 @@
+{
+    "site_name": "biocentury",
+    "field_name" : "accola",
+    "twi_file": "twi\\accola_twi.tif",
+    "ssurgo_file" : "ssurgo\\accola_ssurgo.geojson",
+    "met_file" : "accola-1990-2020.met",
+    "apsim_files" : "AccolaDefault",
+    "year": {
+        "2018": {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\biocentury\\AA\\2018\\shp\\aa_2018_007_foresite.dbf",
+            "rotation" : "sfc",
+            "crop" : "soybean"
+        },
+        "2019" : {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\biocentury\\AA\\2019\\shp\\aa_2019_007_foresite.dbf",
+            "rotation" : "cfs",
+            "crop" : "maize"
+        }
+    }
+}

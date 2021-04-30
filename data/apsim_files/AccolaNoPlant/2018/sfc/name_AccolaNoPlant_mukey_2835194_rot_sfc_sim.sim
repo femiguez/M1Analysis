@@ -53,14 +53,10 @@
           <text><![CDATA[
                      16/4/2015 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 57 (mm)
                      23/4/2015 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.2 (0-1), tillage_depth = 76 (mm)
-                     18/5/2015 maize sow plants = 8 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant
                      21/4/2015 Fertiliser apply amount = 168 (kg/ha), depth = 50.0 (mm), type = uan_n ()
-                     15/10/2015 maize end_crop
                      16/4/2017 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 57 (mm)
                      23/4/2017 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.2 (0-1), tillage_depth = 76 (mm)
-                     18/5/2017 maize sow plants = 8 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant
                      21/4/2017 Fertiliser apply amount = 168 (kg/ha), depth = 50.0 (mm), type = uan_n ()
-                     15/10/2017 maize end_crop
                      28/4/2016 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 88.0 (mm)
                      16/5/2016 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.33 (0-1), tillage_depth = 75.8 (mm)
                      15/5/2016 Fertiliser apply amount = 2.8 (kg/ha), depth = 0.0 (mm), type = nh4so4_n ()
@@ -1356,8 +1352,8 @@
         <ph>7.500 7.500 7.500 7.500 7.500 7.500 7.500 8.000 8.000 8.000 8.000 8.000 8.000 8.000 8.000 8.000 </ph>
         <fbiom>0.035 0.035 0.035 0.035 0.035 0.035 0.035 0.020 0.020 0.020 0.020 0.016 0.015 0.013 0.010 0.010 </fbiom>
         <finert>0.400 0.400 0.400 0.400 0.400 0.400 0.400 0.480 0.480 0.480 0.480 0.660 0.680 0.746 0.900 0.900 </finert>
-        <no3ppm>19.333 19.333 19.333 19.333 19.333 7.733 7.733 4.640 4.640 2.320 2.320 0.801 0.215 0.153 0.030 0.018 </no3ppm>
-        <nh4ppm>19.333 19.333 19.333 19.333 19.333 7.733 7.733 4.640 4.640 2.320 2.320 0.801 0.215 0.153 0.030 0.018 </nh4ppm>
+        <no3ppm>4.060 4.060 4.060 4.060 4.060 4.060 4.060 2.900 2.900 2.900 2.900 1.073 0.870 0.653 0.145 0.145 </no3ppm>
+        <nh4ppm>4.060 4.060 4.060 4.060 4.060 4.060 4.060 2.900 2.900 2.900 2.900 1.073 0.870 0.653 0.145 0.145 </nh4ppm>
       </initdata>
     </component>
     <component name="soybean" executable="%apsim%\Model\Plant.dll" class="Plant.Soybean">

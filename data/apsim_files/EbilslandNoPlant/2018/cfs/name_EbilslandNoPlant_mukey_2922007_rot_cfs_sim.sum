@@ -1,0 +1,343 @@
+     ###     ######     #####   #   #     #   
+    #   #    #     #   #        #   ##   ##   
+   #     #   #     #   #        #   ##   ##   
+   #######   ######     #####   #   # # # #   
+   #     #   #              #   #   #  #  #   
+   #     #   #         #####    #   #  #  #   
+                                              
+                                              
+ The Agricultural Production Systems Simulator
+             Copyright(c) APSRU               
+
+Version                = 7.10 r4217
+Title                  = name_EbilslandNoPlant_mukey_2922007_rot_cfs_sim
+   Component                        "clock" = %apsim%\Model\Clock.dll
+   Component      "ebilsland-1990-2020.met" = %apsim%\Model\Input.dll
+Paddock:
+   Component                   "outputfile" = %apsim%\Model\Report.dll
+   Component                        "accum" = %apsim%\Model\Accum.dll
+   Component          "Operations Schedule" = %apsim%\Model\Operations.dll
+   Component                   "fertiliser" = %apsim%\Model\Fertiliser.dll
+   Component                "Empty manager" = %apsim%\Model\Manager.dll
+   Component                   "Soil Water" = %apsim%\Model\SoilWat.dll
+   Component         "SurfaceOrganicMatter" = %apsim%\Model\SurfaceOM.dll
+   Component                "Soil Nitrogen" = %apsim%\Model\SoilN.dll
+   Component                      "soybean" = %apsim%\Model\Plant.dll
+   Component                        "maize" = %apsim%\Model\Maize.dll
+
+------- clock Initialisation --------------------------------------------------
+     Sequencer phases:
+        prepare
+        init_step
+        do_management
+        run_one_step
+        do_pasture_water
+        process
+        do_pasture_growth
+        do_stock
+        do_cashbook
+        post
+        end_step
+     Simulation start date =  1/01/2015
+     Simulation end date   = 31/12/2018
+     Time step =           = 1440 (mins)
+
+------- ebilsland-1990-2020.met Initialisation --------------------------------
+     Sparse data is not allowed
+     INPUT File name: met_files\ebilsland-1990-2020.met
+
+------- outputfile Initialisation ---------------------------------------------
+     Output frequency:
+        post
+     Output variables:
+        title
+        dd/mm/yyyy as date
+        day
+        year
+        soybean.yield as soybean_yield
+        maize.yield as maize_yield
+        soybean.biomass as soybean_biomass
+        maize.biomass as maize_biomass
+        corn_buac
+        soy_buac
+        fertiliser
+        surfaceom_c
+        leach_no3
+
+     Output file = name_EbilslandNoPlant_mukey_2922007_rot_cfs_sim.out
+     Format = normal
+
+------- paddock.accum Initialisation ------------------------------------------
+     Initialising
+
+------- paddock.Operations Schedule Initialisation ----------------------------
+     Operations Schedule
+     ===================
+       26/4/2015  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 58 (mm)
+        3/6/2015  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.33 (0-1), tillage_depth = 52 (mm)
+       26/4/2017  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 58 (mm)
+        3/6/2017  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.33 (0-1), tillage_depth = 52 (mm)
+       29/4/2016  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.5 (0-1), tillage_depth = 58 (mm)
+      30/10/2016  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.5 (0-1), tillage_depth = 280 (mm)
+       23/4/2016  Prepare      Fertiliser apply amount = 173.73 (kg/ha), depth = 50.0 (mm), type = uan_n ()
+       29/4/2018  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.5 (0-1), tillage_depth = 58 (mm)
+      30/10/2018  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.5 (0-1), tillage_depth = 280 (mm)
+       23/4/2018  Prepare      Fertiliser apply amount = 173.73 (kg/ha), depth = 50.0 (mm), type = uan_n ()
+
+------- paddock.Empty manager Initialisation ----------------------------------
+     Manager rules:
+     
+     SECTION:- init
+     
+     SECTION:- start_of_day
+             corn_buac   = maize.yield * 0.0159/0.85
+             soy_buac   = soybean.yield * 0.0149/0.87
+     
+     SECTION:- end_of_day
+     END of rules
+     
+
+------- paddock.Soil Water Initialisation -------------------------------------
+     
+         - Reading constants
+     
+        - Reading Soil Property Parameters
+     
+        - Reading Soil Profile Parameters
+     Initial soilwater distributed using "sw" parameter.
+     
+     
+     
+                      Soil Profile Properties
+        ---------------------------------------------------------------------
+              Depth  Air_Dry  LL15   Dul    Sat     Sw     BD   Runoff  SWCON   Ks
+                mm     mm/mm  mm/mm  mm/mm  mm/mm  mm/mm  g/cc    wf           mm/day
+        ---------------------------------------------------------------------
+            0.-   20.  0.092  0.183  0.308  0.554  0.308  1.050  0.171  0.500243.648
+           20.-   40.  0.092  0.183  0.308  0.554  0.308  1.050  0.143  0.500243.648
+           40.-   60.  0.092  0.183  0.308  0.554  0.308  1.050  0.118  0.500243.648
+           60.-   80.  0.092  0.183  0.308  0.554  0.308  1.050  0.098  0.500243.648
+           80.-  100.  0.092  0.183  0.308  0.554  0.308  1.050  0.082  0.500243.648
+          100.-  150.  0.092  0.183  0.308  0.554  0.308  1.050  0.149  0.500243.648
+          150.-  200.  0.092  0.183  0.308  0.554  0.308  1.050  0.094  0.500243.648
+          200.-  250.  0.219  0.219  0.331  0.441  0.331  1.350  0.059  0.500243.648
+          250.-  300.  0.219  0.219  0.331  0.441  0.331  1.350  0.037  0.500243.648
+          300.-  400.  0.219  0.219  0.331  0.441  0.331  1.350  0.038  0.500243.648
+          400.-  500.  0.199  0.199  0.319  0.441  0.319  1.350  0.009  0.500243.648
+          500.-  600.  0.174  0.174  0.305  0.424  0.305  1.395  0.000  0.500243.648
+          600.-  900.  0.171  0.171  0.304  0.422  0.304  1.400  0.000  0.500243.648
+          900.- 1200.  0.098  0.098  0.248  0.349  0.248  1.593  0.000  0.500774.000
+         1200.- 1500.  0.095  0.095  0.246  0.346  0.246  1.600  0.000  0.500792.288
+         1500.- 2000.  0.095  0.095  0.246  0.346  0.246  1.600  0.000  0.500792.288
+        ---------------------------------------------------------------------
+     
+     
+     
+                  Soil Water Holding Capacity
+          ---------------------------------------------------------
+              Depth    Unavailable Available  Max Avail.  Drainable
+                          (LL15)   (SW-LL15)  (DUL-LL15)  (SAT-DUL)
+                            mm        mm          mm         mm
+          ---------------------------------------------------------
+            0.-   20.       3.66       2.50       2.50       4.92
+           20.-   40.       3.66       2.50       2.50       4.92
+           40.-   60.       3.66       2.50       2.50       4.92
+           60.-   80.       3.66       2.50       2.50       4.92
+           80.-  100.       3.66       2.50       2.50       4.92
+          100.-  150.       9.15       6.25       6.25      12.30
+          150.-  200.       9.15       6.25       6.25      12.30
+          200.-  250.      10.95       5.60       5.60       5.50
+          250.-  300.      10.95       5.60       5.60       5.50
+          300.-  400.      21.90      11.20      11.20      11.00
+          400.-  500.      19.90      12.00      12.00      12.20
+          500.-  600.      17.40      13.10      13.10      11.90
+          600.-  900.      51.30      39.90      39.90      35.40
+          900.- 1200.      29.40      45.00      45.00      30.30
+         1200.- 1500.      28.50      45.30      45.30      30.00
+         1500.- 2000.      47.50      75.50      75.50      50.00
+          ---------------------------------------------------------
+               Totals     274.40     278.20     278.20     241.00
+          ---------------------------------------------------------
+     
+     
+     
+     
+     
+     
+                  Initial Soil Parameters
+          ---------------------------------------------------------
+                 Insoil        Salb     Dif_Con   Dif_Slope
+          ---------------------------------------------------------
+                   0.00        0.13       88.00       35.00
+          ---------------------------------------------------------
+     
+     
+     
+                  Runoff is predicted using scs curve number:
+                Cn2  Cn_Red  Cn_Cov   H_Eff_Depth
+                                           mm
+          ---------------------------------------------------------
+              73.00   20.00    0.80  450.00
+          ---------------------------------------------------------
+     
+     
+     
+           Using Ritchie evaporation model
+            Cuml evap (U):            9.00 (mm^0.5)
+            CONA:                     4.00 ()
+            Eo from priestly-taylor
+
+------- paddock.SurfaceOrganicMatter Initialisation ---------------------------
+     
+         - Reading constants
+     
+         - Reading parameters
+     
+     
+     
+                         Initial Surface Organic Matter Data
+         ----------------------------------------------------------------------
+            Name   Type        Dry matter   C        N        P    Cover  Standing_fr
+                                (kg/ha)  (kg/ha)  (kg/ha)  (kg/ha) (0-1)     (0-1)
+         ----------------------------------------------------------------------
+          soybean   soybean       1250.0   500.0    18.5     0.0   0.221     0.0
+         ----------------------------------------------------------------------
+     
+                      Effective Cover from Surface Materials =   0.2
+     
+
+------- paddock.Soil Nitrogen Initialisation ----------------------------------
+     
+        - Reading Parameters
+     
+        - Reading Constants
+     
+     
+     
+           TAV and AMP supplied externally
+     
+     
+     
+                      Soil Profile Properties
+          ------------------------------------------------
+           Layer    pH    OC     NO3     NH4    Urea
+                         (%) (kg/ha) (kg/ha) (kg/ha)
+          ------------------------------------------------
+             1     7.50  4.06    0.85    0.85    0.00
+             2     7.50  4.06    0.85    0.85    0.00
+             3     7.50  4.06    0.85    0.85    0.00
+             4     7.50  4.06    0.85    0.85    0.00
+             5     7.50  4.06    0.85    0.85    0.00
+             6     7.50  4.06    2.13    2.13    0.00
+             7     7.50  4.06    2.13    2.13    0.00
+             8     7.70  2.90    1.96    1.96    0.00
+             9     7.70  2.90    1.96    1.96    0.00
+            10     7.70  2.90    3.92    3.92    0.00
+            11     7.70  1.86    2.51    2.51    0.00
+            12     7.97  0.96    1.34    1.34    0.00
+            13     8.00  0.87    3.65    3.65    0.00
+            14     8.00  0.17    0.81    0.81    0.00
+            15     8.00  0.14    0.70    0.70    0.00
+            16     8.00  0.14    1.16    1.16    0.00
+          ------------------------------------------------
+           Totals               26.51   26.51    0.00
+          ------------------------------------------------
+     
+     
+     
+     
+     
+     
+                  Initial Soil Organic Matter Status
+          ---------------------------------------------------------
+           Layer      Hum-C   Hum-N  Biom-C  Biom-N   FOM-C   FOM-N
+                    (kg/ha) (kg/ha) (kg/ha) (kg/ha) (kg/ha) (kg/ha)
+          ---------------------------------------------------------
+             1       8353.0   696.1   173.0    21.6    41.1     1.0
+             2       8353.0   696.1   173.0    21.6    39.9     1.0
+             3       8353.0   696.1   173.0    21.6    38.7     1.0
+             4       8353.0   696.1   173.0    21.6    37.6     0.9
+             5       8353.0   696.1   173.0    21.6    36.4     0.9
+             6      20882.5  1740.2   432.5    54.1    33.8     0.8
+             7      20882.5  1740.2   432.5    54.1    31.4     0.8
+             8      19375.4  1614.6   199.6    24.9    29.1     0.7
+             9      19375.4  1614.6   199.6    24.9    27.0     0.7
+            10      38750.8  3229.2   399.2    49.9    23.2     0.6
+            11      24921.8  2076.8   134.2    16.8    20.0     0.5
+            12      13287.0  1107.3    63.1     7.9    17.2     0.4
+            13      36367.2  3030.6   172.8    21.6    11.0     0.3
+            14       8068.0   672.3     8.6     1.1     7.0     0.2
+            15       6953.1   579.4     6.9     0.9     4.5     0.1
+            16      11588.5   965.7    11.5     1.4     2.1     0.1
+          ---------------------------------------------------------
+           Totals  262217.4 21851.4  2925.3   365.7   400.0    10.0
+          ---------------------------------------------------------
+------- Start of simulation  --------------------------------------------------
+1 January 2015(Day of year=1), paddock.Empty manager: 
+     Manager creating a new local real variable : corn_buac = 0.00000
+     Manager creating a new local real variable : soy_buac = 0.00000
+26 April 2015(Day of year=116), paddock.Operations Schedule: 
+      Sending tillage message to surfaceorganicmatter
+26 April 2015(Day of year=116), paddock.SurfaceOrganicMatter: 
+     Residue removed using user_defined
+                                             Fraction Incorporated =     0.25
+                                             Incorporated Depth    =    58.00
+3 June 2015(Day of year=154), paddock.Operations Schedule: 
+      Sending tillage message to surfaceorganicmatter
+3 June 2015(Day of year=154), paddock.SurfaceOrganicMatter: 
+     Residue removed using user_defined
+                                             Fraction Incorporated =     0.33
+                                             Incorporated Depth    =    52.00
+23 April 2016(Day of year=114), paddock.Operations Schedule: 
+      Sending apply message to fertiliser
+23 April 2016(Day of year=114), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+       173.73 of N as Urea-AmmoniumNitrate (uan_n)
+                                         added at depth   50.00 (layer   3)
+29 April 2016(Day of year=120), paddock.Operations Schedule: 
+      Sending tillage message to surfaceorganicmatter
+29 April 2016(Day of year=120), paddock.SurfaceOrganicMatter: 
+     Residue removed using user_defined
+                                             Fraction Incorporated =     0.50
+                                             Incorporated Depth    =    58.00
+30 October 2016(Day of year=304), paddock.Operations Schedule: 
+      Sending tillage message to surfaceorganicmatter
+30 October 2016(Day of year=304), paddock.SurfaceOrganicMatter: 
+     Residue removed using user_defined
+                                             Fraction Incorporated =     0.50
+                                             Incorporated Depth    =   280.00
+26 April 2017(Day of year=116), paddock.Operations Schedule: 
+      Sending tillage message to surfaceorganicmatter
+26 April 2017(Day of year=116), paddock.SurfaceOrganicMatter: 
+     Residue removed using user_defined
+                                             Fraction Incorporated =     0.25
+                                             Incorporated Depth    =    58.00
+3 June 2017(Day of year=154), paddock.Operations Schedule: 
+      Sending tillage message to surfaceorganicmatter
+3 June 2017(Day of year=154), paddock.SurfaceOrganicMatter: 
+     Residue removed using user_defined
+                                             Fraction Incorporated =     0.33
+                                             Incorporated Depth    =    52.00
+23 April 2018(Day of year=113), paddock.Operations Schedule: 
+      Sending apply message to fertiliser
+23 April 2018(Day of year=113), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+       173.73 of N as Urea-AmmoniumNitrate (uan_n)
+                                         added at depth   50.00 (layer   3)
+29 April 2018(Day of year=119), paddock.Operations Schedule: 
+      Sending tillage message to surfaceorganicmatter
+29 April 2018(Day of year=119), paddock.SurfaceOrganicMatter: 
+     Residue removed using user_defined
+                                             Fraction Incorporated =     0.50
+                                             Incorporated Depth    =    58.00
+30 October 2018(Day of year=303), paddock.Operations Schedule: 
+      Sending tillage message to surfaceorganicmatter
+30 October 2018(Day of year=303), paddock.SurfaceOrganicMatter: 
+     Residue removed using user_defined
+                                             Fraction Incorporated =     0.50
+                                             Incorporated Depth    =   280.00
+31 December 2018(Day of year=365), clock: 
+     Simulation is terminating due to end criteria being met.
+

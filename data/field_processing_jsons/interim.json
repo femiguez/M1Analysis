@@ -1,0 +1,25 @@
+{
+    "site_name": "strips",
+    "field_name" : "interim",
+    "twi_file": "twi\\interim_twi.tif",
+    "ssurgo_file" : "ssurgo\\interim_ssurgo.geojson",
+    "met_file" : "interim-1990-2020.met",
+    "apsim_files" : "InterimDefault",
+    "year": {
+        "2018": {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\STRIPS1\\Interim\\2018\\shp\\Interim_2018.dbf",
+            "rotation" : "cfs",
+            "crop" : "maize"
+        },
+        "2019" : {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\STRIPS1\\Interim\\2019\\shp\\Interim_2019.dbf",
+            "rotation" : "sfc",
+            "crop" : "soybean"
+        },
+        "2020": {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\STRIPS1\\Interim\\2020\\shp\\Interim_2020.dbf",
+            "rotation" : "cfs",
+            "crop" : "maize"
+        }
+    }
+}

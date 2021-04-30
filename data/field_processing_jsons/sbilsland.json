@@ -1,0 +1,15 @@
+{
+    "site_name": "biocentury",
+    "field_name" : "sbilsland",
+    "twi_file": "twi\\ebilsland_twi.tif",
+    "ssurgo_file" : "ssurgo\\ebilsland_ssurgo.geojson",
+    "met_file" : "ebilsland-1990-2020.met",
+    "apsim_files" : "EbilslandDefault",
+    "year": {
+        "2018": {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\biocentury\\SB\\2018\\shp\\sb_2018_007_foresite.dbf",
+            "rotation" : "cfs",
+            "crop" : "maize"
+        }
+    }
+}

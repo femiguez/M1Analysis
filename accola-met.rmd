@@ -17,6 +17,7 @@ accola.met <- accola.iem
 accola.met$radn <- accola.pwr$radn
 ```
 
+
 ```{r}
 accola.2020 = accola.met[accola.met$year == 2020,]
 accola.2020$radn

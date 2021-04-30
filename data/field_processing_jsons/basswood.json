@@ -1,0 +1,30 @@
+{
+    "site_name": "strips",
+    "field_name" : "basswood",
+    "twi_file": "twi\\basswood_twi.tif",
+    "ssurgo_file" : "ssurgo\\basswood_ssurgo.geojson",
+    "met_file" : "basswood-1990-2020.met",
+    "apsim_files" : "BasswoodDefault",
+    "year": {
+        "2016": {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\STRIPS1\\Basswood\\2016\\shp\\basswood_2016.dbf",
+            "rotation" : "cfs",
+            "crop" : "maize"
+        },
+        "2018": {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\STRIPS1\\Basswood\\2018\\shp\\basswood_2018.dbf",
+            "rotation" : "cfs",
+            "crop" : "maize"
+        },
+        "2019" : {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\STRIPS1\\Basswood\\2019\\shp\\basswood_2019.dbf",
+            "rotation" : "sfc",
+            "crop" : "soybean"
+        },
+        "2020": {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\STRIPS1\\Basswood\\2020\\shp\\basswood_2020.dbf",
+            "rotation" : "cfs",
+            "crop" : "maize"
+        }
+    }
+}

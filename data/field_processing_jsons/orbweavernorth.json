@@ -1,0 +1,30 @@
+{
+    "site_name": "strips",
+    "field_name" : "orbweavernorth",
+    "twi_file": "twi\\orbweavernorth_twi.tif",
+    "ssurgo_file" : "ssurgo\\orbweavernorth_ssurgo.geojson",
+    "met_file" : "orbweavernorth-1990-2020.met",
+    "apsim_files" : "OrbweavernorthDefault",
+    "year": {
+        "2016": {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\STRIPS1\\Orbweaver north\\2016\\shp\\orbweaver north_2016.dbf",
+            "rotation" : "cfs",
+            "crop" : "maize"
+        },
+        "2018": {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\STRIPS1\\Orbweaver north\\2018\\shp\\orbweaver north_2018.dbf",
+            "rotation" : "cfs",
+            "crop" : "maize"
+        },
+        "2019" : {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\STRIPS1\\Orbweaver north\\2019\\shp\\orbweaver north_2019.dbf",
+            "rotation" : "sfc",
+            "crop" : "soybean"
+        },
+        "2020": {
+            "ym_file" : "C:\\Users\\mjn\\Documents\\Dev\\v1data\\data-raw\\STRIPS1\\Orbweaver north\\2020\\shp\\orbweaver north_2020.dbf",
+            "rotation" : "cfs",
+            "crop" : "maize"
+        }
+    }
+}

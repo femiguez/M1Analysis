@@ -9,7 +9,7 @@
  The Agricultural Production Systems Simulator
              Copyright(c) APSRU               
 
-Version                = 7.10 r4207
+Version                = 7.10 r4217
 Title                  = name_AccolaNoPlant_mukey_2835194_rot_sfc_sim
    Component                        "clock" = %apsim%\Model\Clock.dll
    Component         "accola-1990-2020.met" = %apsim%\Model\Input.dll
@@ -75,14 +75,10 @@ Paddock:
      ===================
        16/4/2015  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 57 (mm)
        23/4/2015  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.2 (0-1), tillage_depth = 76 (mm)
-       18/5/2015  Prepare      maize sow plants = 8 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant
        21/4/2015  Prepare      Fertiliser apply amount = 168 (kg/ha), depth = 50.0 (mm), type = uan_n ()
-      15/10/2015  Prepare      maize end_crop
        16/4/2017  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 57 (mm)
        23/4/2017  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.2 (0-1), tillage_depth = 76 (mm)
-       18/5/2017  Prepare      maize sow plants = 8 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant
        21/4/2017  Prepare      Fertiliser apply amount = 168 (kg/ha), depth = 50.0 (mm), type = uan_n ()
-      15/10/2017  Prepare      maize end_crop
        28/4/2016  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 88.0 (mm)
        16/5/2016  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.33 (0-1), tillage_depth = 75.8 (mm)
        15/5/2016  Prepare      Fertiliser apply amount = 2.8 (kg/ha), depth = 0.0 (mm), type = nh4so4_n ()
@@ -229,24 +225,24 @@ Paddock:
            Layer    pH    OC     NO3     NH4    Urea
                          (%) (kg/ha) (kg/ha) (kg/ha)
           ------------------------------------------------
-             1     7.50  4.06    4.06    4.06    0.00
-             2     7.50  4.06    4.06    4.06    0.00
-             3     7.50  4.06    4.06    4.06    0.00
-             4     7.50  4.06    4.06    4.06    0.00
-             5     7.50  4.06    4.06    4.06    0.00
-             6     7.50  4.06    4.06    4.06    0.00
-             7     7.50  4.06    4.06    4.06    0.00
-             8     8.00  2.90    2.90    2.90    0.00
-             9     8.00  2.90    2.90    2.90    0.00
-            10     8.00  2.90    2.90    2.90    0.00
-            11     8.00  2.90    2.90    2.90    0.00
-            12     8.00  1.07    1.07    1.07    0.00
-            13     8.00  0.87    0.87    0.87    0.00
-            14     8.00  0.65    0.65    0.65    0.00
-            15     8.00  0.14    0.14    0.14    0.00
-            16     8.00  0.14    0.14    0.14    0.00
+             1     7.50  4.06    0.85    0.85    0.00
+             2     7.50  4.06    0.85    0.85    0.00
+             3     7.50  4.06    0.85    0.85    0.00
+             4     7.50  4.06    0.85    0.85    0.00
+             5     7.50  4.06    0.85    0.85    0.00
+             6     7.50  4.06    2.13    2.13    0.00
+             7     7.50  4.06    2.13    2.13    0.00
+             8     8.00  2.90    1.81    1.81    0.00
+             9     8.00  2.90    1.81    1.81    0.00
+            10     8.00  2.90    3.62    3.62    0.00
+            11     8.00  2.90    3.62    3.62    0.00
+            12     8.00  1.07    1.44    1.44    0.00
+            13     8.00  0.87    3.52    3.52    0.00
+            14     8.00  0.65    2.79    2.79    0.00
+            15     8.00  0.14    0.70    0.70    0.00
+            16     8.00  0.14    1.16    1.16    0.00
           ------------------------------------------------
-           Totals               42.91   42.91    0.00
+           Totals               29.01   29.01    0.00
           ------------------------------------------------
      
      
@@ -301,102 +297,6 @@ Paddock:
      Residue removed using user_defined
                                              Fraction Incorporated =     0.20
                                              Incorporated Depth    =    76.00
-18 May 2015(Day of year=138), paddock.Operations Schedule: 
-      Sending sow message to maize
-18 May 2015(Day of year=138), maize: 
-     Sowing initiate
-     
-                 Crop Sowing Data
-         -------------------------------------------------------
-         Sowing   Depth  Plants Spacing Skiprow Cultivar
-         Day no     mm     m^2    mm     code     name  
-         -------------------------------------------------------
-            138    51.0     8.0   762    1.0     b_105
-         -------------------------------------------------------
-     
-      - reading constants for plant(maize) - b_105
-         tt_emerg_to_endjuv       =  236.00
-         tt_endjuv_to_init        =    0.00
-         tt_init_to_flower        =   50.00
-         tt_flower_to_maturity    =  838.00
-         tt_flag_to_flower        =    1.00
-         tt_flower_to_start_grain =  150.00
-         tt_maturity_to_ripe      =    1.00
-         ------------------------------------------------------
-     
-     
-                            Root Profile
-         ---------------------------------------------------
-              Layer       Kl           Lower    Exploration
-              Depth     Factor         Limit      Factor
-              (mm)         ()        (mm/mm)       (0-1)
-         ---------------------------------------------------
-              20.0     0.080          0.179       1.000
-              20.0     0.079          0.179       1.000
-              20.0     0.078          0.179       1.000
-              20.0     0.077          0.179       1.000
-              20.0     0.076          0.179       1.000
-              50.0     0.075          0.179       1.000
-              50.0     0.073          0.179       1.000
-              50.0     0.070          0.177       1.000
-              50.0     0.068          0.177       1.000
-             100.0     0.066          0.177       1.000
-             100.0     0.062          0.177       1.000
-             100.0     0.058          0.136       1.000
-             300.0     0.054          0.131       1.000
-             300.0     0.044          0.134       1.000
-             300.0     0.036          0.140       1.000
-             500.0     0.030          0.140       1.000
-         ---------------------------------------------------
-     
-19 May 2015(Day of year=139), maize: 
-     Stage 2 Germination  DAS = 1
-     		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =   4.30
-24 May 2015(Day of year=144), maize: 
-     Stage 3 Emergence  DAS = 6
-     		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =  39.27
-12 June 2015(Day of year=163), maize: 
-     Stage 4 EndOfJuvenile  DAS = 25
-     		Biomass       =  22.12 		 LAI            =   0.27
-     		Stover N Conc =   0.55 		 Extractable SW = 150.66
-13 June 2015(Day of year=164), maize: 
-     Stage 5 FloralInitiation  DAS = 26
-     		Biomass       =  23.67 		 LAI            =   0.31
-     		Stover N Conc =   0.62 		 Extractable SW = 154.94
-22 July 2015(Day of year=203), maize: 
-     Stage 6 FlagLeaf  DAS = 65
-     		Biomass       = 850.79 		 LAI            =   4.10
-     		Stover N Conc =  12.57 		 Extractable SW = 220.86
-23 July 2015(Day of year=204), maize: 
-     Stage 7 Flowering  DAS = 66
-     		Biomass       = 871.81 		 LAI            =   4.09
-     		Stover N Conc =  12.88 		 Extractable SW = 217.25
-1 August 2015(Day of year=213), maize: 
-     Stage 8 StartGrainFill  DAS = 75
-     		Biomass       = 1167.18 		 LAI            =   4.01
-     		Stover N Conc =  13.72 		 Extractable SW = 223.32
-17 September 2015(Day of year=260), maize: 
-     Stage 9 EndGrainFill  DAS = 122
-     		Biomass       = 2324.15 		 LAI            =   2.24
-     		Stover N Conc =   6.17 		 Extractable SW = 193.85
-22 September 2015(Day of year=265), maize: 
-     Stage 10 Maturity  DAS = 127
-     		Biomass       = 2372.75 		 LAI            =   2.05
-     		Stover N Conc =   5.71 		 Extractable SW = 197.79
-23 September 2015(Day of year=266), maize: 
-     Stage 11 HarvestRipe  DAS = 128
-     		Biomass       = 2372.75 		 LAI            =   2.05
-     		Stover N Conc =   5.71 		 Extractable SW = 200.21
-15 October 2015(Day of year=288), paddock.Operations Schedule: 
-      Sending end_crop message to maize
-15 October 2015(Day of year=288), maize: 
-     Crop ended.
-     Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =              12364.63		 6202.15
-                         N  (kg/ha) =                 57.06		   45.55
-                         P  (kg/ha) =                  0.00		    0.00
 28 April 2016(Day of year=119), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
 28 April 2016(Day of year=119), paddock.SurfaceOrganicMatter: 
@@ -416,6 +316,16 @@ Paddock:
      Residue removed using user_defined
                                              Fraction Incorporated =     0.33
                                              Incorporated Depth    =    75.80
+16 October 2016(Day of year=290): 
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+     Lower bound (    0.000000    ) exceeds upper bound (  -0.3637979E-11)
+             Variable is not checked
+     Component name: paddock.SurfaceOrganicMatter
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
 16 April 2017(Day of year=106), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
 16 April 2017(Day of year=106), paddock.SurfaceOrganicMatter: 
@@ -435,102 +345,6 @@ Paddock:
      Residue removed using user_defined
                                              Fraction Incorporated =     0.20
                                              Incorporated Depth    =    76.00
-18 May 2017(Day of year=138), paddock.Operations Schedule: 
-      Sending sow message to maize
-18 May 2017(Day of year=138), maize: 
-     Sowing initiate
-     
-                 Crop Sowing Data
-         -------------------------------------------------------
-         Sowing   Depth  Plants Spacing Skiprow Cultivar
-         Day no     mm     m^2    mm     code     name  
-         -------------------------------------------------------
-            138    51.0     8.0   762    1.0     b_105
-         -------------------------------------------------------
-     
-      - reading constants for plant(maize) - b_105
-         tt_emerg_to_endjuv       =  236.00
-         tt_endjuv_to_init        =    0.00
-         tt_init_to_flower        =   50.00
-         tt_flower_to_maturity    =  838.00
-         tt_flag_to_flower        =    1.00
-         tt_flower_to_start_grain =  150.00
-         tt_maturity_to_ripe      =    1.00
-         ------------------------------------------------------
-     
-     
-                            Root Profile
-         ---------------------------------------------------
-              Layer       Kl           Lower    Exploration
-              Depth     Factor         Limit      Factor
-              (mm)         ()        (mm/mm)       (0-1)
-         ---------------------------------------------------
-              20.0     0.080          0.179       1.000
-              20.0     0.079          0.179       1.000
-              20.0     0.078          0.179       1.000
-              20.0     0.077          0.179       1.000
-              20.0     0.076          0.179       1.000
-              50.0     0.075          0.179       1.000
-              50.0     0.073          0.179       1.000
-              50.0     0.070          0.177       1.000
-              50.0     0.068          0.177       1.000
-             100.0     0.066          0.177       1.000
-             100.0     0.062          0.177       1.000
-             100.0     0.058          0.136       1.000
-             300.0     0.054          0.131       1.000
-             300.0     0.044          0.134       1.000
-             300.0     0.036          0.140       1.000
-             500.0     0.030          0.140       1.000
-         ---------------------------------------------------
-     
-19 May 2017(Day of year=139), maize: 
-     Stage 2 Germination  DAS = 1
-     		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 197.12
-25 May 2017(Day of year=145), maize: 
-     Stage 3 Emergence  DAS = 7
-     		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 206.51
-11 June 2017(Day of year=162), maize: 
-     Stage 4 EndOfJuvenile  DAS = 24
-     		Biomass       =  26.08 		 LAI            =   0.22
-     		Stover N Conc =   0.46 		 Extractable SW = 179.84
-12 June 2017(Day of year=163), maize: 
-     Stage 5 FloralInitiation  DAS = 25
-     		Biomass       =  31.53 		 LAI            =   0.27
-     		Stover N Conc =   0.56 		 Extractable SW = 183.49
-18 July 2017(Day of year=199), maize: 
-     Stage 6 FlagLeaf  DAS = 61
-     		Biomass       = 742.89 		 LAI            =   3.21
-     		Stover N Conc =  12.14 		 Extractable SW = 107.33
-19 July 2017(Day of year=200), maize: 
-     Stage 7 Flowering  DAS = 62
-     		Biomass       = 765.76 		 LAI            =   3.20
-     		Stover N Conc =  12.43 		 Extractable SW = 103.99
-27 July 2017(Day of year=208), maize: 
-     Stage 8 StartGrainFill  DAS = 70
-     		Biomass       = 941.66 		 LAI            =   3.10
-     		Stover N Conc =  13.15 		 Extractable SW =  84.76
-15 September 2017(Day of year=258), maize: 
-     Stage 9 EndGrainFill  DAS = 120
-     		Biomass       = 1670.54 		 LAI            =   1.49
-     		Stover N Conc =   4.76 		 Extractable SW =  16.81
-18 September 2017(Day of year=261), maize: 
-     Stage 10 Maturity  DAS = 123
-     		Biomass       = 1686.09 		 LAI            =   1.44
-     		Stover N Conc =   4.59 		 Extractable SW =  33.87
-19 September 2017(Day of year=262), maize: 
-     Stage 11 HarvestRipe  DAS = 124
-     		Biomass       = 1686.09 		 LAI            =   1.44
-     		Stover N Conc =   4.59 		 Extractable SW =  32.85
-15 October 2017(Day of year=288), paddock.Operations Schedule: 
-      Sending end_crop message to maize
-15 October 2017(Day of year=288), maize: 
-     Crop ended.
-     Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               8303.96		 4614.66
-                         N  (kg/ha) =                 45.85		   34.28
-                         P  (kg/ha) =                  0.00		    0.00
 28 April 2018(Day of year=118), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
 28 April 2018(Day of year=118), paddock.SurfaceOrganicMatter: 

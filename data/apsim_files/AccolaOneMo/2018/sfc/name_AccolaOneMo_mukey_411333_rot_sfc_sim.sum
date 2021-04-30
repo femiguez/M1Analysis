@@ -9,7 +9,7 @@
  The Agricultural Production Systems Simulator
              Copyright(c) APSRU               
 
-Version                = 7.10 r4207
+Version                = 7.10 r4217
 Title                  = name_AccolaOneMo_mukey_411333_rot_sfc_sim
    Component                        "clock" = %apsim%\Model\Clock.dll
    Component         "accola-1990-2020.met" = %apsim%\Model\Input.dll
@@ -77,12 +77,12 @@ Paddock:
        23/4/2015  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.2 (0-1), tillage_depth = 76 (mm)
        18/5/2015  Prepare      maize sow plants = 8 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant
        21/4/2015  Prepare      Fertiliser apply amount = 168 (kg/ha), depth = 50.0 (mm), type = uan_n ()
-      15/10/2015  Prepare      maize end_crop
+       18/6/2015  Prepare      maize end_crop
        16/4/2017  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 57 (mm)
        23/4/2017  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.2 (0-1), tillage_depth = 76 (mm)
        18/5/2017  Prepare      maize sow plants = 8 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant
        21/4/2017  Prepare      Fertiliser apply amount = 168 (kg/ha), depth = 50.0 (mm), type = uan_n ()
-      15/10/2017  Prepare      maize end_crop
+       18/6/2017  Prepare      maize end_crop
        28/4/2016  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 88.0 (mm)
        16/5/2016  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.33 (0-1), tillage_depth = 75.8 (mm)
        18/5/2016  Prepare      soybean sow plants = 34 (plants/m2), sowing_depth = 51 (mm), cultivar = MG_2, row_spacing = 762 (mm), crop_class = plant
@@ -233,24 +233,24 @@ Paddock:
            Layer    pH    OC     NO3     NH4    Urea
                          (%) (kg/ha) (kg/ha) (kg/ha)
           ------------------------------------------------
-             1     6.80  5.22    5.22    5.22    0.00
-             2     6.80  5.22    5.22    5.22    0.00
-             3     6.80  5.22    5.22    5.22    0.00
-             4     6.80  5.22    5.22    5.22    0.00
-             5     6.80  5.22    5.22    5.22    0.00
-             6     6.80  5.22    5.22    5.22    0.00
-             7     6.80  5.22    5.22    5.22    0.00
-             8     7.00  3.48    3.48    3.48    0.00
-             9     7.00  3.48    3.48    3.48    0.00
-            10     7.00  3.48    3.48    3.48    0.00
-            11     7.00  3.48    3.48    3.48    0.00
-            12     7.00  3.48    3.48    3.48    0.00
-            13     7.02  2.96    2.96    2.96    0.00
-            14     7.33  0.31    0.31    0.31    0.00
-            15     7.40  0.14    0.14    0.14    0.00
-            16     7.40  0.14    0.14    0.14    0.00
+             1     6.80  5.22    0.99    0.99    0.00
+             2     6.80  5.22    0.99    0.99    0.00
+             3     6.80  5.22    0.99    0.99    0.00
+             4     6.80  5.22    0.99    0.99    0.00
+             5     6.80  5.22    0.99    0.99    0.00
+             6     6.80  5.22    2.48    2.48    0.00
+             7     6.80  5.22    2.48    2.48    0.00
+             8     7.00  3.48    2.26    2.26    0.00
+             9     7.00  3.48    2.26    2.26    0.00
+            10     7.00  3.48    4.52    4.52    0.00
+            11     7.00  3.48    4.52    4.52    0.00
+            12     7.00  3.48    4.52    4.52    0.00
+            13     7.02  2.96   11.71   11.71    0.00
+            14     7.33  0.31    1.46    1.46    0.00
+            15     7.40  0.14    0.70    0.70    0.00
+            16     7.40  0.14    1.16    1.16    0.00
           ------------------------------------------------
-           Totals               57.50   57.50    0.00
+           Totals               43.05   43.05    0.00
           ------------------------------------------------
      
      
@@ -356,50 +356,26 @@ Paddock:
 19 May 2015(Day of year=139), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =   4.09
+     		Stover N Conc =   0.00 		 Extractable SW =   2.69
 24 May 2015(Day of year=144), maize: 
      Stage 3 Emergence  DAS = 6
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =  38.11
-12 June 2015(Day of year=163), maize: 
-     Stage 4 EndOfJuvenile  DAS = 25
-     		Biomass       =  22.13 		 LAI            =   0.27
-     		Stover N Conc =   0.55 		 Extractable SW = 128.30
+     		Stover N Conc =   0.00 		 Extractable SW =  33.99
 13 June 2015(Day of year=164), maize: 
-     Stage 5 FloralInitiation  DAS = 26
-     		Biomass       =  23.67 		 LAI            =   0.31
-     		Stover N Conc =   0.62 		 Extractable SW = 131.26
-22 July 2015(Day of year=203), maize: 
-     Stage 6 FlagLeaf  DAS = 65
-     		Biomass       = 850.84 		 LAI            =   4.10
-     		Stover N Conc =  12.57 		 Extractable SW = 167.16
-23 July 2015(Day of year=204), maize: 
-     Stage 7 Flowering  DAS = 66
-     		Biomass       = 871.85 		 LAI            =   4.09
-     		Stover N Conc =  12.88 		 Extractable SW = 163.55
-1 August 2015(Day of year=213), maize: 
-     Stage 8 StartGrainFill  DAS = 75
-     		Biomass       = 1167.23 		 LAI            =   4.01
-     		Stover N Conc =  13.74 		 Extractable SW = 170.22
-17 September 2015(Day of year=260), maize: 
-     Stage 9 EndGrainFill  DAS = 122
-     		Biomass       = 2320.91 		 LAI            =   2.25
-     		Stover N Conc =   6.18 		 Extractable SW = 141.78
-22 September 2015(Day of year=265), maize: 
-     Stage 10 Maturity  DAS = 127
-     		Biomass       = 2369.95 		 LAI            =   2.06
-     		Stover N Conc =   5.72 		 Extractable SW = 145.67
-23 September 2015(Day of year=266), maize: 
-     Stage 11 HarvestRipe  DAS = 128
-     		Biomass       = 2369.95 		 LAI            =   2.06
-     		Stover N Conc =   5.72 		 Extractable SW = 148.08
-15 October 2015(Day of year=288), paddock.Operations Schedule: 
+     Stage 4 EndOfJuvenile  DAS = 26
+     		Biomass       =  21.07 		 LAI            =   0.28
+     		Stover N Conc =   0.56 		 Extractable SW = 118.56
+14 June 2015(Day of year=165), maize: 
+     Stage 5 FloralInitiation  DAS = 27
+     		Biomass       =  23.80 		 LAI            =   0.31
+     		Stover N Conc =   0.63 		 Extractable SW = 126.80
+18 June 2015(Day of year=169), paddock.Operations Schedule: 
       Sending end_crop message to maize
-15 October 2015(Day of year=288), maize: 
+18 June 2015(Day of year=169), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =              12350.53		 6224.48
-                         N  (kg/ha) =                 57.15		   45.77
+                         DM (kg/ha) =                452.11		  307.84
+                         N  (kg/ha) =                 11.44		    3.13
                          P  (kg/ha) =                  0.00		    0.00
 28 April 2016(Day of year=119), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -502,22 +478,22 @@ Paddock:
 26 May 2016(Day of year=147), paddock.soybean: 
       stage 3.0 emergence
                      biomass =           1.02 (g/m^2)   lai          =   0.010 (m^2/m^2)
-                     stover N conc =     6.00 (%)    extractable sw =   37.11 (mm)
-4 June 2016(Day of year=156), paddock.soybean: 
+                     stover N conc =     6.00 (%)    extractable sw =   25.38 (mm)
+5 June 2016(Day of year=157), paddock.soybean: 
       stage 4.0 end_of_juvenile
-                     biomass =           2.93 (g/m^2)   lai          =   0.051 (m^2/m^2)
-                     stover N conc =     4.66 (%)    extractable sw =  108.71 (mm)
-16 June 2016(Day of year=168), paddock.soybean: 
+                     biomass =           3.49 (g/m^2)   lai          =   0.064 (m^2/m^2)
+                     stover N conc =     4.57 (%)    extractable sw =   53.50 (mm)
+17 June 2016(Day of year=169), paddock.soybean: 
       stage 5.0 floral_initiation
-                     biomass =          27.96 (g/m^2)   lai          =   0.579 (m^2/m^2)
-                     stover N conc =     3.85 (%)    extractable sw =  102.89 (mm)
+                     biomass =          31.64 (g/m^2)   lai          =   0.647 (m^2/m^2)
+                     stover N conc =     3.85 (%)    extractable sw =   80.25 (mm)
 18 June 2016(Day of year=170), paddock.Operations Schedule: 
       Sending end_crop message to soybean
 18 June 2016(Day of year=170), paddock.soybean: 
      Crop ended. Yield (dw) =     0.0  (kg/ha)
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
-                          DM (kg/ha) =                 340.0                   309.2
-                          N  (kg/ha) =                  12.99                    6.18
+                          DM (kg/ha) =                 316.4                   322.7
+                          N  (kg/ha) =                  12.17                    6.45
      
 16 April 2017(Day of year=106), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -589,50 +565,26 @@ Paddock:
 19 May 2017(Day of year=139), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 145.10
+     		Stover N Conc =   0.00 		 Extractable SW = 151.76
 25 May 2017(Day of year=145), maize: 
      Stage 3 Emergence  DAS = 7
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 151.16
-11 June 2017(Day of year=162), maize: 
-     Stage 4 EndOfJuvenile  DAS = 24
-     		Biomass       =  26.11 		 LAI            =   0.22
-     		Stover N Conc =   0.47 		 Extractable SW = 120.45
+     		Stover N Conc =   0.00 		 Extractable SW = 119.81
 12 June 2017(Day of year=163), maize: 
-     Stage 5 FloralInitiation  DAS = 25
-     		Biomass       =  31.57 		 LAI            =   0.27
-     		Stover N Conc =   0.57 		 Extractable SW = 122.66
-18 July 2017(Day of year=199), maize: 
-     Stage 6 FlagLeaf  DAS = 61
-     		Biomass       = 627.78 		 LAI            =   2.46
-     		Stover N Conc =  12.63 		 Extractable SW =  76.99
-19 July 2017(Day of year=200), maize: 
-     Stage 7 Flowering  DAS = 62
-     		Biomass       = 648.26 		 LAI            =   2.45
-     		Stover N Conc =  13.08 		 Extractable SW =  73.99
-27 July 2017(Day of year=208), maize: 
-     Stage 8 StartGrainFill  DAS = 70
-     		Biomass       = 779.90 		 LAI            =   2.36
-     		Stover N Conc =  14.11 		 Extractable SW =  60.80
-15 September 2017(Day of year=258), maize: 
-     Stage 9 EndGrainFill  DAS = 120
-     		Biomass       = 1299.95 		 LAI            =   1.02
-     		Stover N Conc =   9.58 		 Extractable SW =  12.87
-18 September 2017(Day of year=261), maize: 
-     Stage 10 Maturity  DAS = 123
-     		Biomass       = 1315.26 		 LAI            =   0.88
-     		Stover N Conc =   9.36 		 Extractable SW =  29.42
-19 September 2017(Day of year=262), maize: 
-     Stage 11 HarvestRipe  DAS = 124
-     		Biomass       = 1315.26 		 LAI            =   0.88
-     		Stover N Conc =   9.36 		 Extractable SW =  28.12
-15 October 2017(Day of year=288), paddock.Operations Schedule: 
+     Stage 4 EndOfJuvenile  DAS = 25
+     		Biomass       =  28.97 		 LAI            =   0.24
+     		Stover N Conc =   0.54 		 Extractable SW =  84.75
+13 June 2017(Day of year=164), maize: 
+     Stage 5 FloralInitiation  DAS = 26
+     		Biomass       =  33.18 		 LAI            =   0.29
+     		Stover N Conc =   0.64 		 Extractable SW =  87.05
+18 June 2017(Day of year=169), paddock.Operations Schedule: 
       Sending end_crop message to maize
-15 October 2017(Day of year=288), maize: 
+18 June 2017(Day of year=169), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               7721.79		 4972.43
-                         N  (kg/ha) =                 93.62		   33.08
+                         DM (kg/ha) =                746.92		  467.96
+                         N  (kg/ha) =                 16.31		    4.93
                          P  (kg/ha) =                  0.00		    0.00
 28 April 2018(Day of year=118), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -735,22 +687,22 @@ Paddock:
 24 May 2018(Day of year=144), paddock.soybean: 
       stage 3.0 emergence
                      biomass =           1.02 (g/m^2)   lai          =   0.010 (m^2/m^2)
-                     stover N conc =     6.00 (%)    extractable sw =   19.98 (mm)
-31 May 2018(Day of year=151), paddock.soybean: 
+                     stover N conc =     6.00 (%)    extractable sw =   12.80 (mm)
+1 June 2018(Day of year=152), paddock.soybean: 
       stage 4.0 end_of_juvenile
-                     biomass =           2.55 (g/m^2)   lai          =   0.043 (m^2/m^2)
-                     stover N conc =     4.78 (%)    extractable sw =   40.36 (mm)
+                     biomass =           3.06 (g/m^2)   lai          =   0.054 (m^2/m^2)
+                     stover N conc =     4.63 (%)    extractable sw =   34.79 (mm)
 13 June 2018(Day of year=164), paddock.soybean: 
       stage 5.0 floral_initiation
-                     biomass =          21.05 (g/m^2)   lai          =   0.439 (m^2/m^2)
-                     stover N conc =     3.86 (%)    extractable sw =  123.07 (mm)
+                     biomass =          21.23 (g/m^2)   lai          =   0.443 (m^2/m^2)
+                     stover N conc =     3.86 (%)    extractable sw =   97.17 (mm)
 18 June 2018(Day of year=169), paddock.Operations Schedule: 
       Sending end_crop message to soybean
 18 June 2018(Day of year=169), paddock.soybean: 
      Crop ended. Yield (dw) =     0.0  (kg/ha)
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
-                          DM (kg/ha) =                 410.1                   291.8
-                          N  (kg/ha) =                  15.32                    5.84
+                          DM (kg/ha) =                 413.7                   293.9
+                          N  (kg/ha) =                  15.46                    5.88
      
 31 December 2018(Day of year=365), clock: 
      Simulation is terminating due to end criteria being met.
