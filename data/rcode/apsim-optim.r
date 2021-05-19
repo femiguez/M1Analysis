@@ -1,6 +1,7 @@
 #### Optimizing APSIM runs against suboptimal yields
 ####
 #### Date: 2021-04-01
+#### Edited: 2021-05-19
 #### 
 #### APSIM Classic has a bug in which simulations run at 
 #### the command line can only be run from the current directory so 
@@ -16,57 +17,55 @@ setwd(file.path(hr.path, "data", "rcode"))
 
 apsim_options(warn.versions = FALSE)
 
-sfcs <- "../apsim_files/Accola/2018/sfc"
+yr <- "2018"
+sfcs <- paste0("../apsim_files/AccolaDefault/", yr, "/sfc")
 lsf <- list.files(sfcs)
 apsim.files <- grep("apsim$", lsf, value = TRUE)
 file.copy(from = paste0(sfcs, "/", apsim.files), to = ".")
 
-## Let's start with "Accola_2765537_sfc.apsim"
-inspect_apsim("Accola_2765537_sfc.apsim",
-              node = "Weather")
+i <- "AccolaDefault_2765537_sfc.apsim"
+for(i in list.files(pattern = ".apsim$")){
+  
+  site <- strsplit(i, "_")[[1]][1]
+  mukey <- strsplit(i, "_")[[1]][2]
 
-edit_apsim("Accola_2765537_sfc.apsim", 
-           node = "Weather",
-           value = "../met/accola-1990-2020.met",
-           overwrite = TRUE)
+  edit_apsim(file = i,
+             node = "Weather",
+             value = paste0(sfcs, "/met_files/accola-1990-2020.met"),
+             overwrite = TRUE)
+  
+  sim0 <- apsim(file = i, value = "report")
+  
+  file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.out",
+            to = "name_Accola_mukey_2765537_rot_sfc_sim_high.out")
 
-sim0 <- apsim("Accola_2765537_sfc.apsim", value = "report")
+  file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.sum",
+            to = "name_Accola_mukey_2765537_rot_sfc_sim_high.sum")  
+  
+  ## Calculating yield and nitrate leaching requires subsetting
+  sim0.2018 <- subset(sim0, Date > as.Date("2018-01-01") & Date < as.Date("2018-12-31"))
+  (max.yield <- max(sim0.2018$soybean_yield))
+  (n.leach <- sum(sim0.2018$leach_no3))
 
-names(sim0)
+  ## inspect_apsim(i, node = "Soil", soil.child = "Water")
+  ## The crops are maize soybean and wheat
+  
+  ### So second category is in a yield level of about 4 Mg/ha
+  pp.kl <- inspect_apsim_xml(i, parm = "SoilCrop[2]/KL")
+  ## Only the second one is relevant to soybeans
+  pp.xf <- inspect_apsim_xml(i, parm = "SoilCrop[2]/XF")
 
-sim0[which.max(sim0$soybean_yield),]
-## The harvest date was 2018-09-01
+  ## Create the yield data frame for medium
+  yld.dat <- data.frame(Date = as.Date("2018-09-01"),
+                        soybean_yield = 3000)
+  
+  ## Read reference yield
+  ## ym <- st_read("../shapefiles/accola_soybean_2018_full/accola_soybean_2018.shp")
+}
 
-file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.out",
-          to = "name_Accola_mukey_2765537_rot_sfc_sim_high.out")
 
-file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.sum",
-          to = "name_Accola_mukey_2765537_rot_sfc_sim_high.sum")
 
-### Calculate yield and nitrate leaching for the default simulation
-sim0.2018 <- subset(sim0, Date > as.Date("2018-01-01") & Date < as.Date("2018-12-31"))
-(max.yield <- max(sim0.2018$soybean_yield))
-(n.leach <- sum(sim0.2018$leach_no3))
 
-#### Read in yield monitor data
-#### This data are only for 2018 where there was soybean
-ym <- st_read("../shapefiles/accola_soybean_2018_full/accola_soybean_2018.shp")
-
-names(ym)
-
-ym$soy_yield_cat <- cut(ym$s_ydMgHaMn, 5)
-
-ggplot(data = ym, aes(x = s_ydMgHaMn, fill = soy_yield_cat)) + 
-  geom_histogram()
-
-### So second category is in a yield level of about 4 Mg/ha
-pp.kl <- inspect_apsim_xml("Accola_2765537_sfc.apsim", parm = "KL")
-## Only the second one is relevant to soybeans
-pp.xf <- inspect_apsim_xml("Accola_2765537_sfc.apsim", parm = "XF")
-
-## Create the yield data frame for medium
-yld.dat <- data.frame(Date = as.Date("2018-09-01"),
-                      soybean_yield = 3000)
 
 ## I'm trying different optimizations
 ## First KL alone
