@@ -67,8 +67,9 @@ for(i in list.files(pattern = ".apsim$")){
   ### otherwise 2
   crop.index <- ifelse(crop == "maize", 1, 2)
   pp.kl <- inspect_apsim_xml(i, parm = paste0("SoilCrop[", crop.index,"]/KL"))
-  ## Only the second one is relevant to soybeans
   pp.xf <- inspect_apsim_xml(i, parm = paste0("SoilCrop[", crop.index,"]/XF"))
+  pp.dul <- inspect_apsim_xml(i, parm = ".//Soil/Water/DUL")
+  pp.ll <- inspect_apsim_xml(i, parm = paste0("SoilCrop[", crop.index,"]/LL"))
 
   ## Create the yield data frame for medium
   harvest.date <- sim0s[which.max(sim0s[,paste0(crop,"_yield")]),"Date"]
@@ -78,168 +79,99 @@ for(i in list.files(pattern = ".apsim$")){
                       field == strsplit(site, "Default")[[1]][1])
   
   yld.dat <- data.frame(Date = as.Date(harvest.date),
-                        crop_yield = yld.cat.s[,"Mid"])
+                        crop_yield = yld.cat.s[,"Low"] * 1e3)
   names(yld.dat) <- c("Date", paste0(crop, "_yield"))
   
   op.kl <- optim_apsim(file = i, 
                        data = yld.dat,
                        parm.paths = pp.kl,
                        method = "Brent",
-                       lower = 0.001, upper = 1.001)
+                       lower = 0.01, upper = 1.001)
   
-  sim1 <- apsim("Accola_2765537_sfc.apsim", value = "report")
+  sim1 <- apsim(file = i, value = "report")
   
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.out")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_KL.out")
+  file.copy(from = frm,
+            to = paste0("./sims_low/", tu))
+
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.sum")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_KL.sum")
+  file.copy(from = frm,
+            to = paste0("./sims_low/", tu))
+
+  ## Restore KL values
+  kl.vals <- c(0.08, 0.079, 0.078, 0.077, 0.076, 0.075, 0.073, 0.07, 
+               0.068, 0.066, 0.062, 0.058, 0.054, 0.044, 0.036, 0.03)
   
+  edit_apsim("AccolaDefault_2765537_sfc.apsim",
+             node = "Other",
+             parm.path = pp.kl,
+             value = kl.vals,
+             overwrite = TRUE)
+  
+  ## Try now for XF
+  op.xf <- optim_apsim(file = i, 
+                       data = yld.dat,
+                       parm.paths = pp.xf,
+                       method = "Brent",
+                       lower = 0.01, 
+                       upper = 1.001)
+  
+  sim2 <- apsim(file = i, value = "report")
+  
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.out")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_XF.out")
+  file.copy(from = frm,
+            to = paste0("./sims_low/", tu))
+  
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.sum")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_XF.sum")
+  file.copy(from = frm,
+            to = paste0("./sims_low/", tu))
+
+  ## Restore XF values
+  xf.vals <- rep(1, 16)
+  
+  edit_apsim(file = i,
+             node = "Other",
+             parm.path = pp.xf,
+             value = xf.vals,
+             overwrite = TRUE)
+   
+   ## What about changing DUL?
+  op.dul <- optim_apsim(file = i, 
+                       data = yld.dat,
+                       parm.paths = pp.dul,
+                       method = "Brent",
+                       lower = 0.01, 
+                       upper = 1.001)
+  
+  sim3 <- apsim(file = i, value = "report")
+  
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.out")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_DUL.out")
+  file.copy(from = frm,
+            to = paste0("./sims_low/", tu))
+  
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.sum")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_DUL.sum")
+  file.copy(from = frm,
+            to = paste0("./sims_low/", tu))
+  
+  ## Restore DUL values
+  dul.vals <- c(0.286, 0.286, 0.286, 0.286, 0.286, 0.286, 0.286,
+            0.284, 0.281, 0.276, 0.27, 0.27, 0.265, 0.246, 0.246, 0.246) 
+  
+  edit_apsim(file = i,
+             node = "Other",
+             parm.path = pp.dul,
+             value = dul.vals,
+             overwrite = TRUE)
 }
 
 
 
-
-
-## I'm trying different optimizations
-## First KL alone
-op.kl <- optim_apsim("Accola_2765537_sfc.apsim", 
-                     data = yld.dat,
-                     parm.paths = pp.kl[2],
-                     method = "Brent",
-                     lower = 0.001, upper = 1.001)
-
-
-sim1.2018 <- subset(sim1, Date > as.Date("2018-01-01") & Date < as.Date("2018-12-31"))
-(max.yield <- max(sim1.2018$soybean_yield))
-(n.leach <- sum(sim1.2018$leach_no3))
-
-file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.out",
-          to = "name_Accola_mukey_2765537_rot_sfc_sim_medium_kl.out")
-
-file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.sum",
-          to = "name_Accola_mukey_2765537_rot_sfc_sim_medium_kl.sum")
-
-inspect_apsim("Accola_2765537_sfc.apsim",
-              node = "Soil",
-              soil.child = "Water",
-              parm = "KL")
-
-kl.vals <- c(0.08, 0.079, 0.078, 0.077, 0.076, 0.075, 0.073, 0.07, 
-             0.068, 0.066, 0.062, 0.058, 0.054, 0.044, 0.036, 0.03)
-
-edit_apsim("Accola_2765537_sfc.apsim",
-           node = "Other",
-           parm.path = pp.kl[2],
-           value = kl.vals,
-           overwrite = TRUE)
-
-inspect_apsim("Accola_2765537_sfc.apsim",
-              node = "Soil",
-              soil.child = "Water",
-              parm = "KL")
-
-## Trying optimizing XF
-op.xf <- optim_apsim("Accola_2765537_sfc.apsim", 
-                     data = yld.dat,
-                     parm.paths = pp.xf[2],
-                     method = "Brent",
-                     lower = 0.01, 
-                     upper = 1.001)
-
-## So far: default 53, KL 49, XF 107
-sim2 <- apsim("Accola_2765537_sfc.apsim", value = "report")
-
-sim2.2018 <- subset(sim2, Date > as.Date("2018-01-01") & Date < as.Date("2018-12-31"))
-(max.yield <- max(sim2.2018$soybean_yield))
-(n.leach <- sum(sim2.2018$leach_no3))
-
-file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.out",
-          to = "name_Accola_mukey_2765537_rot_sfc_sim_medium_xf.out")
-
-file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.sum",
-          to = "name_Accola_mukey_2765537_rot_sfc_sim_medium_xf.sum")
-
-## Restore XF values
-xf.vals <- rep(1, 16)
-
-edit_apsim("Accola_2765537_sfc.apsim",
-           node = "Other",
-           parm.path = pp.xf[2],
-           value = xf.vals,
-           overwrite = TRUE)
-
-#### Trying both KL and XF??? ----
-op.kl.xf <- optim_apsim("Accola_2765537_sfc.apsim", 
-                     data = yld.dat,
-                     parm.paths = c(pp.kl[2], pp.xf[2]),
-                     method = "L-BFGS-B",
-                     lower = 0.2, 
-                     upper = 1.001)
-#### As expected this does not work
-
-## Restore
-xf.vals <- rep(1, 16)
-
-edit_apsim("Accola_2765537_sfc.apsim",
-           node = "Other",
-           parm.path = pp.xf[2],
-           value = xf.vals,
-           overwrite = TRUE)
-
-
-## Create the yield data frame for low
-yld.datL <- data.frame(Date = as.Date("2018-09-01"),
-                      soybean_yield = 2000)
-
-## First KL alone
-op.kl <- optim_apsim("Accola_2765537_sfc.apsim", 
-                     data = yld.datL,
-                     parm.paths = pp.kl[2],
-                     method = "Brent",
-                     lower = 0.001, upper = 1.001)
-
-sim3 <- apsim("Accola_2765537_sfc.apsim", value = "report")
-
-sim3.2018 <- subset(sim3, Date > as.Date("2018-01-01") & Date < as.Date("2018-12-31"))
-(max.yield <- max(sim3.2018$soybean_yield))
-(n.leach <- sum(sim3.2018$leach_no3))
-
-file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.out",
-          to = "name_Accola_mukey_2765537_rot_sfc_sim_low_kl.out")
-
-file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.sum",
-          to = "name_Accola_mukey_2765537_rot_sfc_sim_low_kl.sum")
-
-kl.vals <- c(0.08, 0.079, 0.078, 0.077, 0.076, 0.075, 0.073, 0.07, 
-             0.068, 0.066, 0.062, 0.058, 0.054, 0.044, 0.036, 0.03)
-
-edit_apsim("Accola_2765537_sfc.apsim",
-           node = "Other",
-           parm.path = pp.kl[2],
-           value = kl.vals,
-           overwrite = TRUE)
-
-inspect_apsim("Accola_2765537_sfc.apsim",
-              node = "Soil",
-              soil.child = "Water",
-              parm = "KL")
-
-### Now for XF
-## Trying optimizing XF
-op.xf <- optim_apsim("Accola_2765537_sfc.apsim", 
-                     data = yld.datL,
-                     parm.paths = pp.xf[2],
-                     method = "Brent",
-                     lower = 0.01, 
-                     upper = 1.001)
-
-sim4 <- apsim("Accola_2765537_sfc.apsim", value = "report")
-
-sim4.2018 <- subset(sim4, Date > as.Date("2018-01-01") & Date < as.Date("2018-12-31"))
-(max.yield <- max(sim4.2018$soybean_yield))
-(n.leach <- sum(sim4.2018$leach_no3))
-
-file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.out",
-          to = "name_Accola_mukey_2765537_rot_sfc_sim_low_xf.out")
-
-file.copy(from = "name_Accola_mukey_2765537_rot_sfc_sim.sum",
-          to = "name_Accola_mukey_2765537_rot_sfc_sim_low_xf.sum")
 
 
 
