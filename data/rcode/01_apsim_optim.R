@@ -1,7 +1,7 @@
 #### Optimizing APSIM runs against suboptimal yields
 ####
 #### Date: 2021-04-01
-#### Edited: 2021-05-19
+#### Edited: 2021-05-21
 #### 
 #### APSIM Classic has a bug in which simulations run at 
 #### the command line can only be run from the current directory so 
@@ -18,17 +18,21 @@ setwd(file.path(hr.path, "data", "rcode"))
 apsim_options(warn.versions = FALSE)
 
 yr <- "2018"
-sfcs <- paste0("../apsim_files/AccolaDefault/", yr, "/sfc")
+site.default <- "AccolaDefault"
+sfcs <- file.path("../apsim_files", site.default, yr, "sfc")
 lsf <- list.files(sfcs)
 apsim.files <- grep("apsim$", lsf, value = TRUE)
 file.copy(from = paste0(sfcs, "/", apsim.files), to = ".")
-
-i <- "AccolaDefault_2765537_sfc.apsim"
 
 for(i in list.files(pattern = ".apsim$")){
   
   site <- strsplit(i, "_")[[1]][1]
   mukey <- strsplit(i, "_")[[1]][2]
+  
+  wrt.dir0 <- file.path(".", "results", site)
+  wrt.dir1 <- file.path(".", "results", site, paste0("mukey_", mukey))
+  dir.create(wrt.dir0)
+  dir.create(wrt.dir1)
   
   site.met <- tolower(strsplit(site, "Default")[[1]][1])
 
@@ -39,15 +43,16 @@ for(i in list.files(pattern = ".apsim$")){
   
   sim0 <- apsim(file = i, value = "report")
   
+  dir.create(file.path(wrt.dir1, "sims_default"))
   frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.out")
-  tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_high.out")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_default.out")
   file.copy(from = frm,
-            to = paste0("./sims_high/", tu))
+            to = file.path(wrt.dir1, "sims_default", tu))
 
   frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.sum")
-  tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_high.sum")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_default.sum")
   file.copy(from = frm,
-            to = paste0("./sims_high/", tu))
+            to = file.path(wrt.dir1, "sims_default", tu))
   
   ## Calculating yield and nitrate leaching requires subsetting
   sim0s <- subset(sim0, year == yr)
@@ -90,15 +95,16 @@ for(i in list.files(pattern = ".apsim$")){
   
   sim1 <- apsim(file = i, value = "report")
   
+  dir.create(file.path(wrt.dir1, "sims_low"))
   frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.out")
   tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_KL.out")
   file.copy(from = frm,
-            to = paste0("./sims_low/", tu))
+            to = file.path(wrt.dir1, "sims_low", tu))
 
   frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.sum")
   tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_KL.sum")
   file.copy(from = frm,
-            to = paste0("./sims_low/", tu))
+            to = paste0(wrt.dir1, "sims_low", tu))
 
   ## Restore KL values
   kl.vals <- c(0.08, 0.079, 0.078, 0.077, 0.076, 0.075, 0.073, 0.07, 
@@ -123,12 +129,12 @@ for(i in list.files(pattern = ".apsim$")){
   frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.out")
   tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_XF.out")
   file.copy(from = frm,
-            to = paste0("./sims_low/", tu))
+            to = file.path(wrt.dir1, "sims_low", tu))
   
   frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.sum")
   tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_XF.sum")
   file.copy(from = frm,
-            to = paste0("./sims_low/", tu))
+            to = file.path(wrt.dir1, "sims_low", tu))
 
   ## Restore XF values
   xf.vals <- rep(1, 16)
@@ -152,12 +158,12 @@ for(i in list.files(pattern = ".apsim$")){
   frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.out")
   tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_DUL.out")
   file.copy(from = frm,
-            to = paste0("./sims_low/", tu))
+            to = file.path(wrt.dir1, "sims_low", tu))
   
   frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.sum")
   tu <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim_low_DUL.sum")
   file.copy(from = frm,
-            to = paste0("./sims_low/", tu))
+            to = file.path(wrt.dir1, "sims_low", tu))
   
   ## Restore DUL values
   dul.vals <- c(0.286, 0.286, 0.286, 0.286, 0.286, 0.286, 0.286,
