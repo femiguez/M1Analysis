@@ -63,6 +63,7 @@ Paddock:
         fertiliser
         surfaceom_c
         leach_no3
+        lch_no3n
 
      Output file = name_BasswoodOneMo_mukey_407698_rot_cfs_sim.out
      Format = normal
@@ -94,6 +95,7 @@ Paddock:
      SECTION:- start_of_day
              corn_buac   = maize.yield * 0.0159/0.85
              soy_buac   = soybean.yield * 0.0149/0.87
+             lch_no3n   = leach_no3 * 0.2259
      
      SECTION:- end_of_day
      END of rules
@@ -296,6 +298,7 @@ Paddock:
 1 January 2013(Day of year=1), paddock.Empty manager: 
      Manager creating a new local real variable : corn_buac = 0.00000
      Manager creating a new local real variable : soy_buac = 0.00000
+     Manager creating a new local real variable : lch_no3n = 0.00000
 1 January 2013(Day of year=1): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
@@ -2727,16 +2730,16 @@ Paddock:
           50.0     0.075          0.230       1.000
           50.0     0.073          0.230       1.000
           50.0     0.070          0.230       1.000
-          50.0     0.068          0.256       1.000
-         100.0     0.066          0.256       1.000
-         100.0     0.062          0.256       1.000
-         100.0     0.058          0.256       1.000
-         300.0     0.054          0.256       1.000
-         300.0     0.044          0.256       1.000
-         300.0     0.036          0.270       1.000
-         500.0     0.030          0.274       1.000
+          50.0     0.068          0.230       1.000
+         100.0     0.066          0.230       1.000
+         100.0     0.062          0.230       1.000
+         100.0     0.058          0.230       1.000
+         300.0     0.054          0.230       1.000
+         300.0     0.044          0.230       1.000
+         300.0     0.036          0.248       1.000
+         500.0     0.030          0.253       1.000
          -----------------------------------------------
-         Extractable SW:   146mm in  2000mm total depth (  7%).
+         Extractable SW:   188mm in  2000mm total depth (  9%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -3627,7 +3630,7 @@ Paddock:
 29 May 2013(Day of year=149), paddock.soybean: 
       stage 4.0 end_of_juvenile
                      biomass =           4.10 (g/m^2)   lai          =   0.072 (m^2/m^2)
-                     stover N conc =     4.56 (%)    extractable sw =   68.76 (mm)
+                     stover N conc =     4.56 (%)    extractable sw =   77.86 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -10311,14 +10314,14 @@ Paddock:
               50.0     0.075          0.230       1.000
               50.0     0.073          0.230       1.000
               50.0     0.070          0.230       1.000
-              50.0     0.068          0.256       1.000
-             100.0     0.066          0.256       1.000
-             100.0     0.062          0.256       1.000
-             100.0     0.058          0.256       1.000
-             300.0     0.054          0.256       1.000
-             300.0     0.044          0.256       1.000
-             300.0     0.036          0.270       1.000
-             500.0     0.030          0.274       1.000
+              50.0     0.068          0.230       1.000
+             100.0     0.066          0.230       1.000
+             100.0     0.062          0.230       1.000
+             100.0     0.058          0.230       1.000
+             300.0     0.054          0.230       1.000
+             300.0     0.044          0.230       1.000
+             300.0     0.036          0.248       1.000
+             500.0     0.030          0.253       1.000
          ---------------------------------------------------
      
 6 May 2014(Day of year=126): 
@@ -11349,8 +11352,8 @@ Paddock:
      
 2 June 2014(Day of year=153), maize: 
      Stage 4 EndOfJuvenile  DAS = 27
-     		Biomass       =  21.95 		 LAI            =   0.21
-     		Stover N Conc =   0.44 		 Extractable SW =  65.99
+     		Biomass       =  21.94 		 LAI            =   0.21
+     		Stover N Conc =   0.44 		 Extractable SW =  83.15
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -11390,8 +11393,8 @@ Paddock:
      
 3 June 2014(Day of year=154), maize: 
      Stage 5 FloralInitiation  DAS = 28
-     		Biomass       =  26.81 		 LAI            =   0.25
-     		Stover N Conc =   0.53 		 Extractable SW =  69.60
+     		Biomass       =  26.79 		 LAI            =   0.25
+     		Stover N Conc =   0.53 		 Extractable SW =  87.62
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -11489,8 +11492,8 @@ Paddock:
 6 June 2014(Day of year=157), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =                404.76		  312.48
-                         N  (kg/ha) =                  8.34		    3.20
+                         DM (kg/ha) =                404.56		  312.33
+                         N  (kg/ha) =                  8.29		    3.19
                          P  (kg/ha) =                  0.00		    0.00
 6 June 2014(Day of year=157): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -17894,16 +17897,16 @@ Paddock:
           50.0     0.075          0.230       1.000
           50.0     0.073          0.230       1.000
           50.0     0.070          0.230       1.000
-          50.0     0.068          0.256       1.000
-         100.0     0.066          0.256       1.000
-         100.0     0.062          0.256       1.000
-         100.0     0.058          0.256       1.000
-         300.0     0.054          0.256       1.000
-         300.0     0.044          0.256       1.000
-         300.0     0.036          0.270       1.000
-         500.0     0.030          0.274       1.000
+          50.0     0.068          0.230       1.000
+         100.0     0.066          0.230       1.000
+         100.0     0.062          0.230       1.000
+         100.0     0.058          0.230       1.000
+         300.0     0.054          0.230       1.000
+         300.0     0.044          0.230       1.000
+         300.0     0.036          0.248       1.000
+         500.0     0.030          0.253       1.000
          -----------------------------------------------
-         Extractable SW:   146mm in  2000mm total depth (  7%).
+         Extractable SW:   188mm in  2000mm total depth (  9%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -18905,7 +18908,7 @@ Paddock:
 1 June 2015(Day of year=152), paddock.soybean: 
       stage 4.0 end_of_juvenile
                      biomass =           1.64 (g/m^2)   lai          =   0.009 (m^2/m^2)
-                     stover N conc =    11.51 (%)    extractable sw =   80.57 (mm)
+                     stover N conc =    11.51 (%)    extractable sw =   97.47 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -25497,14 +25500,14 @@ Paddock:
               50.0     0.075          0.230       1.000
               50.0     0.073          0.230       1.000
               50.0     0.070          0.230       1.000
-              50.0     0.068          0.256       1.000
-             100.0     0.066          0.256       1.000
-             100.0     0.062          0.256       1.000
-             100.0     0.058          0.256       1.000
-             300.0     0.054          0.256       1.000
-             300.0     0.044          0.256       1.000
-             300.0     0.036          0.270       1.000
-             500.0     0.030          0.274       1.000
+              50.0     0.068          0.230       1.000
+             100.0     0.066          0.230       1.000
+             100.0     0.062          0.230       1.000
+             100.0     0.058          0.230       1.000
+             300.0     0.054          0.230       1.000
+             300.0     0.044          0.230       1.000
+             300.0     0.036          0.248       1.000
+             500.0     0.030          0.253       1.000
          ---------------------------------------------------
      
 6 May 2016(Day of year=127): 
@@ -25566,7 +25569,7 @@ Paddock:
 7 May 2016(Day of year=128), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =  88.04
+     		Stover N Conc =   0.00 		 Extractable SW = 107.76
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -25718,7 +25721,7 @@ Paddock:
 11 May 2016(Day of year=132), maize: 
      Stage 3 Emergence  DAS = 5
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =  84.24
+     		Stover N Conc =   0.00 		 Extractable SW = 103.92
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -26609,8 +26612,8 @@ Paddock:
      
 4 June 2016(Day of year=156), maize: 
      Stage 4 EndOfJuvenile  DAS = 29
-     		Biomass       =  30.62 		 LAI            =   0.24
-     		Stover N Conc =   0.64 		 Extractable SW =  81.54
+     		Biomass       =  30.60 		 LAI            =   0.24
+     		Stover N Conc =   0.64 		 Extractable SW = 100.50
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -26650,8 +26653,8 @@ Paddock:
      
 5 June 2016(Day of year=157), maize: 
      Stage 5 FloralInitiation  DAS = 30
-     		Biomass       =  35.24 		 LAI            =   0.27
-     		Stover N Conc =   0.74 		 Extractable SW =  82.24
+     		Biomass       =  35.22 		 LAI            =   0.27
+     		Stover N Conc =   0.74 		 Extractable SW = 102.08
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -26675,8 +26678,8 @@ Paddock:
 6 June 2016(Day of year=158), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =                419.49		  373.82
-                         N  (kg/ha) =                  8.81		    3.72
+                         DM (kg/ha) =                419.30		  373.64
+                         N  (kg/ha) =                  8.75		    3.71
                          P  (kg/ha) =                  0.00		    0.00
 6 June 2016(Day of year=158): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

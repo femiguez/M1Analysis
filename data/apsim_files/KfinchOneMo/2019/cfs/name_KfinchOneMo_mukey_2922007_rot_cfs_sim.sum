@@ -63,6 +63,7 @@ Paddock:
         fertiliser
         surfaceom_c
         leach_no3
+        lch_no3n
 
      Output file = name_KfinchOneMo_mukey_2922007_rot_cfs_sim.out
      Format = normal
@@ -96,6 +97,7 @@ Paddock:
      SECTION:- start_of_day
              corn_buac   = maize.yield * 0.0159/0.85
              soy_buac   = soybean.yield * 0.0149/0.87
+             lch_no3n   = leach_no3 * 0.2259
      
      SECTION:- end_of_day
      END of rules
@@ -280,6 +282,7 @@ Paddock:
 1 January 2016(Day of year=1), paddock.Empty manager: 
      Manager creating a new local real variable : corn_buac = 0.00000
      Manager creating a new local real variable : soy_buac = 0.00000
+     Manager creating a new local real variable : lch_no3n = 0.00000
 18 May 2016(Day of year=139), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
 18 May 2016(Day of year=139), paddock.SurfaceOrganicMatter: 
@@ -346,11 +349,11 @@ Paddock:
          100.0     0.062          0.199       1.000
          100.0     0.058          0.174       1.000
          300.0     0.054          0.171       1.000
-         300.0     0.044          0.141       1.000
-         300.0     0.036          0.140       1.000
-         500.0     0.030          0.140       1.000
+         300.0     0.044          0.105       1.000
+         300.0     0.036          0.103       1.000
+         500.0     0.030          0.103       1.000
          -----------------------------------------------
-         Extractable SW:   229mm in  2000mm total depth ( 11%).
+         Extractable SW:   270mm in  2000mm total depth ( 13%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -432,9 +435,9 @@ Paddock:
              100.0     0.062          0.199       1.000
              100.0     0.058          0.174       1.000
              300.0     0.054          0.171       1.000
-             300.0     0.044          0.141       1.000
-             300.0     0.036          0.140       1.000
-             500.0     0.030          0.140       1.000
+             300.0     0.044          0.105       1.000
+             300.0     0.036          0.103       1.000
+             500.0     0.030          0.103       1.000
          ---------------------------------------------------
      
       Sending apply message to fertiliser
@@ -525,11 +528,11 @@ Paddock:
          100.0     0.062          0.199       1.000
          100.0     0.058          0.174       1.000
          300.0     0.054          0.171       1.000
-         300.0     0.044          0.141       1.000
-         300.0     0.036          0.140       1.000
-         500.0     0.030          0.140       1.000
+         300.0     0.044          0.105       1.000
+         300.0     0.036          0.103       1.000
+         500.0     0.030          0.103       1.000
          -----------------------------------------------
-         Extractable SW:   229mm in  2000mm total depth ( 11%).
+         Extractable SW:   270mm in  2000mm total depth ( 13%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -611,9 +614,9 @@ Paddock:
              100.0     0.062          0.199       1.000
              100.0     0.058          0.174       1.000
              300.0     0.054          0.171       1.000
-             300.0     0.044          0.141       1.000
-             300.0     0.036          0.140       1.000
-             500.0     0.030          0.140       1.000
+             300.0     0.044          0.105       1.000
+             300.0     0.036          0.103       1.000
+             500.0     0.030          0.103       1.000
          ---------------------------------------------------
      
       Sending apply message to fertiliser
@@ -625,11 +628,11 @@ Paddock:
 27 April 2019(Day of year=117), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 137.60
+     		Stover N Conc =   0.00 		 Extractable SW = 140.07
 5 May 2019(Day of year=125), maize: 
      Stage 3 Emergence  DAS = 9
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 109.96
+     		Stover N Conc =   0.00 		 Extractable SW = 112.43
 26 May 2019(Day of year=146), paddock.Operations Schedule: 
       Sending end_crop message to maize
 26 May 2019(Day of year=146), maize: 

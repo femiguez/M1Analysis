@@ -63,6 +63,7 @@ Paddock:
         fertiliser
         surfaceom_c
         leach_no3
+        lch_no3n
 
      Output file = name_BasswoodDefault_mukey_407698_rot_cfs_sim.out
      Format = normal
@@ -94,6 +95,7 @@ Paddock:
      SECTION:- start_of_day
              corn_buac   = maize.yield * 0.0159/0.85
              soy_buac   = soybean.yield * 0.0149/0.87
+             lch_no3n   = leach_no3 * 0.2259
      
      SECTION:- end_of_day
      END of rules
@@ -296,6 +298,7 @@ Paddock:
 1 January 2015(Day of year=1), paddock.Empty manager: 
      Manager creating a new local real variable : corn_buac = 0.00000
      Manager creating a new local real variable : soy_buac = 0.00000
+     Manager creating a new local real variable : lch_no3n = 0.00000
 1 January 2015(Day of year=1): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
@@ -2727,16 +2730,16 @@ Paddock:
           50.0     0.075          0.230       1.000
           50.0     0.073          0.230       1.000
           50.0     0.070          0.230       1.000
-          50.0     0.068          0.256       1.000
-         100.0     0.066          0.256       1.000
-         100.0     0.062          0.256       1.000
-         100.0     0.058          0.256       1.000
-         300.0     0.054          0.256       1.000
-         300.0     0.044          0.256       1.000
-         300.0     0.036          0.270       1.000
-         500.0     0.030          0.274       1.000
+          50.0     0.068          0.230       1.000
+         100.0     0.066          0.230       1.000
+         100.0     0.062          0.230       1.000
+         100.0     0.058          0.230       1.000
+         300.0     0.054          0.230       1.000
+         300.0     0.044          0.230       1.000
+         300.0     0.036          0.248       1.000
+         500.0     0.030          0.253       1.000
          -----------------------------------------------
-         Extractable SW:   146mm in  2000mm total depth (  7%).
+         Extractable SW:   188mm in  2000mm total depth (  9%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -3738,7 +3741,7 @@ Paddock:
 1 June 2015(Day of year=152), paddock.soybean: 
       stage 4.0 end_of_juvenile
                      biomass =           1.64 (g/m^2)   lai          =   0.009 (m^2/m^2)
-                     stover N conc =    11.51 (%)    extractable sw =   80.63 (mm)
+                     stover N conc =    11.51 (%)    extractable sw =   97.53 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -4297,7 +4300,7 @@ Paddock:
 16 June 2015(Day of year=167), paddock.soybean: 
       stage 5.0 floral_initiation
                      biomass =           5.19 (g/m^2)   lai          =   0.085 (m^2/m^2)
-                     stover N conc =     3.83 (%)    extractable sw =  113.24 (mm)
+                     stover N conc =     3.83 (%)    extractable sw =  137.93 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -4902,7 +4905,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327095      in layer  16
+      soil water of     0.327094      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -4939,7 +4942,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327030      in layer  16
+      soil water of     0.327021      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -4967,7 +4970,7 @@ Paddock:
 4 July 2015(Day of year=185), paddock.soybean: 
       stage 6.0 flowering
                      biomass =          66.11 (g/m^2)   lai          =   1.050 (m^2/m^2)
-                     stover N conc =     3.27 (%)    extractable sw =  141.89 (mm)
+                     stover N conc =     3.27 (%)    extractable sw =  184.07 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -4990,7 +4993,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327058      in layer  16
+      soil water of     0.327039      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -5037,15 +5040,6 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327047      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
      Component name: paddock.Soil Water
@@ -5065,15 +5059,6 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327032      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
      Component name: paddock.Soil Water
@@ -5086,15 +5071,6 @@ Paddock:
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327088      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -5444,7 +5420,7 @@ Paddock:
 27 July 2015(Day of year=208), paddock.soybean: 
       stage 7.0 start_grain_fill
                      biomass =         363.09 (g/m^2)   lai          =   3.965 (m^2/m^2)
-                     stover N conc =     3.31 (%)    extractable sw =  131.34 (mm)
+                     stover N conc =     3.31 (%)    extractable sw =  171.17 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -6245,8 +6221,8 @@ Paddock:
      
 7 September 2015(Day of year=250), paddock.soybean: 
       stage 8.0 end_grain_fill
-                     biomass =         766.11 (g/m^2)   lai          =   2.317 (m^2/m^2)
-                     stover N conc =     2.46 (%)    extractable sw =   92.61 (mm)
+                     biomass =         788.19 (g/m^2)   lai          =   2.321 (m^2/m^2)
+                     stover N conc =     2.43 (%)    extractable sw =  119.39 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -6287,8 +6263,8 @@ Paddock:
      
 9 September 2015(Day of year=252), paddock.soybean: 
       stage 9.0 maturity
-                     biomass =         767.43 (g/m^2)   lai          =   2.238 (m^2/m^2)
-                     stover N conc =     2.37 (%)    extractable sw =   91.44 (mm)
+                     biomass =         789.44 (g/m^2)   lai          =   2.243 (m^2/m^2)
+                     stover N conc =     2.35 (%)    extractable sw =  118.22 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -6348,8 +6324,8 @@ Paddock:
      
 12 September 2015(Day of year=255), paddock.soybean: 
       stage 10.0 harvest_ripe
-                     biomass =         767.43 (g/m^2)   lai          =   0.000 (m^2/m^2)
-                     stover N conc =     2.44 (%)    extractable sw =   87.94 (mm)
+                     biomass =         789.44 (g/m^2)   lai          =   0.000 (m^2/m^2)
+                     stover N conc =     2.42 (%)    extractable sw =  114.72 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -6972,10 +6948,10 @@ Paddock:
 15 October 2015(Day of year=288), paddock.Operations Schedule: 
       Sending end_crop message to soybean
 15 October 2015(Day of year=288), paddock.soybean: 
-     Crop ended. Yield (dw) =  3376.7  (kg/ha)
+     Crop ended. Yield (dw) =  3473.5  (kg/ha)
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
-                          DM (kg/ha) =                7674.3                  1148.0
-                          N  (kg/ha) =                 319.45                   24.16
+                          DM (kg/ha) =                7894.4                  1164.4
+                          N  (kg/ha) =                 327.65                   24.51
      
 15 October 2015(Day of year=288): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -7427,30 +7403,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 29 November 2015(Day of year=333): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -7465,30 +7423,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 1 December 2015(Day of year=335): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -7503,15 +7443,6 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 3 December 2015(Day of year=337): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
@@ -7522,30 +7453,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 4 December 2015(Day of year=338): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -9793,7 +9706,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327098      in layer  16
+      soil water of     0.327099      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -9812,7 +9725,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327100      in layer  16
+      soil water of     0.327102      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -9831,7 +9744,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327103      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -10256,7 +10169,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327105      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -10294,7 +10207,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327104      in layer  16
+      soil water of     0.327105      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -10351,7 +10264,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327104      in layer  16
+      soil water of     0.327105      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -10509,14 +10422,14 @@ Paddock:
               50.0     0.075          0.230       1.000
               50.0     0.073          0.230       1.000
               50.0     0.070          0.230       1.000
-              50.0     0.068          0.256       1.000
-             100.0     0.066          0.256       1.000
-             100.0     0.062          0.256       1.000
-             100.0     0.058          0.256       1.000
-             300.0     0.054          0.256       1.000
-             300.0     0.044          0.256       1.000
-             300.0     0.036          0.270       1.000
-             500.0     0.030          0.274       1.000
+              50.0     0.068          0.230       1.000
+             100.0     0.066          0.230       1.000
+             100.0     0.062          0.230       1.000
+             100.0     0.058          0.230       1.000
+             300.0     0.054          0.230       1.000
+             300.0     0.044          0.230       1.000
+             300.0     0.036          0.248       1.000
+             500.0     0.030          0.253       1.000
          ---------------------------------------------------
      
 6 May 2016(Day of year=127): 
@@ -10730,7 +10643,7 @@ Paddock:
 11 May 2016(Day of year=132), maize: 
      Stage 3 Emergence  DAS = 5
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =  22.07
+     		Stover N Conc =   0.00 		 Extractable SW =  22.17
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -11621,8 +11534,8 @@ Paddock:
      
 4 June 2016(Day of year=156), maize: 
      Stage 4 EndOfJuvenile  DAS = 29
-     		Biomass       =  30.69 		 LAI            =   0.24
-     		Stover N Conc =   0.66 		 Extractable SW =  83.96
+     		Biomass       =  30.67 		 LAI            =   0.24
+     		Stover N Conc =   0.65 		 Extractable SW = 103.07
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -11662,8 +11575,8 @@ Paddock:
      
 5 June 2016(Day of year=157), maize: 
      Stage 5 FloralInitiation  DAS = 30
-     		Biomass       =  35.32 		 LAI            =   0.27
-     		Stover N Conc =   0.76 		 Extractable SW =  84.48
+     		Biomass       =  35.29 		 LAI            =   0.27
+     		Stover N Conc =   0.75 		 Extractable SW = 104.46
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -12102,7 +12015,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327087      in layer  16
+      soil water of     0.327086      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12120,7 +12033,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327087      in layer  16
+      soil water of     0.327086      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12139,7 +12052,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327078      in layer  16
+      soil water of     0.327077      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12157,7 +12070,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327078      in layer  16
+      soil water of     0.327077      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12176,7 +12089,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327066      in layer  16
+      soil water of     0.327065      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12194,7 +12107,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327066      in layer  16
+      soil water of     0.327065      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12213,7 +12126,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327051      in layer  16
+      soil water of     0.327046      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12231,7 +12144,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327051      in layer  16
+      soil water of     0.327046      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12250,7 +12163,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327040      in layer  16
+      soil water of     0.327035      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12268,7 +12181,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327035      in layer  16
+      soil water of     0.327029      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12287,7 +12200,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327023      in layer  16
+      soil water of     0.327015      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12308,15 +12221,6 @@ Paddock:
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327009      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -12665,8 +12569,8 @@ Paddock:
      
 11 July 2016(Day of year=193), maize: 
      Stage 6 FlagLeaf  DAS = 66
-     		Biomass       = 656.37 		 LAI            =   2.46
-     		Stover N Conc =  12.79 		 Extractable SW =  71.94
+     		Biomass       = 768.82 		 LAI            =   3.10
+     		Stover N Conc =  12.93 		 Extractable SW =  98.68
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -12688,8 +12592,8 @@ Paddock:
      
 12 July 2016(Day of year=194), maize: 
      Stage 7 Flowering  DAS = 67
-     		Biomass       = 677.14 		 LAI            =   2.45
-     		Stover N Conc =  13.26 		 Extractable SW =  84.38
+     		Biomass       = 796.33 		 LAI            =   3.09
+     		Stover N Conc =  13.41 		 Extractable SW = 109.74
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -12863,8 +12767,8 @@ Paddock:
      
 21 July 2016(Day of year=203), maize: 
      Stage 8 StartGrainFill  DAS = 76
-     		Biomass       = 897.40 		 LAI            =   2.37
-     		Stover N Conc =  15.85 		 Extractable SW =  85.63
+     		Biomass       = 1050.26 		 LAI            =   3.01
+     		Stover N Conc =  15.71 		 Extractable SW = 106.21
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -13665,8 +13569,8 @@ Paddock:
      
 1 September 2016(Day of year=245), maize: 
      Stage 9 EndGrainFill  DAS = 118
-     		Biomass       = 1678.68 		 LAI            =   1.39
-     		Stover N Conc =   8.39 		 Extractable SW =  54.70
+     		Biomass       = 1964.83 		 LAI            =   1.95
+     		Stover N Conc =   7.17 		 Extractable SW =  60.91
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -13745,8 +13649,8 @@ Paddock:
      
 5 September 2016(Day of year=249), maize: 
      Stage 10 Maturity  DAS = 122
-     		Biomass       = 1746.50 		 LAI            =   1.28
-     		Stover N Conc =   7.47 		 Extractable SW =  40.34
+     		Biomass       = 2034.58 		 LAI            =   1.67
+     		Stover N Conc =   6.31 		 Extractable SW =  46.31
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -13768,8 +13672,8 @@ Paddock:
      
 6 September 2016(Day of year=250), maize: 
      Stage 11 HarvestRipe  DAS = 123
-     		Biomass       = 1746.50 		 LAI            =   1.28
-     		Stover N Conc =   7.47 		 Extractable SW =  37.38
+     		Biomass       = 2034.58 		 LAI            =   1.67
+     		Stover N Conc =   6.31 		 Extractable SW =  43.00
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -14924,8 +14828,8 @@ Paddock:
 6 November 2016(Day of year=311), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               8414.34		 8333.17
-                         N  (kg/ha) =                 74.72		   28.14
+                         DM (kg/ha) =              10352.94		 8246.34
+                         N  (kg/ha) =                 63.06		   32.65
                          P  (kg/ha) =                  0.00		    0.00
 6 November 2016(Day of year=311): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -16107,30 +16011,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 4 March 2017(Day of year=63): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -16145,30 +16031,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 6 March 2017(Day of year=65): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -16183,30 +16051,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 8 March 2017(Day of year=67): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -16221,30 +16071,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 10 March 2017(Day of year=69): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -16259,30 +16091,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 12 March 2017(Day of year=71): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -16297,30 +16111,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 14 March 2017(Day of year=73): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -16335,30 +16131,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 16 March 2017(Day of year=75): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -16373,30 +16151,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 18 March 2017(Day of year=77): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -16411,30 +16171,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 20 March 2017(Day of year=79): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -16449,30 +16191,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 22 March 2017(Day of year=81): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -16487,30 +16211,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 24 March 2017(Day of year=83): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -16525,15 +16231,6 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 26 March 2017(Day of year=85): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
@@ -16544,30 +16241,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 27 March 2017(Day of year=86): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -17369,16 +17048,16 @@ Paddock:
           50.0     0.075          0.230       1.000
           50.0     0.073          0.230       1.000
           50.0     0.070          0.230       1.000
-          50.0     0.068          0.256       1.000
-         100.0     0.066          0.256       1.000
-         100.0     0.062          0.256       1.000
-         100.0     0.058          0.256       1.000
-         300.0     0.054          0.256       1.000
-         300.0     0.044          0.256       1.000
-         300.0     0.036          0.270       1.000
-         500.0     0.030          0.274       1.000
+          50.0     0.068          0.230       1.000
+         100.0     0.066          0.230       1.000
+         100.0     0.062          0.230       1.000
+         100.0     0.058          0.230       1.000
+         300.0     0.054          0.230       1.000
+         300.0     0.044          0.230       1.000
+         300.0     0.036          0.248       1.000
+         500.0     0.030          0.253       1.000
          -----------------------------------------------
-         Extractable SW:   146mm in  2000mm total depth (  7%).
+         Extractable SW:   188mm in  2000mm total depth (  9%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -17710,7 +17389,7 @@ Paddock:
 14 May 2017(Day of year=134), paddock.soybean: 
       stage 3.0 emergence
                      biomass =           1.23 (g/m^2)   lai          =   0.012 (m^2/m^2)
-                     stover N conc =     6.00 (%)    extractable sw =   18.61 (mm)
+                     stover N conc =     6.00 (%)    extractable sw =   19.41 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -18306,7 +17985,7 @@ Paddock:
 30 May 2017(Day of year=150), paddock.soybean: 
       stage 4.0 end_of_juvenile
                      biomass =           4.91 (g/m^2)   lai          =   0.092 (m^2/m^2)
-                     stover N conc =     4.50 (%)    extractable sw =   90.39 (mm)
+                     stover N conc =     4.50 (%)    extractable sw =  107.95 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -18790,8 +18469,8 @@ Paddock:
      
 12 June 2017(Day of year=163), paddock.soybean: 
       stage 5.0 floral_initiation
-                     biomass =          75.26 (g/m^2)   lai          =   1.194 (m^2/m^2)
-                     stover N conc =     3.82 (%)    extractable sw =   79.82 (mm)
+                     biomass =          75.32 (g/m^2)   lai          =   1.207 (m^2/m^2)
+                     stover N conc =     3.82 (%)    extractable sw =  107.69 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -18971,7 +18650,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327097      in layer  16
+      soil water of     0.327096      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -18989,7 +18668,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327097      in layer  16
+      soil water of     0.327096      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19008,7 +18687,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327094      in layer  16
+      soil water of     0.327093      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19026,7 +18705,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327094      in layer  16
+      soil water of     0.327093      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19045,7 +18724,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327091      in layer  16
+      soil water of     0.327090      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19063,7 +18742,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327091      in layer  16
+      soil water of     0.327090      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19082,7 +18761,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327088      in layer  16
+      soil water of     0.327086      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19100,7 +18779,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327088      in layer  16
+      soil water of     0.327086      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19119,7 +18798,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327083      in layer  16
+      soil water of     0.327080      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19137,7 +18816,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327083      in layer  16
+      soil water of     0.327080      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19156,7 +18835,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327076      in layer  16
+      soil water of     0.327071      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19174,7 +18853,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327076      in layer  16
+      soil water of     0.327071      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19193,7 +18872,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327068      in layer  16
+      soil water of     0.327063      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19211,7 +18890,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327068      in layer  16
+      soil water of     0.327063      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19230,7 +18909,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327060      in layer  16
+      soil water of     0.327054      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19248,7 +18927,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327060      in layer  16
+      soil water of     0.327054      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19267,7 +18946,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327049      in layer  16
+      soil water of     0.327043      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19285,7 +18964,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327049      in layer  16
+      soil water of     0.327043      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19304,7 +18983,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327040      in layer  16
+      soil water of     0.327033      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19322,7 +19001,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327040      in layer  16
+      soil water of     0.327033      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19341,7 +19020,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327033      in layer  16
+      soil water of     0.327025      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19359,7 +19038,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327033      in layer  16
+      soil water of     0.327025      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19378,7 +19057,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327019      in layer  16
+      soil water of     0.327008      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19396,7 +19075,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327019      in layer  16
+      soil water of     0.327008      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -19414,8 +19093,8 @@ Paddock:
      
 29 June 2017(Day of year=180), paddock.soybean: 
       stage 6.0 flowering
-                     biomass =         310.17 (g/m^2)   lai          =   4.296 (m^2/m^2)
-                     stover N conc =     3.33 (%)    extractable sw =  114.06 (mm)
+                     biomass =         335.93 (g/m^2)   lai          =   4.925 (m^2/m^2)
+                     stover N conc =     3.38 (%)    extractable sw =  151.38 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -19855,8 +19534,8 @@ Paddock:
      
 22 July 2017(Day of year=203), paddock.soybean: 
       stage 7.0 start_grain_fill
-                     biomass =         542.32 (g/m^2)   lai          =   2.711 (m^2/m^2)
-                     stover N conc =     3.42 (%)    extractable sw =   63.16 (mm)
+                     biomass =         627.09 (g/m^2)   lai          =   3.774 (m^2/m^2)
+                     stover N conc =     3.39 (%)    extractable sw =   81.10 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -20600,8 +20279,8 @@ Paddock:
      
 30 August 2017(Day of year=242), paddock.soybean: 
       stage 8.0 end_grain_fill
-                     biomass =         672.03 (g/m^2)   lai          =   0.876 (m^2/m^2)
-                     stover N conc =     1.89 (%)    extractable sw =   53.32 (mm)
+                     biomass =         793.17 (g/m^2)   lai          =   1.251 (m^2/m^2)
+                     stover N conc =     1.91 (%)    extractable sw =   58.60 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -20642,8 +20321,8 @@ Paddock:
      
 1 September 2017(Day of year=244), paddock.soybean: 
       stage 9.0 maturity
-                     biomass =         674.72 (g/m^2)   lai          =   0.876 (m^2/m^2)
-                     stover N conc =     1.85 (%)    extractable sw =   48.61 (mm)
+                     biomass =         796.65 (g/m^2)   lai          =   1.251 (m^2/m^2)
+                     stover N conc =     1.86 (%)    extractable sw =   53.41 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -20684,8 +20363,8 @@ Paddock:
      
 3 September 2017(Day of year=246), paddock.soybean: 
       stage 10.0 harvest_ripe
-                     biomass =         674.72 (g/m^2)   lai          =   0.000 (m^2/m^2)
-                     stover N conc =     1.83 (%)    extractable sw =   46.48 (mm)
+                     biomass =         796.65 (g/m^2)   lai          =   0.000 (m^2/m^2)
+                     stover N conc =     1.85 (%)    extractable sw =   51.63 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -21479,10 +21158,10 @@ Paddock:
 15 October 2017(Day of year=288), paddock.Operations Schedule: 
       Sending end_crop message to soybean
 15 October 2017(Day of year=288), paddock.soybean: 
-     Crop ended. Yield (dw) =  1967.6  (kg/ha)
+     Crop ended. Yield (dw) =  2439.3  (kg/ha)
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
-                          DM (kg/ha) =                6747.2                  1426.8
-                          N  (kg/ha) =                 219.09                   30.39
+                          DM (kg/ha) =                7966.5                  1627.7
+                          N  (kg/ha) =                 264.38                   34.64
      
 15 October 2017(Day of year=288): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -22754,30 +22433,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327090      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 19 February 2018(Day of year=50): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -22792,30 +22453,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 21 February 2018(Day of year=52): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -22830,30 +22473,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 23 February 2018(Day of year=54): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -22868,30 +22493,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 25 February 2018(Day of year=56): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -24259,14 +23866,14 @@ Paddock:
               50.0     0.075          0.230       1.000
               50.0     0.073          0.230       1.000
               50.0     0.070          0.230       1.000
-              50.0     0.068          0.256       1.000
-             100.0     0.066          0.256       1.000
-             100.0     0.062          0.256       1.000
-             100.0     0.058          0.256       1.000
-             300.0     0.054          0.256       1.000
-             300.0     0.044          0.256       1.000
-             300.0     0.036          0.270       1.000
-             500.0     0.030          0.274       1.000
+              50.0     0.068          0.230       1.000
+             100.0     0.066          0.230       1.000
+             100.0     0.062          0.230       1.000
+             100.0     0.058          0.230       1.000
+             300.0     0.054          0.230       1.000
+             300.0     0.044          0.230       1.000
+             300.0     0.036          0.248       1.000
+             500.0     0.030          0.253       1.000
          ---------------------------------------------------
      
 6 May 2018(Day of year=126): 
@@ -24328,7 +23935,7 @@ Paddock:
 7 May 2018(Day of year=127), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =  45.47
+     		Stover N Conc =   0.00 		 Extractable SW =  62.10
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -24480,7 +24087,7 @@ Paddock:
 11 May 2018(Day of year=131), maize: 
      Stage 3 Emergence  DAS = 5
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =  53.22
+     		Stover N Conc =   0.00 		 Extractable SW =  70.70
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -25112,8 +24719,8 @@ Paddock:
      
 28 May 2018(Day of year=148), maize: 
      Stage 4 EndOfJuvenile  DAS = 22
-     		Biomass       =  16.71 		 LAI            =   0.18
-     		Stover N Conc =   0.36 		 Extractable SW =  62.39
+     		Biomass       =  16.66 		 LAI            =   0.18
+     		Stover N Conc =   0.35 		 Extractable SW =  85.86
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -25153,8 +24760,8 @@ Paddock:
      
 29 May 2018(Day of year=149), maize: 
      Stage 5 FloralInitiation  DAS = 23
-     		Biomass       =  20.71 		 LAI            =   0.22
-     		Stover N Conc =   0.45 		 Extractable SW =  63.38
+     		Biomass       =  20.65 		 LAI            =   0.22
+     		Stover N Conc =   0.44 		 Extractable SW =  90.60
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -25297,7 +24904,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327105      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25315,7 +24922,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327105      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25334,7 +24941,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327105      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25352,7 +24959,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327105      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25371,7 +24978,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327104      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25389,7 +24996,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327104      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25408,7 +25015,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327104      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25426,7 +25033,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327104      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25445,7 +25052,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327103      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25463,7 +25070,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327103      in layer  16
+      soil water of     0.327106      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25482,7 +25089,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327102      in layer  16
+      soil water of     0.327105      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25500,7 +25107,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327102      in layer  16
+      soil water of     0.327105      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25519,7 +25126,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327101      in layer  16
+      soil water of     0.327104      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25537,7 +25144,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327101      in layer  16
+      soil water of     0.327104      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25556,7 +25163,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327100      in layer  16
+      soil water of     0.327103      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25574,7 +25181,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327100      in layer  16
+      soil water of     0.327103      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25593,7 +25200,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327098      in layer  16
+      soil water of     0.327102      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25611,7 +25218,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327098      in layer  16
+      soil water of     0.327102      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25630,7 +25237,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327097      in layer  16
+      soil water of     0.327101      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25648,7 +25255,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327097      in layer  16
+      soil water of     0.327101      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25667,7 +25274,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327095      in layer  16
+      soil water of     0.327099      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25685,7 +25292,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327095      in layer  16
+      soil water of     0.327099      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25704,7 +25311,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327093      in layer  16
+      soil water of     0.327098      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25722,7 +25329,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327093      in layer  16
+      soil water of     0.327098      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25741,7 +25348,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327090      in layer  16
+      soil water of     0.327096      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25759,7 +25366,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327090      in layer  16
+      soil water of     0.327096      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25778,7 +25385,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327087      in layer  16
+      soil water of     0.327094      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25796,7 +25403,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327087      in layer  16
+      soil water of     0.327094      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25815,7 +25422,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327081      in layer  16
+      soil water of     0.327088      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25833,7 +25440,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327081      in layer  16
+      soil water of     0.327088      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25852,7 +25459,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327073      in layer  16
+      soil water of     0.327081      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25870,7 +25477,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327073      in layer  16
+      soil water of     0.327081      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25889,7 +25496,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327063      in layer  16
+      soil water of     0.327072      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25907,7 +25514,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327063      in layer  16
+      soil water of     0.327072      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25926,7 +25533,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327051      in layer  16
+      soil water of     0.327061      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25944,7 +25551,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327051      in layer  16
+      soil water of     0.327061      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25963,7 +25570,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327048      in layer  16
+      soil water of     0.327058      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25981,13 +25588,87 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327048      in layer  16
+      soil water of     0.327058      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
 21 June 2018(Day of year=172): 
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+      saturation of     0.327000      in layer  16
+              is at or below drained upper limit of     0.332000
+     Component name: paddock.Soil Water
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+      soil water of     0.327052      in layer  16
+              is above saturation of     0.327000
+     Component name: paddock.Soil Water
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+      saturation of     0.327000      in layer  16
+              is at or below drained upper limit of     0.332000
+     Component name: paddock.Soil Water
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+      soil water of     0.327050      in layer  16
+              is above saturation of     0.327000
+     Component name: paddock.Soil Water
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+22 June 2018(Day of year=173): 
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+      saturation of     0.327000      in layer  16
+              is at or below drained upper limit of     0.332000
+     Component name: paddock.Soil Water
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+      soil water of     0.327046      in layer  16
+              is above saturation of     0.327000
+     Component name: paddock.Soil Water
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+      saturation of     0.327000      in layer  16
+              is at or below drained upper limit of     0.332000
+     Component name: paddock.Soil Water
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+      soil water of     0.327039      in layer  16
+              is above saturation of     0.327000
+     Component name: paddock.Soil Water
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+23 June 2018(Day of year=174): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -26018,73 +25699,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327039      in layer  16
+      soil water of     0.327015      in layer  16
               is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-22 June 2018(Day of year=173): 
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      saturation of     0.327000      in layer  16
-              is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327034      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      saturation of     0.327000      in layer  16
-              is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327028      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-23 June 2018(Day of year=174): 
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      saturation of     0.327000      in layer  16
-              is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327029      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      saturation of     0.327000      in layer  16
-              is at or below drained upper limit of     0.332000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -26102,7 +25718,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327021      in layer  16
+      soil water of     0.327035      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -26130,6 +25746,15 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
+      soil water of     0.327014      in layer  16
+              is above saturation of     0.327000
+     Component name: paddock.Soil Water
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
      Component name: paddock.Soil Water
@@ -26142,6 +25767,15 @@ Paddock:
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
+     Component name: paddock.Soil Water
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
+     
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+      soil water of     0.327040      in layer  16
+              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -26281,8 +25915,8 @@ Paddock:
      
 3 July 2018(Day of year=184), maize: 
      Stage 6 FlagLeaf  DAS = 58
-     		Biomass       = 670.89 		 LAI            =   3.39
-     		Stover N Conc =  12.01 		 Extractable SW = 126.39
+     		Biomass       = 680.11 		 LAI            =   3.47
+     		Stover N Conc =  11.92 		 Extractable SW = 178.62
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -26304,8 +25938,8 @@ Paddock:
      
 4 July 2018(Day of year=185), maize: 
      Stage 7 Flowering  DAS = 59
-     		Biomass       = 701.87 		 LAI            =   3.38
-     		Stover N Conc =  12.41 		 Extractable SW = 128.10
+     		Biomass       = 720.73 		 LAI            =   3.46
+     		Stover N Conc =  12.32 		 Extractable SW = 179.52
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -26479,8 +26113,8 @@ Paddock:
      
 13 July 2018(Day of year=194), maize: 
      Stage 8 StartGrainFill  DAS = 68
-     		Biomass       = 967.57 		 LAI            =   3.30
-     		Stover N Conc =  13.81 		 Extractable SW =  80.39
+     		Biomass       = 1044.48 		 LAI            =   3.37
+     		Stover N Conc =  13.11 		 Extractable SW = 121.58
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -27243,8 +26877,8 @@ Paddock:
      
 22 August 2018(Day of year=234), maize: 
      Stage 9 EndGrainFill  DAS = 108
-     		Biomass       = 1436.71 		 LAI            =   1.16
-     		Stover N Conc =   4.99 		 Extractable SW =  58.94
+     		Biomass       = 1703.00 		 LAI            =   1.53
+     		Stover N Conc =   4.69 		 Extractable SW =  69.13
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -27304,8 +26938,8 @@ Paddock:
      
 25 August 2018(Day of year=237), maize: 
      Stage 10 Maturity  DAS = 111
-     		Biomass       = 1444.07 		 LAI            =   1.15
-     		Stover N Conc =   4.88 		 Extractable SW =  60.36
+     		Biomass       = 1712.24 		 LAI            =   1.51
+     		Stover N Conc =   4.56 		 Extractable SW =  70.33
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -27327,8 +26961,8 @@ Paddock:
      
 26 August 2018(Day of year=238), maize: 
      Stage 11 HarvestRipe  DAS = 112
-     		Biomass       = 1444.07 		 LAI            =   1.15
-     		Stover N Conc =   4.88 		 Extractable SW =  66.07
+     		Biomass       = 1712.24 		 LAI            =   1.51
+     		Stover N Conc =   4.56 		 Extractable SW =  75.88
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -28281,7 +27915,7 @@ Paddock:
      
 15 October 2018(Day of year=288), maize: 
      Frost Event: (Fatal) 
-     		Min Temp      = -3.58 		 Senesced LAI    = 1.14
+     		Min Temp      = -3.58 		 Senesced LAI    = 1.50
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -28380,26 +28014,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28417,26 +28033,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28454,26 +28052,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28491,26 +28071,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28528,26 +28090,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28565,26 +28109,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28602,26 +28128,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28639,26 +28147,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28676,26 +28166,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28713,26 +28185,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28750,26 +28204,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28787,26 +28223,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28824,26 +28242,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28861,26 +28261,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28898,26 +28280,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28935,26 +28299,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -28972,26 +28318,8 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29001,8 +28329,8 @@ Paddock:
 6 November 2018(Day of year=310), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               6422.54		 3400.99
-                         N  (kg/ha) =                 48.83		   28.34
+                         DM (kg/ha) =               7168.28		 3718.15
+                         N  (kg/ha) =                 45.64		   29.74
                          P  (kg/ha) =                  0.00		    0.00
 6 November 2018(Day of year=310): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -29010,15 +28338,6 @@ Paddock:
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29033,30 +28352,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 8 November 2018(Day of year=312): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29071,30 +28372,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 10 November 2018(Day of year=314): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29109,30 +28392,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 12 November 2018(Day of year=316): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29147,30 +28412,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 14 November 2018(Day of year=318): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29185,30 +28432,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 16 November 2018(Day of year=320): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29223,30 +28452,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 18 November 2018(Day of year=322): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29261,30 +28472,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 20 November 2018(Day of year=324): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29299,30 +28492,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 22 November 2018(Day of year=326): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29337,30 +28512,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 24 November 2018(Day of year=328): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29375,30 +28532,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 26 November 2018(Day of year=330): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29413,30 +28552,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 28 November 2018(Day of year=332): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -29451,15 +28572,6 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 30 November 2018(Day of year=334): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
@@ -29470,30 +28582,12 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
      
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 1 December 2018(Day of year=335): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
       saturation of     0.327000      in layer  16
               is at or below drained upper limit of     0.332000
-     Component name: paddock.Soil Water
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-      soil water of     0.327106      in layer  16
-              is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      

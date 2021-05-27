@@ -63,6 +63,7 @@ Paddock:
         fertiliser
         surfaceom_c
         leach_no3
+        lch_no3n
 
      Output file = name_InterimNoPlant_mukey_407636_rot_sfc_sim.out
      Format = normal
@@ -86,6 +87,7 @@ Paddock:
      SECTION:- start_of_day
              corn_buac   = maize.yield * 0.0159/0.85
              soy_buac   = soybean.yield * 0.0149/0.87
+             lch_no3n   = leach_no3 * 0.2259
      
      SECTION:- end_of_day
      END of rules
@@ -270,6 +272,7 @@ Paddock:
 1 January 2016(Day of year=1), paddock.Empty manager: 
      Manager creating a new local real variable : corn_buac = 0.00000
      Manager creating a new local real variable : soy_buac = 0.00000
+     Manager creating a new local real variable : lch_no3n = 0.00000
 22 March 2016(Day of year=82), paddock.Operations Schedule: 
       Sending apply message to fertiliser
 22 March 2016(Day of year=82), fertiliser: 

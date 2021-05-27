@@ -36,6 +36,7 @@
         <variable>fertiliser</variable>
         <variable>surfaceom_c</variable>
         <variable>leach_no3</variable>
+        <variable>lch_no3n</variable>
         <constant name="precision">5</constant>
         <outputfrequency>post</outputfrequency>
       </initdata>
@@ -54,12 +55,14 @@
                      16/4/2015 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 57 (mm)
                      23/4/2015 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.2 (0-1), tillage_depth = 76 (mm)
                      18/5/2015 maize sow plants = 8 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant
-                     21/4/2015 Fertiliser apply amount = 168 (kg/ha), depth = 50.0 (mm), type = uan_n ()
+                     21/4/2015 Fertiliser apply amount = 112.09 (kg/ha), depth = 50.0 (mm), type = uan_n ()
+                     28/6/2015 Fertiliser apply amount = 56.04 (kg/ha), depth = 50.0 (mm), type = uan_n ()
                      15/10/2015 maize end_crop
                      16/4/2017 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 57 (mm)
                      23/4/2017 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.2 (0-1), tillage_depth = 76 (mm)
                      18/5/2017 maize sow plants = 8 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant
-                     21/4/2017 Fertiliser apply amount = 168 (kg/ha), depth = 50.0 (mm), type = uan_n ()
+                     21/4/2017 Fertiliser apply amount = 112.09 (kg/ha), depth = 50.0 (mm), type = uan_n ()
+                     28/6/2017 Fertiliser apply amount = 56.04 (kg/ha), depth = 50.0 (mm), type = uan_n ()
                      15/10/2017 maize end_crop
                      28/4/2016 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 88.0 (mm)
                      16/5/2016 SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.33 (0-1), tillage_depth = 75.8 (mm)
@@ -187,7 +190,7 @@
           <text>
         corn_buac   = maize.yield * 0.0159/0.85  ! corn yield in bushels/acre@15% moisture
         soy_buac   = soybean.yield * 0.0149/0.87  !  soybean yield in bushels/acre
-
+        lch_no3n   = leach_no3 * 0.2259  !  leach_no3 as NO3-N
         !bbc_gradient = -1
         !bbc_potential = 200 - 100
         </text>
@@ -3701,7 +3704,7 @@
           <node_sen_rate units="oCd/node" description="rate of node senescence on main stem">120.0</node_sen_rate>
           <twilight units="o" description="Twilight is defined as the interval between sunrise or sunset and the time when the true">-0</twilight>
         </MG_10>
-        <ll>0.210 0.210 0.210 0.210 0.210 0.210 0.210 0.254 0.254 0.254 0.254 0.254 0.250 0.230 0.230 0.230 </ll>
+        <ll>0.210 0.210 0.210 0.210 0.210 0.210 0.210 0.254 0.254 0.254 0.254 0.254 0.247 0.204 0.199 0.199 </ll>
         <kl>0.080 0.079 0.078 0.077 0.076 0.075 0.073 0.070 0.068 0.066 0.062 0.058 0.054 0.044 0.036 0.030 </kl>
         <xf>1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 </xf>
       </initdata>
@@ -5408,7 +5411,7 @@
           <tt_maturity_to_ripe units="oC">1</tt_maturity_to_ripe>
           <potKernelWt>300</potKernelWt>
         </B_130>
-        <ll>0.210 0.210 0.210 0.210 0.210 0.210 0.210 0.254 0.254 0.254 0.254 0.254 0.250 0.230 0.230 0.230 </ll>
+        <ll>0.210 0.210 0.210 0.210 0.210 0.210 0.210 0.254 0.254 0.254 0.254 0.254 0.247 0.204 0.199 0.199 </ll>
         <kl>0.080 0.079 0.078 0.077 0.076 0.075 0.073 0.070 0.068 0.066 0.062 0.058 0.054 0.044 0.036 0.030 </kl>
         <xf>1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 </xf>
       </initdata>

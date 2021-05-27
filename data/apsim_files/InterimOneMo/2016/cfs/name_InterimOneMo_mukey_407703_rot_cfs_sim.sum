@@ -63,6 +63,7 @@ Paddock:
         fertiliser
         surfaceom_c
         leach_no3
+        lch_no3n
 
      Output file = name_InterimOneMo_mukey_407703_rot_cfs_sim.out
      Format = normal
@@ -94,6 +95,7 @@ Paddock:
      SECTION:- start_of_day
              corn_buac   = maize.yield * 0.0159/0.85
              soy_buac   = soybean.yield * 0.0149/0.87
+             lch_no3n   = leach_no3 * 0.2259
      
      SECTION:- end_of_day
      END of rules
@@ -278,6 +280,7 @@ Paddock:
 1 January 2013(Day of year=1), paddock.Empty manager: 
      Manager creating a new local real variable : corn_buac = 0.00000
      Manager creating a new local real variable : soy_buac = 0.00000
+     Manager creating a new local real variable : lch_no3n = 0.00000
 6 May 2013(Day of year=126), paddock.Operations Schedule: 
       Sending sow message to soybean
 6 May 2013(Day of year=126), paddock.soybean: 
@@ -339,11 +342,11 @@ Paddock:
          100.0     0.062          0.207       1.000
          100.0     0.058          0.207       1.000
          300.0     0.054          0.207       1.000
-         300.0     0.044          0.220       1.000
-         300.0     0.036          0.237       1.000
-         500.0     0.030          0.237       1.000
+         300.0     0.044          0.208       1.000
+         300.0     0.036          0.210       1.000
+         500.0     0.030          0.210       1.000
          -----------------------------------------------
-         Extractable SW:   192mm in  2000mm total depth ( 10%).
+         Extractable SW:   218mm in  2000mm total depth ( 11%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -430,9 +433,9 @@ Paddock:
              100.0     0.062          0.207       1.000
              100.0     0.058          0.207       1.000
              300.0     0.054          0.207       1.000
-             300.0     0.044          0.220       1.000
-             300.0     0.036          0.237       1.000
-             500.0     0.030          0.237       1.000
+             300.0     0.044          0.208       1.000
+             300.0     0.036          0.210       1.000
+             500.0     0.030          0.210       1.000
          ---------------------------------------------------
      
 7 May 2014(Day of year=127), maize: 
@@ -446,11 +449,11 @@ Paddock:
 2 June 2014(Day of year=153), maize: 
      Stage 4 EndOfJuvenile  DAS = 27
      		Biomass       =  21.66 		 LAI            =   0.21
-     		Stover N Conc =   0.43 		 Extractable SW =  88.49
+     		Stover N Conc =   0.43 		 Extractable SW =  88.59
 3 June 2014(Day of year=154), maize: 
      Stage 5 FloralInitiation  DAS = 28
      		Biomass       =  26.44 		 LAI            =   0.24
-     		Stover N Conc =   0.52 		 Extractable SW =  90.47
+     		Stover N Conc =   0.52 		 Extractable SW =  90.97
 6 June 2014(Day of year=157), paddock.Operations Schedule: 
       Sending end_crop message to maize
 6 June 2014(Day of year=157), maize: 
@@ -520,11 +523,11 @@ Paddock:
          100.0     0.062          0.207       1.000
          100.0     0.058          0.207       1.000
          300.0     0.054          0.207       1.000
-         300.0     0.044          0.220       1.000
-         300.0     0.036          0.237       1.000
-         500.0     0.030          0.237       1.000
+         300.0     0.044          0.208       1.000
+         300.0     0.036          0.210       1.000
+         500.0     0.030          0.210       1.000
          -----------------------------------------------
-         Extractable SW:   192mm in  2000mm total depth ( 10%).
+         Extractable SW:   218mm in  2000mm total depth ( 11%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -553,6 +556,16 @@ Paddock:
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
                           DM (kg/ha) =                  19.2                    80.8
                           N  (kg/ha) =                   0.93                    1.62
+     
+27 June 2015(Day of year=178): 
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+     Lower bound (    0.000000    ) exceeds upper bound (  -0.1455192E-10)
+             Variable is not checked
+     Component name: paddock.SurfaceOrganicMatter
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
      
 22 March 2016(Day of year=82), paddock.Operations Schedule: 
       Sending apply message to fertiliser
@@ -611,27 +624,27 @@ Paddock:
              100.0     0.062          0.207       1.000
              100.0     0.058          0.207       1.000
              300.0     0.054          0.207       1.000
-             300.0     0.044          0.220       1.000
-             300.0     0.036          0.237       1.000
-             500.0     0.030          0.237       1.000
+             300.0     0.044          0.208       1.000
+             300.0     0.036          0.210       1.000
+             500.0     0.030          0.210       1.000
          ---------------------------------------------------
      
 7 May 2016(Day of year=128), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 106.16
+     		Stover N Conc =   0.00 		 Extractable SW = 107.45
 11 May 2016(Day of year=132), maize: 
      Stage 3 Emergence  DAS = 5
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 102.69
+     		Stover N Conc =   0.00 		 Extractable SW = 103.99
 3 June 2016(Day of year=155), maize: 
      Stage 4 EndOfJuvenile  DAS = 28
      		Biomass       =  25.30 		 LAI            =   0.21
-     		Stover N Conc =   0.52 		 Extractable SW = 101.47
+     		Stover N Conc =   0.52 		 Extractable SW = 101.98
 4 June 2016(Day of year=156), maize: 
      Stage 5 FloralInitiation  DAS = 29
      		Biomass       =  30.62 		 LAI            =   0.24
-     		Stover N Conc =   0.64 		 Extractable SW = 102.01
+     		Stover N Conc =   0.64 		 Extractable SW = 102.92
 6 June 2016(Day of year=158), paddock.Operations Schedule: 
       Sending end_crop message to maize
 6 June 2016(Day of year=158), maize: 

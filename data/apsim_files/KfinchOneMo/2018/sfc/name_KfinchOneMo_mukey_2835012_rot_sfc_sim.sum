@@ -63,6 +63,7 @@ Paddock:
         fertiliser
         surfaceom_c
         leach_no3
+        lch_no3n
 
      Output file = name_KfinchOneMo_mukey_2835012_rot_sfc_sim.out
      Format = normal
@@ -96,6 +97,7 @@ Paddock:
      SECTION:- start_of_day
              corn_buac   = maize.yield * 0.0159/0.85
              soy_buac   = soybean.yield * 0.0149/0.87
+             lch_no3n   = leach_no3 * 0.2259
      
      SECTION:- end_of_day
      END of rules
@@ -280,6 +282,7 @@ Paddock:
 1 January 2015(Day of year=1), paddock.Empty manager: 
      Manager creating a new local real variable : corn_buac = 0.00000
      Manager creating a new local real variable : soy_buac = 0.00000
+     Manager creating a new local real variable : lch_no3n = 0.00000
 26 April 2015(Day of year=116), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
 26 April 2015(Day of year=116), paddock.SurfaceOrganicMatter: 
@@ -328,9 +331,9 @@ Paddock:
              100.0     0.062          0.216       1.000
              100.0     0.058          0.203       1.000
              300.0     0.054          0.152       1.000
-             300.0     0.044          0.143       1.000
-             300.0     0.036          0.140       1.000
-             500.0     0.030          0.140       1.000
+             300.0     0.044          0.114       1.000
+             300.0     0.036          0.103       1.000
+             500.0     0.030          0.103       1.000
          ---------------------------------------------------
      
       Sending apply message to fertiliser
@@ -421,11 +424,11 @@ Paddock:
          100.0     0.062          0.216       1.000
          100.0     0.058          0.203       1.000
          300.0     0.054          0.152       1.000
-         300.0     0.044          0.143       1.000
-         300.0     0.036          0.140       1.000
-         500.0     0.030          0.140       1.000
+         300.0     0.044          0.114       1.000
+         300.0     0.036          0.103       1.000
+         500.0     0.030          0.103       1.000
          -----------------------------------------------
-         Extractable SW:   230mm in  2000mm total depth ( 11%).
+         Extractable SW:   268mm in  2000mm total depth ( 13%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -507,9 +510,9 @@ Paddock:
              100.0     0.062          0.216       1.000
              100.0     0.058          0.203       1.000
              300.0     0.054          0.152       1.000
-             300.0     0.044          0.143       1.000
-             300.0     0.036          0.140       1.000
-             500.0     0.030          0.140       1.000
+             300.0     0.044          0.114       1.000
+             300.0     0.036          0.103       1.000
+             500.0     0.030          0.103       1.000
          ---------------------------------------------------
      
       Sending apply message to fertiliser
@@ -521,17 +524,17 @@ Paddock:
 27 April 2017(Day of year=117), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 122.76
+     		Stover N Conc =   0.00 		 Extractable SW = 124.93
 6 May 2017(Day of year=126), maize: 
      Stage 3 Emergence  DAS = 10
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 121.80
+     		Stover N Conc =   0.00 		 Extractable SW = 123.97
 26 May 2017(Day of year=146), paddock.Operations Schedule: 
       Sending end_crop message to maize
 26 May 2017(Day of year=146), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =                172.97		  172.17
+                         DM (kg/ha) =                172.96		  172.16
                          N  (kg/ha) =                  4.05		    1.65
                          P  (kg/ha) =                  0.00		    0.00
 18 May 2018(Day of year=138), paddock.Operations Schedule: 
@@ -600,11 +603,11 @@ Paddock:
          100.0     0.062          0.216       1.000
          100.0     0.058          0.203       1.000
          300.0     0.054          0.152       1.000
-         300.0     0.044          0.143       1.000
-         300.0     0.036          0.140       1.000
-         500.0     0.030          0.140       1.000
+         300.0     0.044          0.114       1.000
+         300.0     0.036          0.103       1.000
+         500.0     0.030          0.103       1.000
          -----------------------------------------------
-         Extractable SW:   230mm in  2000mm total depth ( 11%).
+         Extractable SW:   268mm in  2000mm total depth ( 13%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      

@@ -63,6 +63,7 @@ Paddock:
         fertiliser
         surfaceom_c
         leach_no3
+        lch_no3n
 
      Output file = name_KfinchOneMo_mukey_2834849_rot_sfc_sim.out
      Format = normal
@@ -96,6 +97,7 @@ Paddock:
      SECTION:- start_of_day
              corn_buac   = maize.yield * 0.0159/0.85
              soy_buac   = soybean.yield * 0.0149/0.87
+             lch_no3n   = leach_no3 * 0.2259
      
      SECTION:- end_of_day
      END of rules
@@ -280,6 +282,7 @@ Paddock:
 1 January 2015(Day of year=1), paddock.Empty manager: 
      Manager creating a new local real variable : corn_buac = 0.00000
      Manager creating a new local real variable : soy_buac = 0.00000
+     Manager creating a new local real variable : lch_no3n = 0.00000
 26 April 2015(Day of year=116), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
 26 April 2015(Day of year=116), paddock.SurfaceOrganicMatter: 
@@ -327,10 +330,10 @@ Paddock:
              100.0     0.066          0.163       1.000
              100.0     0.062          0.149       1.000
              100.0     0.058          0.149       1.000
-             300.0     0.054          0.144       1.000
-             300.0     0.044          0.140       1.000
-             300.0     0.036          0.140       1.000
-             500.0     0.030          0.140       1.000
+             300.0     0.054          0.124       1.000
+             300.0     0.044          0.103       1.000
+             300.0     0.036          0.103       1.000
+             500.0     0.030          0.103       1.000
          ---------------------------------------------------
      
       Sending apply message to fertiliser
@@ -353,7 +356,7 @@ Paddock:
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
                          DM (kg/ha) =                224.49		  223.69
-                         N  (kg/ha) =                  5.68		    2.13
+                         N  (kg/ha) =                  5.67		    2.12
                          P  (kg/ha) =                  0.00		    0.00
 18 May 2016(Day of year=139), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -420,12 +423,12 @@ Paddock:
          100.0     0.066          0.163       1.000
          100.0     0.062          0.149       1.000
          100.0     0.058          0.149       1.000
-         300.0     0.054          0.144       1.000
-         300.0     0.044          0.140       1.000
-         300.0     0.036          0.140       1.000
-         500.0     0.030          0.140       1.000
+         300.0     0.054          0.124       1.000
+         300.0     0.044          0.103       1.000
+         300.0     0.036          0.103       1.000
+         500.0     0.030          0.103       1.000
          -----------------------------------------------
-         Extractable SW:   235mm in  2000mm total depth ( 12%).
+         Extractable SW:   281mm in  2000mm total depth ( 14%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -450,7 +453,7 @@ Paddock:
 17 June 2016(Day of year=169), paddock.soybean: 
       stage 5.0 floral_initiation
                      biomass =          30.81 (g/m^2)   lai          =   0.629 (m^2/m^2)
-                     stover N conc =     3.85 (%)    extractable sw =  100.17 (mm)
+                     stover N conc =     3.85 (%)    extractable sw =  106.18 (mm)
 18 June 2016(Day of year=170), paddock.Operations Schedule: 
       Sending end_crop message to soybean
 18 June 2016(Day of year=170), paddock.soybean: 
@@ -458,16 +461,6 @@ Paddock:
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
                           DM (kg/ha) =                 308.1                   313.9
                           N  (kg/ha) =                  11.85                    6.28
-     
-17 July 2016(Day of year=199): 
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-     Lower bound (    0.000000    ) exceeds upper bound (  -0.7275958E-11)
-             Variable is not checked
-     Component name: paddock.SurfaceOrganicMatter
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
      
 26 April 2017(Day of year=116), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -516,10 +509,10 @@ Paddock:
              100.0     0.066          0.163       1.000
              100.0     0.062          0.149       1.000
              100.0     0.058          0.149       1.000
-             300.0     0.054          0.144       1.000
-             300.0     0.044          0.140       1.000
-             300.0     0.036          0.140       1.000
-             500.0     0.030          0.140       1.000
+             300.0     0.054          0.124       1.000
+             300.0     0.044          0.103       1.000
+             300.0     0.036          0.103       1.000
+             500.0     0.030          0.103       1.000
          ---------------------------------------------------
      
       Sending apply message to fertiliser
@@ -531,17 +524,17 @@ Paddock:
 27 April 2017(Day of year=117), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 129.74
+     		Stover N Conc =   0.00 		 Extractable SW = 138.54
 6 May 2017(Day of year=126), maize: 
      Stage 3 Emergence  DAS = 10
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 126.45
+     		Stover N Conc =   0.00 		 Extractable SW = 135.23
 26 May 2017(Day of year=146), paddock.Operations Schedule: 
       Sending end_crop message to maize
 26 May 2017(Day of year=146), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =                172.98		  172.18
+                         DM (kg/ha) =                172.96		  172.16
                          N  (kg/ha) =                  4.04		    1.64
                          P  (kg/ha) =                  0.00		    0.00
 18 May 2018(Day of year=138), paddock.Operations Schedule: 
@@ -609,12 +602,12 @@ Paddock:
          100.0     0.066          0.163       1.000
          100.0     0.062          0.149       1.000
          100.0     0.058          0.149       1.000
-         300.0     0.054          0.144       1.000
-         300.0     0.044          0.140       1.000
-         300.0     0.036          0.140       1.000
-         500.0     0.030          0.140       1.000
+         300.0     0.054          0.124       1.000
+         300.0     0.044          0.103       1.000
+         300.0     0.036          0.103       1.000
+         500.0     0.030          0.103       1.000
          -----------------------------------------------
-         Extractable SW:   235mm in  2000mm total depth ( 12%).
+         Extractable SW:   281mm in  2000mm total depth ( 14%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -639,7 +632,7 @@ Paddock:
 13 June 2018(Day of year=164), paddock.soybean: 
       stage 5.0 floral_initiation
                      biomass =          20.66 (g/m^2)   lai          =   0.431 (m^2/m^2)
-                     stover N conc =     3.86 (%)    extractable sw =  118.31 (mm)
+                     stover N conc =     3.86 (%)    extractable sw =  124.31 (mm)
 18 June 2018(Day of year=169), paddock.Operations Schedule: 
       Sending end_crop message to soybean
 18 June 2018(Day of year=169), paddock.soybean: 
@@ -647,6 +640,16 @@ Paddock:
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
                           DM (kg/ha) =                 403.1                   286.0
                           N  (kg/ha) =                  15.05                    5.72
+     
+3 July 2018(Day of year=184): 
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                      APSIM Warning Error
+                      -------------------
+     Lower bound (    0.000000    ) exceeds upper bound (  -0.1455192E-10)
+             Variable is not checked
+     Component name: paddock.SurfaceOrganicMatter
+     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     
      
 31 December 2018(Day of year=365), clock: 
      Simulation is terminating due to end criteria being met.

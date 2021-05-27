@@ -63,6 +63,7 @@ Paddock:
         fertiliser
         surfaceom_c
         leach_no3
+        lch_no3n
 
      Output file = name_InterimOneMo_mukey_407650_rot_cfs_sim.out
      Format = normal
@@ -94,6 +95,7 @@ Paddock:
      SECTION:- start_of_day
              corn_buac   = maize.yield * 0.0159/0.85
              soy_buac   = soybean.yield * 0.0149/0.87
+             lch_no3n   = leach_no3 * 0.2259
      
      SECTION:- end_of_day
      END of rules
@@ -278,6 +280,7 @@ Paddock:
 1 January 2017(Day of year=1), paddock.Empty manager: 
      Manager creating a new local real variable : corn_buac = 0.00000
      Manager creating a new local real variable : soy_buac = 0.00000
+     Manager creating a new local real variable : lch_no3n = 0.00000
 25 May 2017(Day of year=145), paddock.Operations Schedule: 
       Sending sow message to soybean
 25 May 2017(Day of year=145), paddock.soybean: 
@@ -338,12 +341,12 @@ Paddock:
          100.0     0.066          0.200       1.000
          100.0     0.062          0.210       1.000
          100.0     0.058          0.215       1.000
-         300.0     0.054          0.222       1.000
-         300.0     0.044          0.226       1.000
-         300.0     0.036          0.225       1.000
-         500.0     0.030          0.195       1.000
+         300.0     0.054          0.212       1.000
+         300.0     0.044          0.206       1.000
+         300.0     0.036          0.191       1.000
+         500.0     0.030          0.158       1.000
          -----------------------------------------------
-         Extractable SW:   221mm in  2000mm total depth ( 11%).
+         Extractable SW:   259mm in  2000mm total depth ( 13%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -368,7 +371,7 @@ Paddock:
 22 June 2017(Day of year=173), paddock.soybean: 
       stage 5.0 floral_initiation
                      biomass =          50.97 (g/m^2)   lai          =   0.913 (m^2/m^2)
-                     stover N conc =     3.83 (%)    extractable sw =   86.11 (mm)
+                     stover N conc =     3.83 (%)    extractable sw =   89.11 (mm)
 25 June 2017(Day of year=176), paddock.Operations Schedule: 
       Sending end_crop message to soybean
 25 June 2017(Day of year=176), paddock.soybean: 
@@ -433,10 +436,10 @@ Paddock:
              100.0     0.066          0.200       1.000
              100.0     0.062          0.210       1.000
              100.0     0.058          0.215       1.000
-             300.0     0.054          0.222       1.000
-             300.0     0.044          0.226       1.000
-             300.0     0.036          0.225       1.000
-             500.0     0.030          0.195       1.000
+             300.0     0.054          0.212       1.000
+             300.0     0.044          0.206       1.000
+             300.0     0.036          0.191       1.000
+             500.0     0.030          0.158       1.000
          ---------------------------------------------------
      
 7 May 2018(Day of year=127), maize: 
@@ -450,18 +453,18 @@ Paddock:
 29 May 2018(Day of year=149), maize: 
      Stage 4 EndOfJuvenile  DAS = 23
      		Biomass       =  22.67 		 LAI            =   0.23
-     		Stover N Conc =   0.49 		 Extractable SW =  84.91
+     		Stover N Conc =   0.49 		 Extractable SW =  86.68
 30 May 2018(Day of year=150), maize: 
      Stage 5 FloralInitiation  DAS = 24
      		Biomass       =  27.42 		 LAI            =   0.27
-     		Stover N Conc =   0.60 		 Extractable SW =  87.06
+     		Stover N Conc =   0.59 		 Extractable SW =  89.16
 6 June 2018(Day of year=157), paddock.Operations Schedule: 
       Sending end_crop message to maize
 6 June 2018(Day of year=157), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =                942.83		  494.16
-                         N  (kg/ha) =                 20.30		    5.06
+                         DM (kg/ha) =                942.79		  494.14
+                         N  (kg/ha) =                 20.27		    5.06
                          P  (kg/ha) =                  0.00		    0.00
 25 May 2019(Day of year=145), paddock.Operations Schedule: 
       Sending sow message to soybean
@@ -523,12 +526,12 @@ Paddock:
          100.0     0.066          0.200       1.000
          100.0     0.062          0.210       1.000
          100.0     0.058          0.215       1.000
-         300.0     0.054          0.222       1.000
-         300.0     0.044          0.226       1.000
-         300.0     0.036          0.225       1.000
-         500.0     0.030          0.195       1.000
+         300.0     0.054          0.212       1.000
+         300.0     0.044          0.206       1.000
+         300.0     0.036          0.191       1.000
+         500.0     0.030          0.158       1.000
          -----------------------------------------------
-         Extractable SW:   221mm in  2000mm total depth ( 11%).
+         Extractable SW:   259mm in  2000mm total depth ( 13%).
          Crop factor for bounding water use is set to 100.0 times eo.
       stage 1.0 sowing
      
@@ -614,31 +617,31 @@ Paddock:
              100.0     0.066          0.200       1.000
              100.0     0.062          0.210       1.000
              100.0     0.058          0.215       1.000
-             300.0     0.054          0.222       1.000
-             300.0     0.044          0.226       1.000
-             300.0     0.036          0.225       1.000
-             500.0     0.030          0.195       1.000
+             300.0     0.054          0.212       1.000
+             300.0     0.044          0.206       1.000
+             300.0     0.036          0.191       1.000
+             500.0     0.030          0.158       1.000
          ---------------------------------------------------
      
 7 May 2020(Day of year=128), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =  97.53
+     		Stover N Conc =   0.00 		 Extractable SW = 102.68
 15 May 2020(Day of year=136), maize: 
      Stage 3 Emergence  DAS = 9
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 107.30
+     		Stover N Conc =   0.00 		 Extractable SW = 112.35
 5 June 2020(Day of year=157), maize: 
      Stage 4 EndOfJuvenile  DAS = 30
      		Biomass       =  23.63 		 LAI            =   0.22
-     		Stover N Conc =   0.48 		 Extractable SW = 118.67
+     		Stover N Conc =   0.48 		 Extractable SW = 123.84
 6 June 2020(Day of year=158), paddock.Operations Schedule: 
       Sending end_crop message to maize
 6 June 2020(Day of year=158), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =                288.59		  287.89
-                         N  (kg/ha) =                  5.75		    2.70
+                         DM (kg/ha) =                288.58		  287.88
+                         N  (kg/ha) =                  5.74		    2.70
                          P  (kg/ha) =                  0.00		    0.00
 31 December 2020(Day of year=366), clock: 
      Simulation is terminating due to end criteria being met.

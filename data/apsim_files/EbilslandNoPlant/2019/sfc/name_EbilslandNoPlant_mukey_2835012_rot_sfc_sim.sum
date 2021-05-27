@@ -63,6 +63,7 @@ Paddock:
         fertiliser
         surfaceom_c
         leach_no3
+        lch_no3n
 
      Output file = name_EbilslandNoPlant_mukey_2835012_rot_sfc_sim.out
      Format = normal
@@ -75,10 +76,12 @@ Paddock:
      ===================
        29/4/2016  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.5 (0-1), tillage_depth = 58 (mm)
       30/10/2016  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.5 (0-1), tillage_depth = 280 (mm)
-       23/4/2016  Prepare      Fertiliser apply amount = 173.73 (kg/ha), depth = 50.0 (mm), type = uan_n ()
+       23/4/2016  Prepare      Fertiliser apply amount = 100.88 (kg/ha), depth = 50.0 (mm), type = uan_n ()
+       04/6/2016  Prepare      Fertiliser apply amount = 72.86 (kg/ha), depth = 50.0 (mm), type = uan_n ()
        29/4/2018  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.5 (0-1), tillage_depth = 58 (mm)
       30/10/2018  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.5 (0-1), tillage_depth = 280 (mm)
-       23/4/2018  Prepare      Fertiliser apply amount = 173.73 (kg/ha), depth = 50.0 (mm), type = uan_n ()
+       23/4/2018  Prepare      Fertiliser apply amount = 100.88 (kg/ha), depth = 50.0 (mm), type = uan_n ()
+       04/6/2018  Prepare      Fertiliser apply amount = 72.86 (kg/ha), depth = 50.0 (mm), type = uan_n ()
        26/4/2017  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 58 (mm)
         3/6/2017  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.33 (0-1), tillage_depth = 52 (mm)
        26/4/2019  Prepare      SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 58 (mm)
@@ -92,6 +95,7 @@ Paddock:
      SECTION:- start_of_day
              corn_buac   = maize.yield * 0.0159/0.85
              soy_buac   = soybean.yield * 0.0149/0.87
+             lch_no3n   = leach_no3 * 0.2259
      
      SECTION:- end_of_day
      END of rules
@@ -276,12 +280,13 @@ Paddock:
 1 January 2016(Day of year=1), paddock.Empty manager: 
      Manager creating a new local real variable : corn_buac = 0.00000
      Manager creating a new local real variable : soy_buac = 0.00000
+     Manager creating a new local real variable : lch_no3n = 0.00000
 23 April 2016(Day of year=114), paddock.Operations Schedule: 
       Sending apply message to fertiliser
 23 April 2016(Day of year=114), fertiliser: 
      
    - Reading Fertiliser Type Parameters
-       173.73 of N as Urea-AmmoniumNitrate (uan_n)
+       100.88 of N as Urea-AmmoniumNitrate (uan_n)
                                          added at depth   50.00 (layer   3)
 29 April 2016(Day of year=120), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -289,6 +294,13 @@ Paddock:
      Residue removed using user_defined
                                              Fraction Incorporated =     0.50
                                              Incorporated Depth    =    58.00
+4 June 2016(Day of year=156), paddock.Operations Schedule: 
+      Sending apply message to fertiliser
+4 June 2016(Day of year=156), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+        72.86 of N as Urea-AmmoniumNitrate (uan_n)
+                                         added at depth   50.00 (layer   3)
 30 October 2016(Day of year=304), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
 30 October 2016(Day of year=304), paddock.SurfaceOrganicMatter: 
@@ -312,7 +324,7 @@ Paddock:
 23 April 2018(Day of year=113), fertiliser: 
      
    - Reading Fertiliser Type Parameters
-       173.73 of N as Urea-AmmoniumNitrate (uan_n)
+       100.88 of N as Urea-AmmoniumNitrate (uan_n)
                                          added at depth   50.00 (layer   3)
 29 April 2018(Day of year=119), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -320,6 +332,13 @@ Paddock:
      Residue removed using user_defined
                                              Fraction Incorporated =     0.50
                                              Incorporated Depth    =    58.00
+4 June 2018(Day of year=155), paddock.Operations Schedule: 
+      Sending apply message to fertiliser
+4 June 2018(Day of year=155), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+        72.86 of N as Urea-AmmoniumNitrate (uan_n)
+                                         added at depth   50.00 (layer   3)
 30 October 2018(Day of year=303), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
 30 October 2018(Day of year=303), paddock.SurfaceOrganicMatter: 
