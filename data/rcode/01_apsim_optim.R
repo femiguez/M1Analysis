@@ -17,9 +17,12 @@ setwd(file.path(hr.path, "data", "rcode"))
 
 apsim_options(warn.versions = FALSE)
 
-yr <- "2018"
+yr <- "2019"
 site.default <- "AccolaDefault"
+## This is for soybean
 sfcs <- file.path("../apsim_files", site.default, yr, "sfc")
+## This is for corn
+sfcs <- file.path("../apsim_files", site.default, yr, "cfs")
 lsf <- list.files(sfcs)
 apsim.files <- grep("apsim$", lsf, value = TRUE)
 file.copy(from = paste0(sfcs, "/", apsim.files), to = ".")
@@ -49,15 +52,16 @@ for(i in list.files(pattern = ".apsim$")){
 
   ## Which crop are we growing?
   crop <- ifelse(max(sim0s$soybean_yield) > 0, "soybean", "maize")[1]
+  file_ext <- ifelse(crop == "soybean", "sfc", "cfs")
   
   dir.create(file.path(wrt.dir1, "sims_default"))
-  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.out")
-  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_sfc_sim_default.out")
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_", file_ext, "_sim.out")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_", file_ext ,"_sim_default.out")
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_default", tu))
 
-  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.sum")
-  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_sfc_sim_default.sum")
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_", file_ext, "_sim.sum")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_", file_ext, "_sim_default.sum")
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_default", tu))
   
@@ -89,13 +93,13 @@ for(i in list.files(pattern = ".apsim$")){
   sim1 <- apsim(file = i, value = "report")
   
   dir.create(file.path(wrt.dir1, "sims_low"))
-  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.out")
-  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_sfc_sim_low_KL.out")
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_", file_ext, "_sim.out")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_", file_ext, "_sim_low_KL.out")
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_low", tu))
 
-  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.sum")
-  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_sfc_sim_low_KL.sum")
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_", file_ext, "_sim.sum")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_", file_ext, "_sim_low_KL.sum")
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_low", tu))
 
@@ -119,13 +123,13 @@ for(i in list.files(pattern = ".apsim$")){
   
   sim2 <- apsim(file = i, value = "report")
   
-  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.out")
-  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_sfc_sim_low_XF.out")
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_", file_ext, "_sim.out")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_", file_ext, "_sim_low_XF.out")
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_low", tu))
   
-  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.sum")
-  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_sfc_sim_low_XF.sum")
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_", file_ext, "_sim.sum")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_", file_ext, "_sim_low_XF.sum")
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_low", tu))
 
@@ -148,13 +152,13 @@ for(i in list.files(pattern = ".apsim$")){
   
   sim3 <- apsim(file = i, value = "report")
   
-  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.out")
-  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_sfc_sim_low_DUL.out")
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_", file_ext, "_sim.out")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_", file_ext, "_sim_low_DUL.out")
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_low", tu))
   
-  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_sfc_sim.sum")
-  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_sfc_sim_low_DUL.sum")
+  frm <- paste0("name_", site, "_mukey_", mukey, "_rot_", file_ext, "_sim.sum")
+  tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_", file_ext, "_sim_low_DUL.sum")
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_low", tu))
   
