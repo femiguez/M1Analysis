@@ -5892,8 +5892,8 @@ Paddock:
      
 1 September 2016(Day of year=245), maize: 
      Stage 9 EndGrainFill  DAS = 118
-     		Biomass       = 1796.45 		 LAI            =   1.33
-     		Stover N Conc =   4.29 		 Extractable SW =  83.90
+     		Biomass       = 1796.23 		 LAI            =   1.33
+     		Stover N Conc =   4.28 		 Extractable SW =  83.93
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -5972,8 +5972,8 @@ Paddock:
      
 5 September 2016(Day of year=249), maize: 
      Stage 10 Maturity  DAS = 122
-     		Biomass       = 1805.58 		 LAI            =   1.28
-     		Stover N Conc =   4.21 		 Extractable SW =  78.02
+     		Biomass       = 1805.35 		 LAI            =   1.28
+     		Stover N Conc =   4.21 		 Extractable SW =  78.06
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -5995,8 +5995,8 @@ Paddock:
      
 6 September 2016(Day of year=250), maize: 
      Stage 11 HarvestRipe  DAS = 123
-     		Biomass       = 1805.58 		 LAI            =   1.28
-     		Stover N Conc =   4.21 		 Extractable SW =  76.70
+     		Biomass       = 1805.35 		 LAI            =   1.28
+     		Stover N Conc =   4.21 		 Extractable SW =  76.74
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -7151,8 +7151,8 @@ Paddock:
 6 November 2016(Day of year=311), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               8650.99		 3787.62
-                         N  (kg/ha) =                 42.09		   32.47
+                         DM (kg/ha) =               8642.24		 3786.88
+                         N  (kg/ha) =                 42.06		   32.46
                          P  (kg/ha) =                  0.00		    0.00
 6 November 2016(Day of year=311): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -11039,7 +11039,7 @@ Paddock:
 10 June 2017(Day of year=161), paddock.soybean: 
       stage 4.0 end_of_juvenile
                      biomass =           4.98 (g/m^2)   lai          =   0.094 (m^2/m^2)
-                     stover N conc =     4.50 (%)    extractable sw =   39.93 (mm)
+                     stover N conc =     4.50 (%)    extractable sw =   39.92 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -17032,7 +17032,7 @@ Paddock:
 7 May 2018(Day of year=127), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 135.63
+     		Stover N Conc =   0.00 		 Extractable SW = 135.66
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -17184,7 +17184,7 @@ Paddock:
 11 May 2018(Day of year=131), maize: 
      Stage 3 Emergence  DAS = 5
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 140.23
+     		Stover N Conc =   0.00 		 Extractable SW = 140.27
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -17817,7 +17817,7 @@ Paddock:
 28 May 2018(Day of year=148), maize: 
      Stage 4 EndOfJuvenile  DAS = 22
      		Biomass       =  16.60 		 LAI            =   0.18
-     		Stover N Conc =   0.34 		 Extractable SW = 127.38
+     		Stover N Conc =   0.34 		 Extractable SW = 127.41
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -17858,7 +17858,7 @@ Paddock:
 29 May 2018(Day of year=149), maize: 
      Stage 5 FloralInitiation  DAS = 23
      		Biomass       =  20.57 		 LAI            =   0.22
-     		Stover N Conc =   0.43 		 Extractable SW = 133.02
+     		Stover N Conc =   0.43 		 Extractable SW = 133.05
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -19048,7 +19048,7 @@ Paddock:
      
 3 July 2018(Day of year=184), maize: 
      Stage 6 FlagLeaf  DAS = 58
-     		Biomass       = 678.47 		 LAI            =   3.47
+     		Biomass       = 678.48 		 LAI            =   3.47
      		Stover N Conc =  10.58 		 Extractable SW = 182.45
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
@@ -19247,7 +19247,7 @@ Paddock:
 13 July 2018(Day of year=194), maize: 
      Stage 8 StartGrainFill  DAS = 68
      		Biomass       = 1048.08 		 LAI            =   3.37
-     		Stover N Conc =  12.16 		 Extractable SW = 129.59
+     		Stover N Conc =  12.16 		 Extractable SW = 129.58
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -20010,8 +20010,8 @@ Paddock:
      
 22 August 2018(Day of year=234), maize: 
      Stage 9 EndGrainFill  DAS = 108
-     		Biomass       = 1762.86 		 LAI            =   1.55
-     		Stover N Conc =   4.78 		 Extractable SW =  74.12
+     		Biomass       = 1762.74 		 LAI            =   1.55
+     		Stover N Conc =   4.78 		 Extractable SW =  74.13
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -20071,8 +20071,8 @@ Paddock:
      
 25 August 2018(Day of year=237), maize: 
      Stage 10 Maturity  DAS = 111
-     		Biomass       = 1772.65 		 LAI            =   1.52
-     		Stover N Conc =   4.65 		 Extractable SW =  75.44
+     		Biomass       = 1772.51 		 LAI            =   1.52
+     		Stover N Conc =   4.65 		 Extractable SW =  75.45
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -20094,8 +20094,8 @@ Paddock:
      
 26 August 2018(Day of year=238), maize: 
      Stage 11 HarvestRipe  DAS = 112
-     		Biomass       = 1772.65 		 LAI            =   1.52
-     		Stover N Conc =   4.65 		 Extractable SW =  80.95
+     		Biomass       = 1772.51 		 LAI            =   1.52
+     		Stover N Conc =   4.65 		 Extractable SW =  80.96
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -21462,8 +21462,8 @@ Paddock:
 6 November 2018(Day of year=310), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               7587.11		 3854.55
-                         N  (kg/ha) =                 46.46		   30.54
+                         DM (kg/ha) =               7578.86		 3850.60
+                         N  (kg/ha) =                 46.46		   30.53
                          P  (kg/ha) =                  0.00		    0.00
 6 November 2018(Day of year=310): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -26406,7 +26406,7 @@ Paddock:
 27 June 2019(Day of year=178), paddock.soybean: 
       stage 5.0 floral_initiation
                      biomass =          38.61 (g/m^2)   lai          =   0.764 (m^2/m^2)
-                     stover N conc =     3.64 (%)    extractable sw =  107.75 (mm)
+                     stover N conc =     3.64 (%)    extractable sw =  107.74 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -28295,7 +28295,7 @@ Paddock:
      
 13 September 2019(Day of year=256), paddock.soybean: 
       stage 8.0 end_grain_fill
-                     biomass =         989.75 (g/m^2)   lai          =   3.701 (m^2/m^2)
+                     biomass =         989.74 (g/m^2)   lai          =   3.701 (m^2/m^2)
                      stover N conc =     2.35 (%)    extractable sw =   95.33 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
@@ -28337,8 +28337,8 @@ Paddock:
      
 15 September 2019(Day of year=258), paddock.soybean: 
       stage 9.0 maturity
-                     biomass =         986.59 (g/m^2)   lai          =   3.525 (m^2/m^2)
-                     stover N conc =     2.29 (%)    extractable sw =   97.38 (mm)
+                     biomass =         986.58 (g/m^2)   lai          =   3.525 (m^2/m^2)
+                     stover N conc =     2.29 (%)    extractable sw =   97.37 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -28360,8 +28360,8 @@ Paddock:
      
 16 September 2019(Day of year=259), paddock.soybean: 
       stage 10.0 harvest_ripe
-                     biomass =         986.59 (g/m^2)   lai          =   0.000 (m^2/m^2)
-                     stover N conc =     2.37 (%)    extractable sw =   94.77 (mm)
+                     biomass =         986.58 (g/m^2)   lai          =   0.000 (m^2/m^2)
+                     stover N conc =     2.37 (%)    extractable sw =   94.76 (mm)
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -29195,7 +29195,7 @@ Paddock:
 30 October 2019(Day of year=303), paddock.soybean: 
      Crop ended. Yield (dw) =  4439.6  (kg/ha)
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
-                          DM (kg/ha) =                9865.9                  1623.2
+                          DM (kg/ha) =                9865.8                  1623.2
                           N  (kg/ha) =                 410.07                   34.62
      
 30 October 2019(Day of year=303): 
@@ -29621,7 +29621,7 @@ Paddock:
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
-      soil water of     0.327106      in layer  16
+      soil water of     0.327094      in layer  16
               is above saturation of     0.327000
      Component name: paddock.Soil Water
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

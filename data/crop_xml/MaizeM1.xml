@@ -1665,8 +1665,13 @@
       <tt_flag_to_flower>1</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70  (oC)! MJR changed 21/3/00">150 </tt_flower_to_start_grain>
       <tt_maturity_to_ripe units="oC">1</tt_maturity_to_ripe>
+<<<<<<< HEAD
       <potKernelWt>320</potKernelWt>
       <GNmaxCoef>210</GNmaxCoef>
+=======
+      <GNmaxCoef>170</GNmaxCoef>
+      <potKernelWt>320</potKernelWt>
+>>>>>>> ecba7dea6ba55d35f2a36edafcd5723a2d17637f
     </B_105>
     <!-- this hybrid used for natalia's paper, sept 2015. this has the b-110 params that i used in the sensitivity analysis -->
     <!-- <B_105_biochar cultivar="yes">
@@ -1689,7 +1694,8 @@
       <tt_flag_to_flower>1</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70  (oC)! MJR changed 21/3/00">150 </tt_flower_to_start_grain>
       <tt_maturity_to_ripe units="oC">1</tt_maturity_to_ripe>
-      <potKernelWt>300</potKernelWt>
+      <GNmaxCoef>170</GNmaxCoef>
+      <potKernelWt>320</potKernelWt>
     </B_110>
     <B_115 cultivar="yes">
       <tt_emerg_to_endjuv units="oC">251</tt_emerg_to_endjuv>
@@ -1703,7 +1709,8 @@
       <tt_flag_to_flower>1</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70  (oC)! MJR changed 21/3/00">150 </tt_flower_to_start_grain>
       <tt_maturity_to_ripe units="oC">1</tt_maturity_to_ripe>
-      <potKernelWt>300</potKernelWt>
+      <GNmaxCoef>170</GNmaxCoef>
+      <potKernelWt>320</potKernelWt>
     </B_115>
     <B_120 cultivar="yes">
       <tt_emerg_to_endjuv units="oC">269</tt_emerg_to_endjuv>

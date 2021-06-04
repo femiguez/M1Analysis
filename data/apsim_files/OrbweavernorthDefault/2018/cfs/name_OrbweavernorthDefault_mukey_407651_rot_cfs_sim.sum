@@ -494,23 +494,23 @@ Paddock:
      		Stover N Conc =  15.80 		 Extractable SW = 189.47
 1 September 2016(Day of year=245), maize: 
      Stage 9 EndGrainFill  DAS = 118
-     		Biomass       = 2228.60 		 LAI            =   2.16
-     		Stover N Conc =   6.55 		 Extractable SW = 135.20
+     		Biomass       = 2228.89 		 LAI            =   2.16
+     		Stover N Conc =   6.55 		 Extractable SW = 135.23
 5 September 2016(Day of year=249), maize: 
      Stage 10 Maturity  DAS = 122
-     		Biomass       = 2278.44 		 LAI            =   1.89
-     		Stover N Conc =   6.00 		 Extractable SW = 123.84
+     		Biomass       = 2278.56 		 LAI            =   1.89
+     		Stover N Conc =   5.99 		 Extractable SW = 123.90
 6 September 2016(Day of year=250), maize: 
      Stage 11 HarvestRipe  DAS = 123
-     		Biomass       = 2278.44 		 LAI            =   1.89
-     		Stover N Conc =   6.00 		 Extractable SW = 120.76
+     		Biomass       = 2278.56 		 LAI            =   1.89
+     		Stover N Conc =   5.99 		 Extractable SW = 120.82
 6 November 2016(Day of year=311), paddock.Operations Schedule: 
       Sending end_crop message to maize
 6 November 2016(Day of year=311), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =              12373.32		 7300.82
-                         N  (kg/ha) =                 59.95		   36.23
+                         DM (kg/ha) =              12369.16		 7282.65
+                         N  (kg/ha) =                 59.92		   36.22
                          P  (kg/ha) =                  0.00		    0.00
 6 May 2017(Day of year=126), paddock.Operations Schedule: 
       Sending sow message to soybean
@@ -598,22 +598,22 @@ Paddock:
 30 May 2017(Day of year=150), paddock.soybean: 
       stage 4.0 end_of_juvenile
                      biomass =           4.88 (g/m^2)   lai          =   0.091 (m^2/m^2)
-                     stover N conc =     4.51 (%)    extractable sw =  145.54 (mm)
+                     stover N conc =     4.51 (%)    extractable sw =  145.55 (mm)
 12 June 2017(Day of year=163), paddock.soybean: 
       stage 5.0 floral_initiation
                      biomass =          67.26 (g/m^2)   lai          =   1.151 (m^2/m^2)
                      stover N conc =     3.33 (%)    extractable sw =  144.90 (mm)
 30 June 2017(Day of year=181), paddock.soybean: 
       stage 6.0 flowering
-                     biomass =         358.96 (g/m^2)   lai          =   5.401 (m^2/m^2)
+                     biomass =         358.97 (g/m^2)   lai          =   5.401 (m^2/m^2)
                      stover N conc =     3.37 (%)    extractable sw =  237.81 (mm)
 22 July 2017(Day of year=203), paddock.soybean: 
       stage 7.0 start_grain_fill
-                     biomass =         739.53 (g/m^2)   lai          =   6.083 (m^2/m^2)
+                     biomass =         739.54 (g/m^2)   lai          =   6.083 (m^2/m^2)
                      stover N conc =     3.13 (%)    extractable sw =  138.57 (mm)
 31 August 2017(Day of year=243), paddock.soybean: 
       stage 8.0 end_grain_fill
-                     biomass =        1003.66 (g/m^2)   lai          =   2.530 (m^2/m^2)
+                     biomass =        1003.67 (g/m^2)   lai          =   2.530 (m^2/m^2)
                      stover N conc =     1.67 (%)    extractable sw =   74.67 (mm)
 2 September 2017(Day of year=245), paddock.soybean: 
       stage 9.0 maturity
@@ -631,7 +631,7 @@ Paddock:
      Crop ended. Yield (dw) =  3508.7  (kg/ha)
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
                           DM (kg/ha) =               10082.6                  1913.4
-                          N  (kg/ha) =                 339.22                   40.31
+                          N  (kg/ha) =                 339.23                   40.31
      
 22 March 2018(Day of year=81), paddock.Operations Schedule: 
       Sending apply message to fertiliser
@@ -698,19 +698,19 @@ Paddock:
 7 May 2018(Day of year=127), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 192.78
+     		Stover N Conc =   0.00 		 Extractable SW = 193.00
 10 May 2018(Day of year=130), maize: 
      Stage 3 Emergence  DAS = 4
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 186.81
+     		Stover N Conc =   0.00 		 Extractable SW = 187.03
 28 May 2018(Day of year=148), maize: 
      Stage 4 EndOfJuvenile  DAS = 22
      		Biomass       =  19.02 		 LAI            =   0.20
-     		Stover N Conc =   0.38 		 Extractable SW = 192.19
+     		Stover N Conc =   0.38 		 Extractable SW = 192.37
 29 May 2018(Day of year=149), maize: 
      Stage 5 FloralInitiation  DAS = 23
      		Biomass       =  23.37 		 LAI            =   0.24
-     		Stover N Conc =   0.47 		 Extractable SW = 197.02
+     		Stover N Conc =   0.47 		 Extractable SW = 197.20
 3 July 2018(Day of year=184), maize: 
      Stage 6 FlagLeaf  DAS = 58
      		Biomass       = 700.64 		 LAI            =   3.51
@@ -721,27 +721,27 @@ Paddock:
      		Stover N Conc =  10.93 		 Extractable SW = 317.06
 13 July 2018(Day of year=194), maize: 
      Stage 8 StartGrainFill  DAS = 68
-     		Biomass       = 1110.32 		 LAI            =   3.42
+     		Biomass       = 1110.33 		 LAI            =   3.42
      		Stover N Conc =  12.62 		 Extractable SW = 246.56
 22 August 2018(Day of year=234), maize: 
      Stage 9 EndGrainFill  DAS = 108
-     		Biomass       = 2100.19 		 LAI            =   1.82
-     		Stover N Conc =   5.68 		 Extractable SW = 139.51
+     		Biomass       = 2100.35 		 LAI            =   1.82
+     		Stover N Conc =   5.68 		 Extractable SW = 139.54
 25 August 2018(Day of year=237), maize: 
      Stage 10 Maturity  DAS = 111
-     		Biomass       = 2121.41 		 LAI            =   1.72
-     		Stover N Conc =   5.42 		 Extractable SW = 144.54
+     		Biomass       = 2121.54 		 LAI            =   1.72
+     		Stover N Conc =   5.42 		 Extractable SW = 144.57
 26 August 2018(Day of year=238), maize: 
      Stage 11 HarvestRipe  DAS = 112
-     		Biomass       = 2121.41 		 LAI            =   1.72
-     		Stover N Conc =   5.42 		 Extractable SW = 148.24
+     		Biomass       = 2121.54 		 LAI            =   1.72
+     		Stover N Conc =   5.42 		 Extractable SW = 148.28
 6 November 2018(Day of year=310), paddock.Operations Schedule: 
       Sending end_crop message to maize
 6 November 2018(Day of year=310), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =              10821.48		 5933.07
-                         N  (kg/ha) =                 54.23		   40.60
+                         DM (kg/ha) =              10815.89		 5927.84
+                         N  (kg/ha) =                 54.22		   40.57
                          P  (kg/ha) =                  0.00		    0.00
 31 December 2018(Day of year=365), clock: 
      Simulation is terminating due to end criteria being met.
