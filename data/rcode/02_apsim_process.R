@@ -13,41 +13,54 @@ setwd(file.path(hr.path, "data", "rcode"))
 
 ### Read in the default and low for Accola 2018 - mukey 2765537
 
-sim0 <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_default.out",
+sim.default <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_default.out",
                     src.dir = "./results/AccolaDefault/mukey_2765537/sims_default")
-sim.KL <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_low_KL.out",
+sim.low.KL <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_low_KL.out",
                      src.dir = "./results/AccolaDefault/mukey_2765537/sims_low")
-sim.XF <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_low_XF.out",
+sim.low.XF <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_low_XF.out",
                      src.dir = "./results/AccolaDefault/mukey_2765537/sims_low")
-sim.DUL <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_low_DUL.out",
+sim.low.DUL <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_low_DUL.out",
                       src.dir = "./results/AccolaDefault/mukey_2765537/sims_low")
-
-
+sim.high.HI <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_high_HI.out",
+                          src.dir = "./results/AccolaDefault/mukey_2765537/sims_high")
 ### Plot
 ggplot() + 
-  geom_line(data = sim0, aes(x = Date, y = soybean_yield, color = "default"), size = 2) + 
-  geom_line(data = sim.KL, aes(x = Date, y = soybean_yield, color = "KL optimized"), size = 2) + 
-  geom_line(data = sim.XF, aes(x = Date, y = soybean_yield, color = "XF optimized"), size = 2) + 
-  geom_line(data = sim.DUL, aes(x = Date, y = soybean_yield, color = "DUL optimized"), size = 2) + 
+  geom_line(data = sim.default, aes(x = Date, y = soybean_yield, color = "default"), size = 2) + 
+  geom_line(data = sim.low.KL, aes(x = Date, y = soybean_yield, color = "KL low optimized"), size = 2) + 
+  geom_line(data = sim.low.XF, aes(x = Date, y = soybean_yield, color = "XF low optimized"), size = 2) + 
+  geom_line(data = sim.low.DUL, aes(x = Date, y = soybean_yield, color = "DUL low optimized"), size = 2) + 
+  geom_line(data = sim.high.HI, aes(x = Date, y = soybean_yield, color = "HI high optimized"), size = 2) + 
   xlim(as.Date(c("2018-06-01", "2018-11-15"))) + ylab("Yield (kg/ha)") + 
   ggtitle("Yield optimization")
-ggsave("optim-yield.png")
+ggsave("./figs/Accola-soybean-2018-optim-yield.png")
 
 ggplot() + 
-  geom_line(data = sim0, aes(x = Date, y = leach_no3, color = "default"), size = 2) + 
-  geom_line(data = sim.KL, aes(x = Date, y = leach_no3, color = "KL optimized"), size = 2) + 
-  geom_line(data = sim.XF, aes(x = Date, y = leach_no3, color = "XF optimized"), size = 2) + 
-  geom_line(data = sim.DUL, aes(x = Date, y = leach_no3, color = "DUL optimized"), size = 2) + 
-  xlim(as.Date(c("2018-06-01", "2018-11-15"))) + ylab("Nitrate leaching (kg/ha)") + 
+  geom_line(data = sim.default, aes(x = Date, y = leach_no3, color = "default"), size = 2) + 
+  geom_line(data = sim.low.KL, aes(x = Date, y = leach_no3, color = "KL low optimized"), size = 2) + 
+  geom_line(data = sim.low.XF, aes(x = Date, y = leach_no3, color = "XF low optimized"), size = 2) + 
+  geom_line(data = sim.low.DUL, aes(x = Date, y = leach_no3, color = "DUL low optimized"), size = 2) + 
+  geom_line(data = sim.high.HI, aes(x = Date, y = leach_no3, color = "HI high optimized"), size = 2) + 
+  xlim(as.Date(c("2018-06-01", "2018-11-15"))) + ylab("Nitrate (NO3) leaching (kg/ha)") + 
   ggtitle("Impact on NO3 leaching")
-ggsave("optim-yield-leach.png")
+ggsave("./figs/Accola-soybean-2018-optim-yield-NO3-leach.png")
 
 ggplot() + 
-  geom_line(data = sim0, aes(x = Date, y = cumsum(leach_no3), color = "default"), size = 2) + 
-  geom_line(data = sim.KL, aes(x = Date, y = cumsum(leach_no3), color = "KL optimized"), size = 2) + 
-  geom_line(data = sim.XF, aes(x = Date, y = cumsum(leach_no3), color = "XF optimized"), size = 2) + 
-  geom_line(data = sim.DUL, aes(x = Date, y = cumsum(leach_no3), color = "DUL optimized"), size = 2) + 
+  geom_line(data = sim.default, aes(x = Date, y = lch_no3n, color = "default"), size = 2) + 
+  geom_line(data = sim.low.KL, aes(x = Date, y = lch_no3n, color = "KL low optimized"), size = 2) + 
+  geom_line(data = sim.low.XF, aes(x = Date, y = lch_no3n, color = "XF low optimized"), size = 2) + 
+  geom_line(data = sim.low.DUL, aes(x = Date, y = lch_no3n, color = "DUL low optimized"), size = 2) + 
+  geom_line(data = sim.high.HI, aes(x = Date, y = lch_no3n, color = "HI high optimized"), size = 2) + 
+  xlim(as.Date(c("2018-06-01", "2018-11-15"))) + ylab("Nitrogen-Nitrate (N-NO3) leaching (kg/ha)") + 
+  ggtitle("Impact on N-NO3 leaching")
+ggsave("./figs/Accola-soybean-2018-optim-yield-N-NO3-leach.png")
+
+ggplot() + 
+  geom_line(data = sim.default, aes(x = Date, y = cumsum(lch_no3n), color = "default"), size = 2) + 
+  geom_line(data = sim.low.KL, aes(x = Date, y = cumsum(lch_no3n), color = "KL low optimized"), size = 2) + 
+  geom_line(data = sim.low.XF, aes(x = Date, y = cumsum(lch_no3n), color = "XF low optimized"), size = 2) + 
+  geom_line(data = sim.low.DUL, aes(x = Date, y = cumsum(lch_no3n), color = "DUL low optimized"), size = 2) + 
+  geom_line(data = sim.high.DUL, aes(x = Date, y = cumsum(lch_no3n), color = "DUL high optimized"), size = 2) + 
   xlim(as.Date(c("2018-06-01", "2018-11-15"))) + 
-  ylab("Cumulative nitrate leaching (kg/ha)") + 
-  ggtitle("Impact on cumulative NO3 leaching")
-ggsave("optim-cumulative-leach.png")
+  ylab("Cumulative nitrogen-nitrate leaching (kg/ha)") + 
+  ggtitle("Impact on cumulative N-NO3 leaching")
+ggsave("./figs/Accola-soybean-2018-optim-cumulative-leach.png")
