@@ -372,23 +372,23 @@ Paddock:
      		Stover N Conc =  14.63 		 Extractable SW = 253.04
 14 September 2015(Day of year=257), maize: 
      Stage 9 EndGrainFill  DAS = 141
-     		Biomass       = 2295.48 		 LAI            =   1.84
-     		Stover N Conc =   6.10 		 Extractable SW = 229.87
+     		Biomass       = 2295.63 		 LAI            =   1.84
+     		Stover N Conc =   6.10 		 Extractable SW = 229.92
 17 September 2015(Day of year=260), maize: 
      Stage 10 Maturity  DAS = 144
-     		Biomass       = 2309.18 		 LAI            =   1.72
-     		Stover N Conc =   5.98 		 Extractable SW = 239.37
+     		Biomass       = 2309.30 		 LAI            =   1.72
+     		Stover N Conc =   5.98 		 Extractable SW = 239.42
 18 September 2015(Day of year=261), maize: 
      Stage 11 HarvestRipe  DAS = 145
-     		Biomass       = 2309.18 		 LAI            =   1.72
-     		Stover N Conc =   5.98 		 Extractable SW = 258.09
+     		Biomass       = 2309.30 		 LAI            =   1.72
+     		Stover N Conc =   5.98 		 Extractable SW = 258.14
 29 October 2015(Day of year=302), paddock.Operations Schedule: 
       Sending end_crop message to maize
 29 October 2015(Day of year=302), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =              11698.36		 6760.69
-                         N  (kg/ha) =                 59.78		   51.92
+                         DM (kg/ha) =              11691.93		 6754.08
+                         N  (kg/ha) =                 59.76		   51.89
                          P  (kg/ha) =                  0.00		    0.00
 18 May 2016(Day of year=139), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -513,7 +513,7 @@ Paddock:
 17 October 2016(Day of year=291), paddock.soybean: 
      Crop ended. Yield (dw) =  3870.6  (kg/ha)
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
-                          DM (kg/ha) =                9440.6                  1550.7
+                          DM (kg/ha) =                9440.5                  1550.7
                           N  (kg/ha) =                 375.27                   32.98
      
 26 April 2017(Day of year=116), paddock.Operations Schedule: 
@@ -578,19 +578,19 @@ Paddock:
 27 April 2017(Day of year=117), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 261.13
+     		Stover N Conc =   0.00 		 Extractable SW = 261.21
 6 May 2017(Day of year=126), maize: 
      Stage 3 Emergence  DAS = 10
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 267.82
+     		Stover N Conc =   0.00 		 Extractable SW = 267.88
 31 May 2017(Day of year=151), maize: 
      Stage 4 EndOfJuvenile  DAS = 35
      		Biomass       =  39.49 		 LAI            =   0.29
-     		Stover N Conc =   0.92 		 Extractable SW = 268.09
+     		Stover N Conc =   0.92 		 Extractable SW = 268.12
 1 June 2017(Day of year=152), maize: 
      Stage 5 FloralInitiation  DAS = 36
      		Biomass       =  46.69 		 LAI            =   0.31
-     		Stover N Conc =   1.09 		 Extractable SW = 227.25
+     		Stover N Conc =   1.09 		 Extractable SW = 227.28
 9 July 2017(Day of year=190), maize: 
      Stage 6 FlagLeaf  DAS = 74
      		Biomass       = 1000.80 		 LAI            =   4.36
@@ -623,8 +623,8 @@ Paddock:
 29 October 2017(Day of year=302), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               9184.04		 7414.76
-                         N  (kg/ha) =                 91.19		   40.03
+                         DM (kg/ha) =               9183.44		 7414.74
+                         N  (kg/ha) =                 91.18		   40.03
                          P  (kg/ha) =                  0.00		    0.00
 18 May 2018(Day of year=138), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter

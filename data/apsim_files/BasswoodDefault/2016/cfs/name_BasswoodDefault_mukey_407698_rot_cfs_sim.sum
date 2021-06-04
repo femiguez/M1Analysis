@@ -12138,8 +12138,8 @@ Paddock:
      
 11 September 2014(Day of year=254), maize: 
      Stage 9 EndGrainFill  DAS = 128
-     		Biomass       = 2127.88 		 LAI            =   1.87
-     		Stover N Conc =   5.89 		 Extractable SW = 111.79
+     		Biomass       = 2127.60 		 LAI            =   1.87
+     		Stover N Conc =   5.89 		 Extractable SW = 111.82
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -12256,8 +12256,8 @@ Paddock:
      
 17 September 2014(Day of year=260), maize: 
      Stage 10 Maturity  DAS = 134
-     		Biomass       = 2158.59 		 LAI            =   1.73
-     		Stover N Conc =   5.58 		 Extractable SW = 112.32
+     		Biomass       = 2158.25 		 LAI            =   1.73
+     		Stover N Conc =   5.58 		 Extractable SW = 112.35
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -12279,8 +12279,8 @@ Paddock:
      
 18 September 2014(Day of year=261), maize: 
      Stage 11 HarvestRipe  DAS = 135
-     		Biomass       = 2158.59 		 LAI            =   1.73
-     		Stover N Conc =   5.58 		 Extractable SW = 110.39
+     		Biomass       = 2158.25 		 LAI            =   1.73
+     		Stover N Conc =   5.58 		 Extractable SW = 110.42
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -13213,8 +13213,8 @@ Paddock:
 6 November 2014(Day of year=310), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =              11361.79		 4987.90
-                         N  (kg/ha) =                 55.82		   33.78
+                         DM (kg/ha) =              11352.02		 4983.84
+                         N  (kg/ha) =                 55.79		   33.78
                          P  (kg/ha) =                  0.00		    0.00
 6 November 2014(Day of year=310): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -24022,7 +24022,7 @@ Paddock:
 7 May 2016(Day of year=128), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 140.32
+     		Stover N Conc =   0.00 		 Extractable SW = 140.39
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -24174,7 +24174,7 @@ Paddock:
 11 May 2016(Day of year=132), maize: 
      Stage 3 Emergence  DAS = 5
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 149.52
+     		Stover N Conc =   0.00 		 Extractable SW = 149.59
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -25066,7 +25066,7 @@ Paddock:
 4 June 2016(Day of year=156), maize: 
      Stage 4 EndOfJuvenile  DAS = 29
      		Biomass       =  30.54 		 LAI            =   0.24
-     		Stover N Conc =   0.62 		 Extractable SW = 137.27
+     		Stover N Conc =   0.62 		 Extractable SW = 137.34
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -25107,7 +25107,7 @@ Paddock:
 5 June 2016(Day of year=157), maize: 
      Stage 5 FloralInitiation  DAS = 30
      		Biomass       =  35.15 		 LAI            =   0.27
-     		Stover N Conc =   0.72 		 Extractable SW = 138.38
+     		Stover N Conc =   0.72 		 Extractable SW = 138.45
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -26128,7 +26128,7 @@ Paddock:
 11 July 2016(Day of year=193), maize: 
      Stage 6 FlagLeaf  DAS = 66
      		Biomass       = 862.36 		 LAI            =   3.65
-     		Stover N Conc =  12.68 		 Extractable SW = 143.01
+     		Stover N Conc =  12.68 		 Extractable SW = 142.99
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -26150,8 +26150,8 @@ Paddock:
      
 12 July 2016(Day of year=194), maize: 
      Stage 7 Flowering  DAS = 67
-     		Biomass       = 904.34 		 LAI            =   3.64
-     		Stover N Conc =  13.17 		 Extractable SW = 144.46
+     		Biomass       = 904.33 		 LAI            =   3.64
+     		Stover N Conc =  13.17 		 Extractable SW = 144.45
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -26325,8 +26325,8 @@ Paddock:
      
 21 July 2016(Day of year=203), maize: 
      Stage 8 StartGrainFill  DAS = 76
-     		Biomass       = 1180.84 		 LAI            =   3.56
-     		Stover N Conc =  13.79 		 Extractable SW = 135.49
+     		Biomass       = 1180.83 		 LAI            =   3.56
+     		Stover N Conc =  13.80 		 Extractable SW = 135.48
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -27127,8 +27127,8 @@ Paddock:
      
 1 September 2016(Day of year=245), maize: 
      Stage 9 EndGrainFill  DAS = 118
-     		Biomass       = 2194.06 		 LAI            =   1.98
-     		Stover N Conc =   5.96 		 Extractable SW =  82.20
+     		Biomass       = 2194.30 		 LAI            =   1.98
+     		Stover N Conc =   5.96 		 Extractable SW =  82.21
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -27207,8 +27207,8 @@ Paddock:
      
 5 September 2016(Day of year=249), maize: 
      Stage 10 Maturity  DAS = 122
-     		Biomass       = 2227.12 		 LAI            =   1.77
-     		Stover N Conc =   5.56 		 Extractable SW =  73.44
+     		Biomass       = 2227.25 		 LAI            =   1.77
+     		Stover N Conc =   5.55 		 Extractable SW =  73.48
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -27230,8 +27230,8 @@ Paddock:
      
 6 September 2016(Day of year=250), maize: 
      Stage 11 HarvestRipe  DAS = 123
-     		Biomass       = 2227.12 		 LAI            =   1.77
-     		Stover N Conc =   5.56 		 Extractable SW =  71.28
+     		Biomass       = 2227.25 		 LAI            =   1.77
+     		Stover N Conc =   5.55 		 Extractable SW =  71.32
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                       APSIM Warning Error
                       -------------------
@@ -28386,8 +28386,8 @@ Paddock:
 6 November 2016(Day of year=311), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =              12097.31		 5859.70
-                         N  (kg/ha) =                 55.55		   36.55
+                         DM (kg/ha) =              12092.80		 5848.24
+                         N  (kg/ha) =                 55.54		   36.54
                          P  (kg/ha) =                  0.00		    0.00
 6 November 2016(Day of year=311): 
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

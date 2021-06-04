@@ -516,7 +516,7 @@ Paddock:
 29 October 2017(Day of year=302), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               9261.20		 7538.12
+                         DM (kg/ha) =               9260.70		 7538.12
                          N  (kg/ha) =                110.38		   40.47
                          P  (kg/ha) =                  0.00		    0.00
 18 May 2018(Day of year=138), paddock.Operations Schedule: 
@@ -734,23 +734,23 @@ Paddock:
      		Stover N Conc =  17.07 		 Extractable SW = 216.35
 15 September 2019(Day of year=258), maize: 
      Stage 9 EndGrainFill  DAS = 142
-     		Biomass       = 2539.93 		 LAI            =   2.37
-     		Stover N Conc =   7.50 		 Extractable SW = 128.81
+     		Biomass       = 2540.39 		 LAI            =   2.36
+     		Stover N Conc =   7.49 		 Extractable SW = 128.84
 17 September 2019(Day of year=260), maize: 
      Stage 10 Maturity  DAS = 144
-     		Biomass       = 2563.66 		 LAI            =   2.22
-     		Stover N Conc =   7.16 		 Extractable SW = 123.09
+     		Biomass       = 2564.04 		 LAI            =   2.22
+     		Stover N Conc =   7.16 		 Extractable SW = 123.12
 18 September 2019(Day of year=261), maize: 
      Stage 11 HarvestRipe  DAS = 145
-     		Biomass       = 2563.66 		 LAI            =   2.22
-     		Stover N Conc =   7.16 		 Extractable SW = 125.98
+     		Biomass       = 2564.04 		 LAI            =   2.22
+     		Stover N Conc =   7.16 		 Extractable SW = 126.02
 29 October 2019(Day of year=302), paddock.Operations Schedule: 
       Sending end_crop message to maize
 29 October 2019(Day of year=302), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =              13866.94		 7297.84
-                         N  (kg/ha) =                 71.59		   51.73
+                         DM (kg/ha) =              13863.39		 7287.10
+                         N  (kg/ha) =                 71.55		   51.71
                          P  (kg/ha) =                  0.00		    0.00
 31 December 2019(Day of year=365), clock: 
      Simulation is terminating due to end criteria being met.

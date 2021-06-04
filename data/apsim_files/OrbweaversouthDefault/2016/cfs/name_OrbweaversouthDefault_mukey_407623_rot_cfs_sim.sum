@@ -494,16 +494,16 @@ Paddock:
      		Stover N Conc =  13.80 		 Extractable SW = 148.66
 13 September 2014(Day of year=256), maize: 
      Stage 9 EndGrainFill  DAS = 130
-     		Biomass       = 2227.39 		 LAI            =   1.93
-     		Stover N Conc =   6.19 		 Extractable SW = 185.45
+     		Biomass       = 2227.21 		 LAI            =   1.93
+     		Stover N Conc =   6.19 		 Extractable SW = 185.47
 19 September 2014(Day of year=262), maize: 
      Stage 10 Maturity  DAS = 136
-     		Biomass       = 2273.72 		 LAI            =   1.72
-     		Stover N Conc =   5.76 		 Extractable SW = 177.68
+     		Biomass       = 2273.43 		 LAI            =   1.72
+     		Stover N Conc =   5.76 		 Extractable SW = 177.72
 20 September 2014(Day of year=263), maize: 
      Stage 11 HarvestRipe  DAS = 137
-     		Biomass       = 2273.72 		 LAI            =   1.72
-     		Stover N Conc =   5.76 		 Extractable SW = 181.58
+     		Biomass       = 2273.43 		 LAI            =   1.72
+     		Stover N Conc =   5.76 		 Extractable SW = 181.62
 31 October 2014(Day of year=304), maize: 
      Frost Event: (Fatal) 
      		Min Temp      = -4.15 		 Senesced LAI    = 1.71
@@ -515,8 +515,8 @@ Paddock:
 6 November 2014(Day of year=310), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =              12218.38		 4983.08
-                         N  (kg/ha) =                 57.62		   34.90
+                         DM (kg/ha) =              12208.82		 4978.93
+                         N  (kg/ha) =                 57.59		   34.90
                          P  (kg/ha) =                  0.00		    0.00
 6 May 2015(Day of year=126), paddock.Operations Schedule: 
       Sending sow message to soybean
@@ -637,7 +637,7 @@ Paddock:
      Crop ended. Yield (dw) =  3490.0  (kg/ha)
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
                           DM (kg/ha) =                7931.9                  1170.9
-                          N  (kg/ha) =                 328.44                   24.65
+                          N  (kg/ha) =                 328.45                   24.65
      
 22 March 2016(Day of year=82), paddock.Operations Schedule: 
       Sending apply message to fertiliser
@@ -720,34 +720,34 @@ Paddock:
 11 July 2016(Day of year=193), maize: 
      Stage 6 FlagLeaf  DAS = 66
      		Biomass       = 860.26 		 LAI            =   3.65
-     		Stover N Conc =  12.50 		 Extractable SW = 184.88
+     		Stover N Conc =  12.50 		 Extractable SW = 184.87
 12 July 2016(Day of year=194), maize: 
      Stage 7 Flowering  DAS = 67
      		Biomass       = 902.20 		 LAI            =   3.64
-     		Stover N Conc =  12.95 		 Extractable SW = 192.96
+     		Stover N Conc =  12.95 		 Extractable SW = 192.94
 21 July 2016(Day of year=203), maize: 
      Stage 8 StartGrainFill  DAS = 76
      		Biomass       = 1178.47 		 LAI            =   3.56
-     		Stover N Conc =  13.45 		 Extractable SW = 217.39
+     		Stover N Conc =  13.45 		 Extractable SW = 217.38
 1 September 2016(Day of year=245), maize: 
      Stage 9 EndGrainFill  DAS = 118
-     		Biomass       = 2192.82 		 LAI            =   1.98
+     		Biomass       = 2193.07 		 LAI            =   1.97
      		Stover N Conc =   5.91 		 Extractable SW = 197.85
 5 September 2016(Day of year=249), maize: 
      Stage 10 Maturity  DAS = 122
-     		Biomass       = 2225.22 		 LAI            =   1.77
-     		Stover N Conc =   5.52 		 Extractable SW = 189.41
+     		Biomass       = 2225.36 		 LAI            =   1.77
+     		Stover N Conc =   5.52 		 Extractable SW = 189.42
 6 September 2016(Day of year=250), maize: 
      Stage 11 HarvestRipe  DAS = 123
-     		Biomass       = 2225.22 		 LAI            =   1.77
-     		Stover N Conc =   5.52 		 Extractable SW = 187.24
+     		Biomass       = 2225.36 		 LAI            =   1.77
+     		Stover N Conc =   5.52 		 Extractable SW = 187.26
 6 November 2016(Day of year=311), paddock.Operations Schedule: 
       Sending end_crop message to maize
 6 November 2016(Day of year=311), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =              12029.66		 5954.28
-                         N  (kg/ha) =                 55.19		   36.00
+                         DM (kg/ha) =              12025.22		 5943.14
+                         N  (kg/ha) =                 55.18		   35.99
                          P  (kg/ha) =                  0.00		    0.00
 31 December 2016(Day of year=366), clock: 
      Simulation is terminating due to end criteria being met.

@@ -536,7 +536,7 @@ Paddock:
 9 September 2017(Day of year=252), maize: 
      Stage 9 EndGrainFill  DAS = 114
      		Biomass       = 1590.49 		 LAI            =   2.23
-     		Stover N Conc =  10.33 		 Extractable SW =  31.60
+     		Stover N Conc =  10.32 		 Extractable SW =  31.60
 12 September 2017(Day of year=255), maize: 
      Stage 10 Maturity  DAS = 117
      		Biomass       = 1609.56 		 LAI            =   1.96
@@ -550,8 +550,8 @@ Paddock:
 15 October 2017(Day of year=288), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               7542.12		 5691.02
-                         N  (kg/ha) =                100.54		   30.80
+                         DM (kg/ha) =               7538.44		 5691.02
+                         N  (kg/ha) =                100.49		   30.80
                          P  (kg/ha) =                  0.00		    0.00
 28 April 2018(Day of year=118), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -797,23 +797,23 @@ Paddock:
      		Stover N Conc =  15.49 		 Extractable SW = 197.28
 16 September 2019(Day of year=259), maize: 
      Stage 9 EndGrainFill  DAS = 121
-     		Biomass       = 2325.68 		 LAI            =   2.49
-     		Stover N Conc =   7.28 		 Extractable SW = 131.10
+     		Biomass       = 2325.96 		 LAI            =   2.49
+     		Stover N Conc =   7.27 		 Extractable SW = 131.12
 19 September 2019(Day of year=262), maize: 
      Stage 10 Maturity  DAS = 124
-     		Biomass       = 2353.04 		 LAI            =   2.38
-     		Stover N Conc =   6.89 		 Extractable SW = 135.78
+     		Biomass       = 2353.25 		 LAI            =   2.37
+     		Stover N Conc =   6.88 		 Extractable SW = 135.81
 20 September 2019(Day of year=263), maize: 
      Stage 11 HarvestRipe  DAS = 125
-     		Biomass       = 2353.04 		 LAI            =   2.38
-     		Stover N Conc =   6.89 		 Extractable SW = 135.98
+     		Biomass       = 2353.25 		 LAI            =   2.37
+     		Stover N Conc =   6.88 		 Extractable SW = 136.02
 15 October 2019(Day of year=288), paddock.Operations Schedule: 
       Sending end_crop message to maize
 15 October 2019(Day of year=288), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =              12211.74		 5401.61
-                         N  (kg/ha) =                 68.86		   39.23
+                         DM (kg/ha) =              12206.76		 5393.91
+                         N  (kg/ha) =                 68.83		   39.19
                          P  (kg/ha) =                  0.00		    0.00
 31 December 2019(Day of year=365), clock: 
      Simulation is terminating due to end criteria being met.

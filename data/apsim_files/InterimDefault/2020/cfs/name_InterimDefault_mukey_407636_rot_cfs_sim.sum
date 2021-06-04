@@ -494,22 +494,22 @@ Paddock:
      		Stover N Conc =  13.52 		 Extractable SW =  58.63
 27 August 2018(Day of year=239), maize: 
      Stage 9 EndGrainFill  DAS = 113
-     		Biomass       = 1285.72 		 LAI            =   1.35
-     		Stover N Conc =   5.09 		 Extractable SW =  42.90
+     		Biomass       = 1285.73 		 LAI            =   1.35
+     		Stover N Conc =   5.09 		 Extractable SW =  42.89
 30 August 2018(Day of year=242), maize: 
      Stage 10 Maturity  DAS = 116
-     		Biomass       = 1314.70 		 LAI            =   1.22
+     		Biomass       = 1314.72 		 LAI            =   1.22
      		Stover N Conc =   4.81 		 Extractable SW =  47.13
 31 August 2018(Day of year=243), maize: 
      Stage 11 HarvestRipe  DAS = 117
-     		Biomass       = 1314.70 		 LAI            =   1.22
+     		Biomass       = 1314.72 		 LAI            =   1.22
      		Stover N Conc =   4.81 		 Extractable SW =  50.20
 6 November 2018(Day of year=310), paddock.Operations Schedule: 
       Sending end_crop message to maize
 6 November 2018(Day of year=310), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               5941.09		 5290.66
+                         DM (kg/ha) =               5940.91		 5291.08
                          N  (kg/ha) =                 48.08		   26.89
                          P  (kg/ha) =                  0.00		    0.00
 25 May 2019(Day of year=145), paddock.Operations Schedule: 
@@ -625,20 +625,10 @@ Paddock:
                      stover N conc =     2.24 (%)    extractable sw =   54.79 (mm)
 18 September 2019(Day of year=261), paddock.soybean: 
       stage 11.0 end_crop
-12 October 2019(Day of year=285): 
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                      APSIM Warning Error
-                      -------------------
-     Lower bound (    0.000000    ) exceeds upper bound (  -0.8673617E-18)
-             Variable is not checked
-     Component name: paddock.SurfaceOrganicMatter
-     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     
-     
 30 October 2019(Day of year=303), paddock.Operations Schedule: 
       Sending end_crop message to soybean
 30 October 2019(Day of year=303), paddock.soybean: 
-     Crop ended. Yield (dw) =  3572.4  (kg/ha)
+     Crop ended. Yield (dw) =  3572.5  (kg/ha)
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
                           DM (kg/ha) =                8325.7                  1415.9
                           N  (kg/ha) =                 334.55                   30.15
@@ -708,7 +698,7 @@ Paddock:
 7 May 2020(Day of year=128), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW = 120.65
+     		Stover N Conc =   0.00 		 Extractable SW = 120.64
 15 May 2020(Day of year=136), maize: 
      Stage 3 Emergence  DAS = 9
      		Biomass       =   0.00 		 LAI            =   0.00
@@ -735,15 +725,15 @@ Paddock:
      		Stover N Conc =  15.58 		 Extractable SW =  49.10
 6 September 2020(Day of year=250), maize: 
      Stage 9 EndGrainFill  DAS = 123
-     		Biomass       = 1249.57 		 LAI            =   0.69
+     		Biomass       = 1249.60 		 LAI            =   0.69
      		Stover N Conc =  10.99 		 Extractable SW =   8.29
 12 September 2020(Day of year=256), maize: 
      Stage 10 Maturity  DAS = 129
-     		Biomass       = 1261.54 		 LAI            =   0.61
+     		Biomass       = 1261.57 		 LAI            =   0.61
      		Stover N Conc =  10.82 		 Extractable SW =  50.43
 13 September 2020(Day of year=257), maize: 
      Stage 11 HarvestRipe  DAS = 130
-     		Biomass       = 1261.54 		 LAI            =   0.61
+     		Biomass       = 1261.57 		 LAI            =   0.61
      		Stover N Conc =  10.82 		 Extractable SW =  48.80
 24 October 2020(Day of year=298), maize: 
      Frost Event: (Fatal) 
@@ -762,8 +752,8 @@ Paddock:
 6 November 2020(Day of year=311), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               6690.35		 4890.44
-                         N  (kg/ha) =                108.22		   29.58
+                         DM (kg/ha) =               6690.16		 4890.19
+                         N  (kg/ha) =                108.22		   29.57
                          P  (kg/ha) =                  0.00		    0.00
 31 December 2020(Day of year=366), clock: 
      Simulation is terminating due to end criteria being met.
