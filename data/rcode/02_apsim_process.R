@@ -18,19 +18,19 @@ prds <- read.csv("../lohi_centers.csv")
 prds.accola.2018 <- subset(prds, field == "Accola" & year == 2018)
 
 sim.medium.KL <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_medium_KL.out",
-                    src.dir = "./results/AccolaDefault/mukey_2765537/sims_medium")
+                    src.dir = "./results/AccolaDefault/soybean/mukey_2765537/sims_medium")
 sim.medium.XF <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_medium_XF.out",
-                            src.dir = "./results/AccolaDefault/mukey_2765537/sims_medium")
+                            src.dir = "./results/AccolaDefault/soybean/mukey_2765537/sims_medium")
 sim.medium.DUL <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_medium_DUL.out",
-                            src.dir = "./results/AccolaDefault/mukey_2765537/sims_medium")
+                            src.dir = "./results/AccolaDefault/soybean/mukey_2765537/sims_medium")
 sim.low.KL <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_low_KL.out",
-                     src.dir = "./results/AccolaDefault/mukey_2765537/sims_low")
+                     src.dir = "./results/AccolaDefault/soybean/mukey_2765537/sims_low")
 sim.low.XF <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_low_XF.out",
-                     src.dir = "./results/AccolaDefault/mukey_2765537/sims_low")
+                     src.dir = "./results/AccolaDefault/soybean/mukey_2765537/sims_low")
 sim.low.DUL <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_low_DUL.out",
-                      src.dir = "./results/AccolaDefault/mukey_2765537/sims_low")
+                      src.dir = "./results/AccolaDefault/soybean/mukey_2765537/sims_low")
 sim.high.HI <- read_apsim("name_AccolaDefault_mukey_2765537_soybean_2018_rot_sfc_sim_high_HI.out",
-                          src.dir = "./results/AccolaDefault/mukey_2765537/sims_high")
+                          src.dir = "./results/AccolaDefault/soybean/mukey_2765537/sims_high")
 ### Plot
 ggplot() + 
   geom_point(data = prds.accola.2018, aes(x = as.Date("2018-11-01"), y = Low*1e3, color = "Low")) + 
