@@ -1,7 +1,7 @@
 #### Optimizing APSIM runs against suboptimal, default and supraoptimal yields
 ####
 #### Date: 2021-04-01
-#### Edited: 2021-06-04
+#### Edited: 2021-06-07
 #### 
 #### APSIM Classic has a bug in which simulations run at 
 #### the command line can only be run from the current directory so 
@@ -17,12 +17,12 @@ setwd(file.path(hr.path, "data", "rcode"))
 
 apsim_options(warn.versions = FALSE)
 
-yr <- "2018"
-site.default <- "AccolaDefault"
+yr <- "2016"
+site.default <- "BasswoodDefault"
 ## This is for soybean
-sfcs <- file.path("../apsim_files", site.default, yr, "sfc")
+## sfcs <- file.path("../apsim_files", site.default, yr, "sfc")
 ## This is for corn
-## sfcs <- file.path("../apsim_files", site.default, yr, "cfs")
+sfcs <- file.path("../apsim_files", site.default, yr, "cfs")
 lsf <- list.files(sfcs)
 apsim.files <- grep("apsim$", lsf, value = TRUE)
 file.copy(from = paste0(sfcs, "/", apsim.files), to = ".")

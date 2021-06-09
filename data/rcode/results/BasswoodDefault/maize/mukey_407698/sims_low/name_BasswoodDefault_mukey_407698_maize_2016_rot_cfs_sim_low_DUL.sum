@@ -1,0 +1,754 @@
+     ###     ######     #####   #   #     #   
+    #   #    #     #   #        #   ##   ##   
+   #     #   #     #   #        #   ##   ##   
+   #######   ######     #####   #   # # # #   
+   #     #   #              #   #   #  #  #   
+   #     #   #         #####    #   #  #  #   
+                                              
+                                              
+ The Agricultural Production Systems Simulator
+             Copyright(c) APSRU               
+
+Version                = 7.10 r4207
+Title                  = name_BasswoodDefault_mukey_407698_rot_cfs_sim
+   Component                        "clock" = %apsim%\Model\Clock.dll
+   Component       "basswood-1990-2020.met" = %apsim%\Model\Input.dll
+Paddock:
+   Component                   "outputfile" = %apsim%\Model\Report.dll
+   Component                        "accum" = %apsim%\Model\Accum.dll
+   Component          "Operations Schedule" = %apsim%\Model\Operations.dll
+   Component                   "fertiliser" = %apsim%\Model\Fertiliser.dll
+   Component                "Empty manager" = %apsim%\Model\Manager.dll
+   Component                   "Soil Water" = %apsim%\Model\SoilWat.dll
+   Component         "SurfaceOrganicMatter" = %apsim%\Model\SurfaceOM.dll
+   Component                "Soil Nitrogen" = %apsim%\Model\SoilN.dll
+   Component                      "soybean" = %apsim%\Model\Plant.dll
+   Component                        "maize" = %apsim%\Model\Maize.dll
+
+------- clock Initialisation --------------------------------------------------
+     Sequencer phases:
+        prepare
+        init_step
+        do_management
+        run_one_step
+        do_pasture_water
+        process
+        do_pasture_growth
+        do_stock
+        do_cashbook
+        post
+        end_step
+     Simulation start date =  1/01/2013
+     Simulation end date   = 31/12/2016
+     Time step =           = 1440 (mins)
+
+------- basswood-1990-2020.met Initialisation ---------------------------------
+     Sparse data is not allowed
+     INPUT File name: ..\apsim_files\BasswoodDefault\2016\cfs\met_files\basswood-1990-2020.met
+
+------- outputfile Initialisation ---------------------------------------------
+     Output frequency:
+        post
+     Output variables:
+        title
+        dd/mm/yyyy as date
+        day
+        year
+        soybean.yield as soybean_yield
+        maize.yield as maize_yield
+        soybean.biomass as soybean_biomass
+        maize.biomass as maize_biomass
+        corn_buac
+        soy_buac
+        fertiliser
+        surfaceom_c
+        leach_no3
+        lch_no3n
+
+     Output file = name_BasswoodDefault_mukey_407698_rot_cfs_sim.out
+     Format = normal
+
+------- paddock.accum Initialisation ------------------------------------------
+     Initialising
+
+------- paddock.Operations Schedule Initialisation ----------------------------
+     Operations Schedule
+     ===================
+       06/5/2013  Prepare      soybean sow plants = 41 (plants/m2), sowing_depth = 51 (mm), cultivar = MG_2, row_spacing = 254 (mm), crop_class = plant
+      15/10/2013  Prepare      soybean end_crop
+       06/5/2015  Prepare      soybean sow plants = 41 (plants/m2), sowing_depth = 51 (mm), cultivar = MG_2, row_spacing = 254 (mm), crop_class = plant
+      15/10/2015  Prepare      soybean end_crop
+       06/5/2014  Prepare      maize sow plants = 7 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant
+       22/3/2014  Prepare      Fertiliser apply amount = 110 (kg/ha), depth = 50.0 (mm), type = MAP ()
+       09/4/2014  Prepare      Fertiliser apply amount = 151 (kg/ha), depth = 50.0 (mm), type = NH4_N ()
+      06/11/2014  Prepare      maize end_crop
+       06/5/2016  Prepare      maize sow plants = 7 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant
+       22/3/2016  Prepare      Fertiliser apply amount = 110 (kg/ha), depth = 50.0 (mm), type = MAP ()
+       09/4/2016  Prepare      Fertiliser apply amount = 151 (kg/ha), depth = 50.0 (mm), type = NH4_N ()
+      06/11/2016  Prepare      maize end_crop
+
+------- paddock.Empty manager Initialisation ----------------------------------
+     Manager rules:
+     
+     SECTION:- init
+     
+     SECTION:- start_of_day
+             corn_buac   = maize.yield * 0.0159/0.85
+             soy_buac   = soybean.yield * 0.0149/0.87
+             lch_no3n   = leach_no3 * 0.2259
+     
+     SECTION:- end_of_day
+     END of rules
+     
+
+------- paddock.Soil Water Initialisation -------------------------------------
+     
+         - Reading constants
+     
+        - Reading Soil Property Parameters
+     
+        - Reading Soil Profile Parameters
+     Initial soilwater distributed using "sw" parameter.
+     
+     
+     
+                      Soil Profile Properties
+        ---------------------------------------------------------------------
+              Depth  Air_Dry  LL15   Dul    Sat     Sw     BD   Runoff  SWCON   Ks
+                mm     mm/mm  mm/mm  mm/mm  mm/mm  mm/mm  g/cc    wf           mm/day
+        ---------------------------------------------------------------------
+            0.-   20.  0.115  0.230  0.280  0.392  0.280  1.480  0.171  0.500259.200
+           20.-   40.  0.115  0.230  0.280  0.392  0.280  1.480  0.143  0.500259.200
+           40.-   60.  0.115  0.230  0.280  0.392  0.280  1.480  0.118  0.500259.200
+           60.-   80.  0.115  0.230  0.280  0.392  0.280  1.480  0.098  0.500259.200
+           80.-  100.  0.115  0.230  0.280  0.392  0.280  1.480  0.082  0.500259.200
+          100.-  150.  0.115  0.230  0.280  0.392  0.280  1.480  0.149  0.500259.200
+          150.-  200.  0.115  0.230  0.280  0.392  0.280  1.480  0.094  0.500259.200
+          200.-  250.  0.115  0.230  0.280  0.392  0.280  1.480  0.059  0.500259.200
+          250.-  300.  0.225  0.225  0.269  0.346  0.269  1.600  0.037  0.500  3.456
+          300.-  400.  0.225  0.225  0.269  0.346  0.269  1.600  0.038  0.500  3.456
+          400.-  500.  0.225  0.225  0.269  0.346  0.269  1.600  0.009  0.500  3.456
+          500.-  600.  0.225  0.225  0.269  0.346  0.269  1.600  0.000  0.500  3.456
+          600.-  900.  0.225  0.225  0.269  0.346  0.269  1.600  0.000  0.500  3.456
+          900.- 1200.  0.225  0.225  0.269  0.346  0.269  1.600  0.000  0.500  3.456
+         1200.- 1500.  0.243  0.243  0.271  0.332  0.271  1.638  0.000  0.500 47.174
+         1500.- 2000.  0.249  0.249  0.271  0.327  0.271  1.650  0.000  0.500 60.480
+        ---------------------------------------------------------------------
+     
+     
+     
+                  Soil Water Holding Capacity
+          ---------------------------------------------------------
+              Depth    Unavailable Available  Max Avail.  Drainable
+                          (LL15)   (SW-LL15)  (DUL-LL15)  (SAT-DUL)
+                            mm        mm          mm         mm
+          ---------------------------------------------------------
+            0.-   20.       4.60       1.00       1.00       2.24
+           20.-   40.       4.60       1.00       1.00       2.24
+           40.-   60.       4.60       1.00       1.00       2.24
+           60.-   80.       4.60       1.00       1.00       2.24
+           80.-  100.       4.60       1.00       1.00       2.24
+          100.-  150.      11.50       2.50       2.50       5.60
+          150.-  200.      11.50       2.50       2.50       5.60
+          200.-  250.      11.50       2.50       2.50       5.60
+          250.-  300.      11.25       2.20       2.20       3.85
+          300.-  400.      22.50       4.40       4.40       7.70
+          400.-  500.      22.50       4.40       4.40       7.70
+          500.-  600.      22.50       4.40       4.40       7.70
+          600.-  900.      67.50      13.20      13.20      23.10
+          900.- 1200.      67.50      13.20      13.20      23.10
+         1200.- 1500.      72.90       8.40       8.40      18.30
+         1500.- 2000.     124.50      11.00      11.00      28.00
+          ---------------------------------------------------------
+               Totals     468.65      73.70      73.70     147.45
+          ---------------------------------------------------------
+     
+     
+     
+     
+     
+     
+                  Initial Soil Parameters
+          ---------------------------------------------------------
+                 Insoil        Salb     Dif_Con   Dif_Slope
+          ---------------------------------------------------------
+                   0.00        0.13       88.00       35.00
+          ---------------------------------------------------------
+     
+     
+     
+                  Runoff is predicted using scs curve number:
+                Cn2  Cn_Red  Cn_Cov   H_Eff_Depth
+                                           mm
+          ---------------------------------------------------------
+              73.00   20.00    0.80  450.00
+          ---------------------------------------------------------
+     
+     
+     
+           Using Ritchie evaporation model
+            Cuml evap (U):            9.50 (mm^0.5)
+            CONA:                     4.00 ()
+            Eo from priestly-taylor
+
+------- paddock.SurfaceOrganicMatter Initialisation ---------------------------
+     
+         - Reading constants
+     
+         - Reading parameters
+     
+     
+     
+                         Initial Surface Organic Matter Data
+         ----------------------------------------------------------------------
+            Name   Type        Dry matter   C        N        P    Cover  Standing_fr
+                                (kg/ha)  (kg/ha)  (kg/ha)  (kg/ha) (0-1)     (0-1)
+         ----------------------------------------------------------------------
+          soybean   soybean       1250.0   500.0    18.5     0.0   0.221     0.0
+         ----------------------------------------------------------------------
+     
+                      Effective Cover from Surface Materials =   0.2
+     
+
+------- paddock.Soil Nitrogen Initialisation ----------------------------------
+     
+        - Reading Parameters
+     
+        - Reading Constants
+     
+     
+     
+           TAV and AMP supplied externally
+     
+     
+     
+                      Soil Profile Properties
+          ------------------------------------------------
+           Layer    pH    OC     NO3     NH4    Urea
+                         (%) (kg/ha) (kg/ha) (kg/ha)
+          ------------------------------------------------
+             1     6.40  1.57    0.46    0.46    0.00
+             2     6.40  1.57    0.46    0.46    0.00
+             3     6.40  1.57    0.46    0.46    0.00
+             4     6.40  1.57    0.46    0.46    0.00
+             5     6.40  1.57    0.46    0.46    0.00
+             6     6.40  1.57    1.16    1.16    0.00
+             7     6.40  1.57    1.16    1.16    0.00
+             8     6.40  1.57    1.16    1.16    0.00
+             9     5.80  0.73    0.58    0.58    0.00
+            10     5.80  0.73    1.16    1.16    0.00
+            11     5.80  0.73    1.16    1.16    0.00
+            12     5.80  0.73    1.16    1.16    0.00
+            13     5.80  0.73    3.48    3.48    0.00
+            14     5.80  0.73    3.48    3.48    0.00
+            15     6.34  0.28    1.38    1.38    0.00
+            16     6.50  0.14    1.20    1.20    0.00
+          ------------------------------------------------
+           Totals               19.39   19.39    0.00
+          ------------------------------------------------
+     
+     
+     
+     
+     
+     
+                  Initial Soil Organic Matter Status
+          ---------------------------------------------------------
+           Layer      Hum-C   Hum-N  Biom-C  Biom-N   FOM-C   FOM-N
+                    (kg/ha) (kg/ha) (kg/ha) (kg/ha) (kg/ha) (kg/ha)
+          ---------------------------------------------------------
+             1       4541.3   378.4    94.1    11.8    41.1     1.0
+             2       4541.3   378.4    94.1    11.8    39.9     1.0
+             3       4541.3   378.4    94.1    11.8    38.7     1.0
+             4       4541.3   378.4    94.1    11.8    37.6     0.9
+             5       4541.3   378.4    94.1    11.8    36.4     0.9
+             6      11353.3   946.1   235.1    29.4    33.8     0.8
+             7      11353.3   946.1   235.1    29.4    31.4     0.8
+             8      11353.3   946.1   235.1    29.4    29.1     0.7
+             9       5794.3   482.9     5.7     0.7    27.0     0.7
+            10      11588.5   965.7    11.5     1.4    23.2     0.6
+            11      11588.5   965.7    11.5     1.4    20.0     0.5
+            12      11588.5   965.7    11.5     1.4    17.2     0.4
+            13      34765.5  2897.1    34.5     4.3    11.0     0.3
+            14      34765.5  2897.1    34.5     4.3     7.0     0.2
+            15      13745.6  1145.5    13.6     1.7     4.5     0.1
+            16      11950.7   995.9    11.8     1.5     2.1     0.1
+          ---------------------------------------------------------
+           Totals  192553.5 16046.1  1310.2   163.8   400.0    10.0
+          ---------------------------------------------------------
+------- Start of simulation  --------------------------------------------------
+1 January 2013(Day of year=1), paddock.Empty manager: 
+     Manager creating a new local real variable : corn_buac = 0.00000
+     Manager creating a new local real variable : soy_buac = 0.00000
+     Manager creating a new local real variable : lch_no3n = 0.00000
+6 May 2013(Day of year=126), paddock.Operations Schedule: 
+      Sending sow message to soybean
+6 May 2013(Day of year=126), paddock.soybean: 
+     Crop Sow
+        ------------------------------------------------
+        cultivar                   = mg_2
+        Phases:
+           out
+           sowing
+           germination
+              shoot_lag                  =      10 (dd)
+              shoot_rate                 =       1 (dd/mm)
+           emergence
+              cumvd_emergence            =       0     100 (vd)
+              tt_emergence               =     100     100 (dd)
+           end_of_juvenile
+              x_pp_end_of_juvenile       =   13.59    14.6    15.6    16.6 (h)
+              y_tt_end_of_juvenile       =     100     133     200     400 (dd)
+           floral_initiation
+              x_pp_floral_initiation     =   13.59    14.6    15.6    16.6 (h)
+              y_tt_floral_initiation     =     128     171     256     512 (dd)
+           flowering
+              x_pp_flowering             =   13.59    14.6    15.6    16.6 (h)
+              y_tt_flowering             =     246     328     492    1312 (dd)
+           start_grain_fill
+              x_pp_start_grain_fill      =   13.59    14.6    15.6    16.6 (h)
+              y_tt_start_grain_fill      =     499     666     999    2664 (dd)
+           end_grain_fill
+              tt_end_grain_fill          =      20 (dd)
+           maturity
+              tt_maturity                =      20 (dd)
+           harvest_ripe
+              tt_harvest_ripe            =       1 (dd)
+           end_crop
+     
+        x_pp_hi_incr               =       1.00      24.00
+        y_hi_incr                  =     0.0100     0.0100
+        x_hi_max_pot_stress        =       0.00       1.00
+        y_hi_max_pot               =       0.50       0.50
+        ------------------------------------------------
+     
+     
+                        Root Profile
+         -----------------------------------------------
+          Layer       Kl           Lower    Exploration
+          Depth     Factor         Limit      Factor
+          (mm)         ()        (mm/mm)       (0-1)
+         -----------------------------------------------
+          20.0     0.080          0.230       1.000
+          20.0     0.079          0.230       1.000
+          20.0     0.078          0.230       1.000
+          20.0     0.077          0.230       1.000
+          20.0     0.076          0.230       1.000
+          50.0     0.075          0.230       1.000
+          50.0     0.073          0.230       1.000
+          50.0     0.070          0.230       1.000
+          50.0     0.068          0.230       1.000
+         100.0     0.066          0.230       1.000
+         100.0     0.062          0.230       1.000
+         100.0     0.058          0.230       1.000
+         300.0     0.054          0.230       1.000
+         300.0     0.044          0.230       1.000
+         300.0     0.036          0.248       1.000
+         500.0     0.030          0.253       1.000
+         -----------------------------------------------
+         Extractable SW:    65mm in  2000mm total depth (  3%).
+         Crop factor for bounding water use is set to 100.0 times eo.
+      stage 1.0 sowing
+     
+                      Crop Sowing Data
+         ------------------------------------------------
+         Sowing  Depth Plants Spacing Skip  Skip  Cultivar
+         Day no   mm     m^2     mm   row   plant name
+         ------------------------------------------------
+            126   51.0   41.0  254.0   0.0   0.0 mg_2
+         ------------------------------------------------
+     
+7 May 2013(Day of year=127), paddock.soybean: 
+      stage 2.0 germination
+17 May 2013(Day of year=137), paddock.soybean: 
+      stage 3.0 emergence
+                     biomass =           1.23 (g/m^2)   lai          =   0.012 (m^2/m^2)
+                     stover N conc =     6.00 (%)    extractable sw =    8.25 (mm)
+29 May 2013(Day of year=149), paddock.soybean: 
+      stage 4.0 end_of_juvenile
+                     biomass =           4.10 (g/m^2)   lai          =   0.072 (m^2/m^2)
+                     stover N conc =     4.56 (%)    extractable sw =   64.05 (mm)
+16 June 2013(Day of year=167), paddock.soybean: 
+      stage 5.0 floral_initiation
+                     biomass =          41.13 (g/m^2)   lai          =   0.766 (m^2/m^2)
+                     stover N conc =     3.84 (%)    extractable sw =   66.09 (mm)
+3 July 2013(Day of year=184), paddock.soybean: 
+      stage 6.0 flowering
+                     biomass =         229.48 (g/m^2)   lai          =   3.155 (m^2/m^2)
+                     stover N conc =     3.42 (%)    extractable sw =   58.51 (mm)
+26 July 2013(Day of year=207), paddock.soybean: 
+      stage 7.0 start_grain_fill
+                     biomass =         369.99 (g/m^2)   lai          =   1.586 (m^2/m^2)
+                     stover N conc =     3.56 (%)    extractable sw =   29.76 (mm)
+5 September 2013(Day of year=248), paddock.soybean: 
+      stage 8.0 end_grain_fill
+                     biomass =         407.53 (g/m^2)   lai          =   0.108 (m^2/m^2)
+                     stover N conc =     2.59 (%)    extractable sw =    3.71 (mm)
+6 September 2013(Day of year=249), paddock.soybean: 
+      stage 9.0 maturity
+                     biomass =         407.53 (g/m^2)   lai          =   0.102 (m^2/m^2)
+                     stover N conc =     2.59 (%)    extractable sw =    3.55 (mm)
+8 September 2013(Day of year=251), paddock.soybean: 
+      stage 10.0 harvest_ripe
+                     biomass =         407.53 (g/m^2)   lai          =   0.000 (m^2/m^2)
+                     stover N conc =     2.60 (%)    extractable sw =    3.40 (mm)
+9 September 2013(Day of year=252), paddock.soybean: 
+      stage 11.0 end_crop
+15 October 2013(Day of year=288), paddock.Operations Schedule: 
+      Sending end_crop message to soybean
+15 October 2013(Day of year=288), paddock.soybean: 
+     Crop ended. Yield (dw) =   909.8  (kg/ha)
+         Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
+                          DM (kg/ha) =                4075.3                   910.4
+                          N  (kg/ha) =                 132.64                   19.61
+     
+22 March 2014(Day of year=81), paddock.Operations Schedule: 
+      Sending apply message to fertiliser
+22 March 2014(Day of year=81), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+       110.00 of mono-ammonium phosphate (map)
+                                         added at depth   50.00 (layer   3)
+9 April 2014(Day of year=99), paddock.Operations Schedule: 
+      Sending apply message to fertiliser
+9 April 2014(Day of year=99), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+       151.00 of N as ammonium (nh4_n)
+                                         added at depth   50.00 (layer   3)
+6 May 2014(Day of year=126), paddock.Operations Schedule: 
+      Sending sow message to maize
+6 May 2014(Day of year=126), maize: 
+     Sowing initiate
+     
+                 Crop Sowing Data
+         -------------------------------------------------------
+         Sowing   Depth  Plants Spacing Skiprow Cultivar
+         Day no     mm     m^2    mm     code     name  
+         -------------------------------------------------------
+            126    51.0     7.0   762    1.0     b_105
+         -------------------------------------------------------
+     
+      - reading constants for plant(maize) - b_105
+         tt_emerg_to_endjuv       =  236.00
+         tt_endjuv_to_init        =    0.00
+         tt_init_to_flower        =   50.00
+         tt_flower_to_maturity    =  838.00
+         tt_flag_to_flower        =    1.00
+         tt_flower_to_start_grain =  150.00
+         tt_maturity_to_ripe      =    1.00
+         ------------------------------------------------------
+     
+     
+                            Root Profile
+         ---------------------------------------------------
+              Layer       Kl           Lower    Exploration
+              Depth     Factor         Limit      Factor
+              (mm)         ()        (mm/mm)       (0-1)
+         ---------------------------------------------------
+              20.0     0.080          0.230       1.000
+              20.0     0.079          0.230       1.000
+              20.0     0.078          0.230       1.000
+              20.0     0.077          0.230       1.000
+              20.0     0.076          0.230       1.000
+              50.0     0.075          0.230       1.000
+              50.0     0.073          0.230       1.000
+              50.0     0.070          0.230       1.000
+              50.0     0.068          0.230       1.000
+             100.0     0.066          0.230       1.000
+             100.0     0.062          0.230       1.000
+             100.0     0.058          0.230       1.000
+             300.0     0.054          0.230       1.000
+             300.0     0.044          0.230       1.000
+             300.0     0.036          0.248       1.000
+             500.0     0.030          0.253       1.000
+         ---------------------------------------------------
+     
+7 May 2014(Day of year=127), maize: 
+     Stage 2 Germination  DAS = 1
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW =   0.62
+11 May 2014(Day of year=131), maize: 
+     Stage 3 Emergence  DAS = 5
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW =  27.71
+2 June 2014(Day of year=153), maize: 
+     Stage 4 EndOfJuvenile  DAS = 27
+     		Biomass       =  21.97 		 LAI            =   0.21
+     		Stover N Conc =   0.44 		 Extractable SW =  37.21
+3 June 2014(Day of year=154), maize: 
+     Stage 5 FloralInitiation  DAS = 28
+     		Biomass       =  26.83 		 LAI            =   0.25
+     		Stover N Conc =   0.53 		 Extractable SW =  39.25
+15 July 2014(Day of year=196), maize: 
+     Stage 6 FlagLeaf  DAS = 70
+     		Biomass       = 753.84 		 LAI            =   3.26
+     		Stover N Conc =  12.74 		 Extractable SW =  70.21
+16 July 2014(Day of year=197), maize: 
+     Stage 7 Flowering  DAS = 71
+     		Biomass       = 781.32 		 LAI            =   3.26
+     		Stover N Conc =  12.96 		 Extractable SW =  66.48
+26 July 2014(Day of year=207), maize: 
+     Stage 8 StartGrainFill  DAS = 81
+     		Biomass       = 973.35 		 LAI            =   3.18
+     		Stover N Conc =  13.50 		 Extractable SW =  41.93
+11 September 2014(Day of year=254), maize: 
+     Stage 9 EndGrainFill  DAS = 128
+     		Biomass       = 1574.25 		 LAI            =   1.29
+     		Stover N Conc =   4.00 		 Extractable SW = 111.27
+17 September 2014(Day of year=260), maize: 
+     Stage 10 Maturity  DAS = 134
+     		Biomass       = 1593.83 		 LAI            =   1.19
+     		Stover N Conc =   3.87 		 Extractable SW =  98.68
+18 September 2014(Day of year=261), maize: 
+     Stage 11 HarvestRipe  DAS = 135
+     		Biomass       = 1593.83 		 LAI            =   1.19
+     		Stover N Conc =   3.87 		 Extractable SW =  94.48
+31 October 2014(Day of year=304), maize: 
+     Frost Event: (Fatal) 
+     		Min Temp      = -4.11 		 Senesced LAI    = 1.18
+1 November 2014(Day of year=305), maize: 
+     Frost Event: (Fatal) 
+     		Min Temp      = -5.19 		 Senesced LAI    = -0.01
+6 November 2014(Day of year=310), paddock.Operations Schedule: 
+      Sending end_crop message to maize
+6 November 2014(Day of year=310), maize: 
+     Crop ended.
+     Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
+                         DM (kg/ha) =               6639.15		 4057.16
+                         N  (kg/ha) =                 38.73		   30.79
+                         P  (kg/ha) =                  0.00		    0.00
+6 May 2015(Day of year=126), paddock.Operations Schedule: 
+      Sending sow message to soybean
+6 May 2015(Day of year=126), paddock.soybean: 
+     Crop Sow
+        ------------------------------------------------
+        cultivar                   = mg_2
+        Phases:
+           out
+           sowing
+           germination
+              shoot_lag                  =      10 (dd)
+              shoot_rate                 =       1 (dd/mm)
+           emergence
+              cumvd_emergence            =       0     100 (vd)
+              tt_emergence               =     100     100 (dd)
+           end_of_juvenile
+              x_pp_end_of_juvenile       =   13.59    14.6    15.6    16.6 (h)
+              y_tt_end_of_juvenile       =     100     133     200     400 (dd)
+           floral_initiation
+              x_pp_floral_initiation     =   13.59    14.6    15.6    16.6 (h)
+              y_tt_floral_initiation     =     128     171     256     512 (dd)
+           flowering
+              x_pp_flowering             =   13.59    14.6    15.6    16.6 (h)
+              y_tt_flowering             =     246     328     492    1312 (dd)
+           start_grain_fill
+              x_pp_start_grain_fill      =   13.59    14.6    15.6    16.6 (h)
+              y_tt_start_grain_fill      =     499     666     999    2664 (dd)
+           end_grain_fill
+              tt_end_grain_fill          =      20 (dd)
+           maturity
+              tt_maturity                =      20 (dd)
+           harvest_ripe
+              tt_harvest_ripe            =       1 (dd)
+           end_crop
+     
+        x_pp_hi_incr               =       1.00      24.00
+        y_hi_incr                  =     0.0100     0.0100
+        x_hi_max_pot_stress        =       0.00       1.00
+        y_hi_max_pot               =       0.50       0.50
+        ------------------------------------------------
+     
+     
+                        Root Profile
+         -----------------------------------------------
+          Layer       Kl           Lower    Exploration
+          Depth     Factor         Limit      Factor
+          (mm)         ()        (mm/mm)       (0-1)
+         -----------------------------------------------
+          20.0     0.080          0.230       1.000
+          20.0     0.079          0.230       1.000
+          20.0     0.078          0.230       1.000
+          20.0     0.077          0.230       1.000
+          20.0     0.076          0.230       1.000
+          50.0     0.075          0.230       1.000
+          50.0     0.073          0.230       1.000
+          50.0     0.070          0.230       1.000
+          50.0     0.068          0.230       1.000
+         100.0     0.066          0.230       1.000
+         100.0     0.062          0.230       1.000
+         100.0     0.058          0.230       1.000
+         300.0     0.054          0.230       1.000
+         300.0     0.044          0.230       1.000
+         300.0     0.036          0.248       1.000
+         500.0     0.030          0.253       1.000
+         -----------------------------------------------
+         Extractable SW:    65mm in  2000mm total depth (  3%).
+         Crop factor for bounding water use is set to 100.0 times eo.
+      stage 1.0 sowing
+     
+                      Crop Sowing Data
+         ------------------------------------------------
+         Sowing  Depth Plants Spacing Skip  Skip  Cultivar
+         Day no   mm     m^2     mm   row   plant name
+         ------------------------------------------------
+            126   51.0   41.0  254.0   0.0   0.0 mg_2
+         ------------------------------------------------
+     
+7 May 2015(Day of year=127), paddock.soybean: 
+      stage 2.0 germination
+16 May 2015(Day of year=136), paddock.soybean: 
+      stage 3.0 emergence
+                     biomass =           1.23 (g/m^2)   lai          =   0.012 (m^2/m^2)
+                     stover N conc =     6.00 (%)    extractable sw =   32.00 (mm)
+1 June 2015(Day of year=152), paddock.soybean: 
+      stage 4.0 end_of_juvenile
+                     biomass =           1.64 (g/m^2)   lai          =   0.009 (m^2/m^2)
+                     stover N conc =    11.51 (%)    extractable sw =   67.65 (mm)
+16 June 2015(Day of year=167), paddock.soybean: 
+      stage 5.0 floral_initiation
+                     biomass =           5.19 (g/m^2)   lai          =   0.085 (m^2/m^2)
+                     stover N conc =     3.83 (%)    extractable sw =   92.63 (mm)
+4 July 2015(Day of year=185), paddock.soybean: 
+      stage 6.0 flowering
+                     biomass =          66.11 (g/m^2)   lai          =   1.050 (m^2/m^2)
+                     stover N conc =     3.27 (%)    extractable sw =   93.12 (mm)
+27 July 2015(Day of year=208), paddock.soybean: 
+      stage 7.0 start_grain_fill
+                     biomass =         348.43 (g/m^2)   lai          =   3.712 (m^2/m^2)
+                     stover N conc =     3.30 (%)    extractable sw =   99.84 (mm)
+7 September 2015(Day of year=250), paddock.soybean: 
+      stage 8.0 end_grain_fill
+                     biomass =         727.62 (g/m^2)   lai          =   2.122 (m^2/m^2)
+                     stover N conc =     2.45 (%)    extractable sw =  104.99 (mm)
+9 September 2015(Day of year=252), paddock.soybean: 
+      stage 9.0 maturity
+                     biomass =         728.91 (g/m^2)   lai          =   2.046 (m^2/m^2)
+                     stover N conc =     2.36 (%)    extractable sw =  104.57 (mm)
+12 September 2015(Day of year=255), paddock.soybean: 
+      stage 10.0 harvest_ripe
+                     biomass =         728.91 (g/m^2)   lai          =   0.000 (m^2/m^2)
+                     stover N conc =     2.42 (%)    extractable sw =  100.39 (mm)
+13 September 2015(Day of year=256), paddock.soybean: 
+      stage 11.0 end_crop
+15 October 2015(Day of year=288), paddock.Operations Schedule: 
+      Sending end_crop message to soybean
+15 October 2015(Day of year=288), paddock.soybean: 
+     Crop ended. Yield (dw) =  3207.2  (kg/ha)
+         Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
+                          DM (kg/ha) =                7289.1                  1096.9
+                          N  (kg/ha) =                 302.78                   23.09
+     
+22 March 2016(Day of year=82), paddock.Operations Schedule: 
+      Sending apply message to fertiliser
+22 March 2016(Day of year=82), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+       110.00 of mono-ammonium phosphate (map)
+                                         added at depth   50.00 (layer   3)
+9 April 2016(Day of year=100), paddock.Operations Schedule: 
+      Sending apply message to fertiliser
+9 April 2016(Day of year=100), fertiliser: 
+     
+   - Reading Fertiliser Type Parameters
+       151.00 of N as ammonium (nh4_n)
+                                         added at depth   50.00 (layer   3)
+6 May 2016(Day of year=127), paddock.Operations Schedule: 
+      Sending sow message to maize
+6 May 2016(Day of year=127), maize: 
+     Sowing initiate
+     
+                 Crop Sowing Data
+         -------------------------------------------------------
+         Sowing   Depth  Plants Spacing Skiprow Cultivar
+         Day no     mm     m^2    mm     code     name  
+         -------------------------------------------------------
+            127    51.0     7.0   762    1.0     b_105
+         -------------------------------------------------------
+     
+      - reading constants for plant(maize) - b_105
+         tt_emerg_to_endjuv       =  236.00
+         tt_endjuv_to_init        =    0.00
+         tt_init_to_flower        =   50.00
+         tt_flower_to_maturity    =  838.00
+         tt_flag_to_flower        =    1.00
+         tt_flower_to_start_grain =  150.00
+         tt_maturity_to_ripe      =    1.00
+         ------------------------------------------------------
+     
+     
+                            Root Profile
+         ---------------------------------------------------
+              Layer       Kl           Lower    Exploration
+              Depth     Factor         Limit      Factor
+              (mm)         ()        (mm/mm)       (0-1)
+         ---------------------------------------------------
+              20.0     0.080          0.230       1.000
+              20.0     0.079          0.230       1.000
+              20.0     0.078          0.230       1.000
+              20.0     0.077          0.230       1.000
+              20.0     0.076          0.230       1.000
+              50.0     0.075          0.230       1.000
+              50.0     0.073          0.230       1.000
+              50.0     0.070          0.230       1.000
+              50.0     0.068          0.230       1.000
+             100.0     0.066          0.230       1.000
+             100.0     0.062          0.230       1.000
+             100.0     0.058          0.230       1.000
+             300.0     0.054          0.230       1.000
+             300.0     0.044          0.230       1.000
+             300.0     0.036          0.248       1.000
+             500.0     0.030          0.253       1.000
+         ---------------------------------------------------
+     
+7 May 2016(Day of year=128), maize: 
+     Stage 2 Germination  DAS = 1
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW =  65.39
+11 May 2016(Day of year=132), maize: 
+     Stage 3 Emergence  DAS = 5
+     		Biomass       =   0.00 		 LAI            =   0.00
+     		Stover N Conc =   0.00 		 Extractable SW =  78.78
+4 June 2016(Day of year=156), maize: 
+     Stage 4 EndOfJuvenile  DAS = 29
+     		Biomass       =  30.59 		 LAI            =   0.24
+     		Stover N Conc =   0.63 		 Extractable SW =  87.77
+5 June 2016(Day of year=157), maize: 
+     Stage 5 FloralInitiation  DAS = 30
+     		Biomass       =  35.21 		 LAI            =   0.27
+     		Stover N Conc =   0.73 		 Extractable SW =  84.62
+11 July 2016(Day of year=193), maize: 
+     Stage 6 FlagLeaf  DAS = 66
+     		Biomass       = 547.89 		 LAI            =   1.89
+     		Stover N Conc =  11.43 		 Extractable SW =  50.42
+12 July 2016(Day of year=194), maize: 
+     Stage 7 Flowering  DAS = 67
+     		Biomass       = 564.95 		 LAI            =   1.88
+     		Stover N Conc =  11.70 		 Extractable SW =  63.78
+21 July 2016(Day of year=203), maize: 
+     Stage 8 StartGrainFill  DAS = 76
+     		Biomass       = 755.96 		 LAI            =   1.80
+     		Stover N Conc =  13.26 		 Extractable SW =  71.09
+1 September 2016(Day of year=245), maize: 
+     Stage 9 EndGrainFill  DAS = 118
+     		Biomass       = 1389.72 		 LAI            =   0.81
+     		Stover N Conc =   3.51 		 Extractable SW =  60.82
+5 September 2016(Day of year=249), maize: 
+     Stage 10 Maturity  DAS = 122
+     		Biomass       = 1422.10 		 LAI            =   0.70
+     		Stover N Conc =   3.19 		 Extractable SW =  53.85
+6 September 2016(Day of year=250), maize: 
+     Stage 11 HarvestRipe  DAS = 123
+     		Biomass       = 1422.10 		 LAI            =   0.70
+     		Stover N Conc =   3.19 		 Extractable SW =  52.05
+6 November 2016(Day of year=311), paddock.Operations Schedule: 
+      Sending end_crop message to maize
+6 November 2016(Day of year=311), maize: 
+     Crop ended.
+     Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
+                         DM (kg/ha) =               4853.86		 4681.08
+                         N  (kg/ha) =                 31.92		   23.99
+                         P  (kg/ha) =                  0.00		    0.00
+31 December 2016(Day of year=366), clock: 
+     Simulation is terminating due to end criteria being met.
+
