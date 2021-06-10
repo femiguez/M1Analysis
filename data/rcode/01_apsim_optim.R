@@ -17,8 +17,8 @@ setwd(file.path(hr.path, "data", "rcode"))
 
 apsim_options(warn.versions = FALSE)
 
-yr <- "2016"
-site.default <- "BasswoodDefault"
+yr <- "2019"
+site.default <- "AccolaDefault"
 ## This is for soybean
 ## sfcs <- file.path("../apsim_files", site.default, yr, "sfc")
 ## This is for corn
@@ -36,7 +36,7 @@ file.copy(from = "../crop_xml/MaizeM1.xml", to = ".")
 file.copy(from = "../crop_xml/SoybeanM1.xml", to = ".")
 
 j <- 1
-
+start <- Sys.time()
 for(i in list.files(pattern = ".apsim$")){
   
   site <- strsplit(i, "_")[[1]][1]
@@ -117,6 +117,11 @@ for(i in list.files(pattern = ".apsim$")){
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_low", tu))
 
+  ## Also need to copy simulation file
+  file.copy(from = i, 
+            to = file.path(wrt.dir1, "sims_low", 
+                           paste0(tools::file_path_sans_ext(i), "_KL.apsim")))
+  
   ## Restore KL values
   kl.vals <- c(0.08, 0.079, 0.078, 0.077, 0.076, 0.075, 0.073, 0.07, 
                0.068, 0.066, 0.062, 0.058, 0.054, 0.044, 0.036, 0.03)
@@ -147,6 +152,11 @@ for(i in list.files(pattern = ".apsim$")){
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_low", tu))
 
+  ## Also need to copy simulation file
+  file.copy(from = i, 
+            to = file.path(wrt.dir1, "sims_low", 
+                           paste0(tools::file_path_sans_ext(i), "_XF.apsim")))
+  
   ## Restore XF values
   xf.vals <- rep(1, 16)
   
@@ -175,6 +185,11 @@ for(i in list.files(pattern = ".apsim$")){
   tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_", file_ext, "_sim_low_DUL.sum")
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_low", tu))
+
+  ## Also need to copy simulation file
+  file.copy(from = i, 
+            to = file.path(wrt.dir1, "sims_low", 
+                           paste0(tools::file_path_sans_ext(i), "_DUL.apsim")))
   
   ## Restore DUL values
   dul.vals <- c(0.286, 0.286, 0.286, 0.286, 0.286, 0.286, 0.286,
@@ -186,6 +201,10 @@ for(i in list.files(pattern = ".apsim$")){
              value = dul.vals,
              overwrite = TRUE)
 
+  ## Need to save optimization objects
+  save(op.kl, op.xf, op.dul, 
+       file = file.path(wrt.dir1, "sims_low", "optim_KL_XF_DUL.RData"))
+  
   ## For medium
   yld.dat <- data.frame(Date = as.Date(harvest.date),
                         crop_yield = yld.cat.s[,"Mid"] * 1e3)
@@ -209,6 +228,11 @@ for(i in list.files(pattern = ".apsim$")){
   tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_", file_ext, "_sim_medium_KL.sum")
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_medium", tu))
+  
+  ## Also need to copy simulation file
+  file.copy(from = i, 
+            to = file.path(wrt.dir1, "sims_medium", 
+                           paste0(tools::file_path_sans_ext(i), "_KL.apsim")))
   
   ## Restore KL values
   kl.vals <- c(0.08, 0.079, 0.078, 0.077, 0.076, 0.075, 0.073, 0.07, 
@@ -239,6 +263,11 @@ for(i in list.files(pattern = ".apsim$")){
   tu <- paste0("name_", site, "_mukey_", mukey, "_", crop, "_", yr, "_rot_", file_ext, "_sim_medium_XF.sum")
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_medium", tu))
+
+  ## Also need to copy simulation file
+  file.copy(from = i, 
+            to = file.path(wrt.dir1, "sims_medium", 
+                           paste0(tools::file_path_sans_ext(i), "_XF.apsim")))
   
   ## Restore XF values
   xf.vals <- rep(1, 16)
@@ -269,6 +298,11 @@ for(i in list.files(pattern = ".apsim$")){
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_medium", tu))
   
+  ## Also need to copy simulation file
+  file.copy(from = i, 
+            to = file.path(wrt.dir1, "sims_medium", 
+                           paste0(tools::file_path_sans_ext(i), "_DUL.apsim")))
+  
   ## Restore DUL values
   dul.vals <- c(0.286, 0.286, 0.286, 0.286, 0.286, 0.286, 0.286,
                 0.284, 0.281, 0.276, 0.27, 0.27, 0.265, 0.246, 0.246, 0.246) 
@@ -278,6 +312,10 @@ for(i in list.files(pattern = ".apsim$")){
              parm.path = pp.dul,
              value = dul.vals,
              overwrite = TRUE)
+
+  ## Need to save optimization objects
+  save(op.kl, op.xf, op.dul, 
+       file = file.path(wrt.dir1, "sims_medium", "optim_KL_XF_DUL.RData"))
   
   ## In order to produce higher yields, we need to edit the xml file
   json.mngr <- jsonlite::fromJSON(paste0("../mgmt_jsons/", site.met, "_", file_ext, "_", yr, ".json"))
@@ -316,9 +354,22 @@ for(i in list.files(pattern = ".apsim$")){
   file.copy(from = frm,
             to = file.path(wrt.dir1, "sims_high", tu))
 
+  ## Also need to copy simulation file
+  file.copy(from = i, 
+            to = file.path(wrt.dir1, "sims_high", 
+                           paste0(tools::file_path_sans_ext(i), "_HI.apsim")))
+  if(crop == "maize"){
+    file.copy(from = "MaizeM1.xml", 
+              to = file.path(wrt.dir1, "sims_high", "MaizeM1_HI.xml"))
+  }else{
+    file.copy(from = "SoybeanM1.xml", 
+              to = file.path(wrt.dir1, "sims_high", "SoybeanM1_HI.xml"))
+  }
+  
   j <- j + 1
 }
 
+end <- Sys.time()
 
 
 

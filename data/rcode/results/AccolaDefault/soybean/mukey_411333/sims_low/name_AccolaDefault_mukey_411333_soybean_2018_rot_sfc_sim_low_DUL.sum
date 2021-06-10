@@ -395,23 +395,23 @@ Paddock:
      		Stover N Conc =  13.52 		 Extractable SW =  89.81
 20 September 2015(Day of year=263), maize: 
      Stage 9 EndGrainFill  DAS = 125
-     		Biomass       = 1900.74 		 LAI            =   1.26
-     		Stover N Conc =   4.55 		 Extractable SW =  93.83
+     		Biomass       = 1888.68 		 LAI            =   1.43
+     		Stover N Conc =   4.93 		 Extractable SW =  86.29
 23 September 2015(Day of year=266), maize: 
      Stage 10 Maturity  DAS = 128
-     		Biomass       = 1915.56 		 LAI            =   1.20
-     		Stover N Conc =   4.37 		 Extractable SW =  96.31
+     		Biomass       = 1911.20 		 LAI            =   1.33
+     		Stover N Conc =   4.70 		 Extractable SW =  87.68
 24 September 2015(Day of year=267), maize: 
      Stage 11 HarvestRipe  DAS = 129
-     		Biomass       = 1915.56 		 LAI            =   1.20
-     		Stover N Conc =   4.37 		 Extractable SW =  95.48
+     		Biomass       = 1911.20 		 LAI            =   1.33
+     		Stover N Conc =   4.70 		 Extractable SW =  87.02
 15 October 2015(Day of year=288), paddock.Operations Schedule: 
       Sending end_crop message to maize
 15 October 2015(Day of year=288), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               7465.73		 3614.90
-                         N  (kg/ha) =                 43.69		   29.12
+                         DM (kg/ha) =               9535.33		 4653.16
+                         N  (kg/ha) =                 46.99		   36.44
                          P  (kg/ha) =                  0.00		    0.00
 28 April 2016(Day of year=119), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -442,7 +442,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(1)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -452,7 +452,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(2)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -462,7 +462,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(1)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -472,7 +472,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(2)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -482,7 +482,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(1)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -492,7 +492,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(2)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -529,7 +529,7 @@ Paddock:
            end_crop
      
         x_pp_hi_incr               =       1.00      24.00
-        y_hi_incr                  =   481.4560   481.4560
+        y_hi_incr                  =   630.3339   630.3339
         x_hi_max_pot_stress        =       0.00       1.00
         y_hi_max_pot               =       0.50       0.50
         ------------------------------------------------
@@ -575,44 +575,44 @@ Paddock:
 26 May 2016(Day of year=147), paddock.soybean: 
       stage 3.0 emergence
                      biomass =           1.02 (g/m^2)   lai          =   0.010 (m^2/m^2)
-                     stover N conc =     6.00 (%)    extractable sw =   27.57 (mm)
+                     stover N conc =     6.00 (%)    extractable sw =   27.63 (mm)
 5 June 2016(Day of year=157), paddock.soybean: 
       stage 4.0 end_of_juvenile
                      biomass =           3.49 (g/m^2)   lai          =   0.064 (m^2/m^2)
-                     stover N conc =     4.57 (%)    extractable sw =   41.33 (mm)
+                     stover N conc =     4.57 (%)    extractable sw =   41.64 (mm)
 17 June 2016(Day of year=169), paddock.soybean: 
       stage 5.0 floral_initiation
-                     biomass =          31.50 (g/m^2)   lai          =   0.633 (m^2/m^2)
-                     stover N conc =     3.87 (%)    extractable sw =   28.89 (mm)
+                     biomass =          31.56 (g/m^2)   lai          =   0.634 (m^2/m^2)
+                     stover N conc =     3.86 (%)    extractable sw =   29.16 (mm)
 3 July 2016(Day of year=185), paddock.soybean: 
       stage 6.0 flowering
-                     biomass =         112.29 (g/m^2)   lai          =   1.550 (m^2/m^2)
-                     stover N conc =     3.24 (%)    extractable sw =   44.33 (mm)
+                     biomass =         113.39 (g/m^2)   lai          =   1.570 (m^2/m^2)
+                     stover N conc =     3.25 (%)    extractable sw =   44.80 (mm)
 25 July 2016(Day of year=207), paddock.soybean: 
       stage 7.0 start_grain_fill
-                     biomass =         346.52 (g/m^2)   lai          =   3.650 (m^2/m^2)
-                     stover N conc =     3.11 (%)    extractable sw =  116.39 (mm)
+                     biomass =         349.45 (g/m^2)   lai          =   3.689 (m^2/m^2)
+                     stover N conc =     3.10 (%)    extractable sw =  117.17 (mm)
 3 September 2016(Day of year=247), paddock.soybean: 
       stage 8.0 end_grain_fill
-                     biomass =         688.27 (g/m^2)   lai          =   2.511 (m^2/m^2)
-                     stover N conc =     2.37 (%)    extractable sw =   77.73 (mm)
+                     biomass =         692.56 (g/m^2)   lai          =   2.526 (m^2/m^2)
+                     stover N conc =     2.37 (%)    extractable sw =   79.13 (mm)
 5 September 2016(Day of year=249), paddock.soybean: 
       stage 9.0 maturity
-                     biomass =         693.08 (g/m^2)   lai          =   2.399 (m^2/m^2)
-                     stover N conc =     2.34 (%)    extractable sw =   71.37 (mm)
+                     biomass =         697.38 (g/m^2)   lai          =   2.413 (m^2/m^2)
+                     stover N conc =     2.34 (%)    extractable sw =   72.59 (mm)
 6 September 2016(Day of year=250), paddock.soybean: 
       stage 10.0 harvest_ripe
-                     biomass =         693.08 (g/m^2)   lai          =   0.000 (m^2/m^2)
-                     stover N conc =     2.43 (%)    extractable sw =   68.30 (mm)
+                     biomass =         697.38 (g/m^2)   lai          =   0.000 (m^2/m^2)
+                     stover N conc =     2.43 (%)    extractable sw =   69.37 (mm)
 7 September 2016(Day of year=251), paddock.soybean: 
       stage 11.0 end_crop
 24 September 2016(Day of year=268), paddock.Operations Schedule: 
       Sending end_crop message to soybean
 24 September 2016(Day of year=268), paddock.soybean: 
-     Crop ended. Yield (dw) =  3465.4  (kg/ha)
+     Crop ended. Yield (dw) =  3486.9  (kg/ha)
          Organic matter from crop:-      Tops to surface residue      Roots to soil FOM
-                          DM (kg/ha) =                6930.8                  1262.8
-                          N  (kg/ha) =                 304.56                   25.96
+                          DM (kg/ha) =                6973.8                  1271.1
+                          N  (kg/ha) =                 306.44                   26.13
      
 16 April 2017(Day of year=106), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -684,19 +684,19 @@ Paddock:
 19 May 2017(Day of year=139), maize: 
      Stage 2 Germination  DAS = 1
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =  81.43
+     		Stover N Conc =   0.00 		 Extractable SW =  80.51
 25 May 2017(Day of year=145), maize: 
      Stage 3 Emergence  DAS = 7
      		Biomass       =   0.00 		 LAI            =   0.00
-     		Stover N Conc =   0.00 		 Extractable SW =  76.72
+     		Stover N Conc =   0.00 		 Extractable SW =  76.02
 12 June 2017(Day of year=163), maize: 
      Stage 4 EndOfJuvenile  DAS = 25
      		Biomass       =  28.86 		 LAI            =   0.24
-     		Stover N Conc =   0.51 		 Extractable SW =  60.91
+     		Stover N Conc =   0.51 		 Extractable SW =  60.32
 13 June 2017(Day of year=164), maize: 
      Stage 5 FloralInitiation  DAS = 26
      		Biomass       =  33.04 		 LAI            =   0.29
-     		Stover N Conc =   0.61 		 Extractable SW =  61.25
+     		Stover N Conc =   0.61 		 Extractable SW =  60.65
 28 June 2017(Day of year=179), paddock.Operations Schedule: 
       Sending apply message to fertiliser
 28 June 2017(Day of year=179), fertiliser: 
@@ -706,29 +706,26 @@ Paddock:
                                          added at depth   50.00 (layer   3)
 18 July 2017(Day of year=199), maize: 
      Stage 6 FlagLeaf  DAS = 61
-     		Biomass       = 349.95 		 LAI            =   0.89
-     		Stover N Conc =   8.22 		 Extractable SW =  30.22
+     		Biomass       = 349.30 		 LAI            =   0.89
+     		Stover N Conc =   8.17 		 Extractable SW =  30.22
 19 July 2017(Day of year=200), maize: 
      Stage 7 Flowering  DAS = 62
-     		Biomass       = 354.86 		 LAI            =   0.83
-     		Stover N Conc =   8.29 		 Extractable SW =  29.06
+     		Biomass       = 354.20 		 LAI            =   0.83
+     		Stover N Conc =   8.24 		 Extractable SW =  29.06
 26 July 2017(Day of year=207), maize: 
      Stage 8 StartGrainFill  DAS = 69
-     		Biomass       = 391.27 		 LAI            =   0.83
-     		Stover N Conc =   9.65 		 Extractable SW =  25.73
-9 September 2017(Day of year=252), maize: 
-     Stage 9 EndGrainFill  DAS = 114
-     		Biomass       = 417.35 		 LAI            =   0.10
-     		Stover N Conc =  11.83 		 Extractable SW =  30.65
-      ********** Crop failed due to loss of leaf area ********     	LAI: 0.101 		DltSLAI: 0.040 		DltLAI: 0.00
-     Plant Death. Standing above-ground dm = 4173.48 (kg/ha)
+     		Biomass       = 390.61 		 LAI            =   0.83
+     		Stover N Conc =   9.58 		 Extractable SW =  25.72
+8 September 2017(Day of year=251), maize: 
+      ********** Crop failed due to loss of leaf area ********     	LAI: 0.134 		DltSLAI: 0.036 		DltLAI: 0.00
+     Plant Death. Standing above-ground dm = 4166.86 (kg/ha)
 15 October 2017(Day of year=288), paddock.Operations Schedule: 
       Sending end_crop message to maize
 15 October 2017(Day of year=288), maize: 
      Crop ended.
      Organic matter from crop:-      Tops to surface residue	 Roots to soil FOM
-                         DM (kg/ha) =               4173.48		 3223.73
-                         N  (kg/ha) =                118.26		   22.84
+                         DM (kg/ha) =               4166.86		 3198.12
+                         N  (kg/ha) =                117.11		   22.81
                          P  (kg/ha) =                  0.00		    0.00
 28 April 2018(Day of year=118), paddock.Operations Schedule: 
       Sending tillage message to surfaceorganicmatter
@@ -759,7 +756,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(1)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -769,7 +766,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(2)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -779,7 +776,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(1)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -789,7 +786,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(2)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -799,7 +796,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(1)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -809,7 +806,7 @@ Paddock:
                       -------------------
      Bound check warning while reading parameter.
      Variable  : y_hi_incr(2)
-     Condition : 0.00 <= 481.455948889721 <= 1.00
+     Condition : 0.00 <= 630.333847030292 <= 1.00
      Component name: paddock.soybean
      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      
@@ -846,7 +843,7 @@ Paddock:
            end_crop
      
         x_pp_hi_incr               =       1.00      24.00
-        y_hi_incr                  =   481.4560   481.4560
+        y_hi_incr                  =   630.3339   630.3339
         x_hi_max_pot_stress        =       0.00       1.00
         y_hi_max_pot               =       0.50       0.50
         ------------------------------------------------
