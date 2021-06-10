@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder version="36" creator="C-CHANGE Foresite" name="AccolaDefault">
+  <simulation name="name_AccolaDefault_mukey_2835021_rot_cfs_sim">
+    <metfile name="accola-1990-2020.met">
+      <filename name="filename" input="yes">../apsim_files/AccolaDefault/2019/cfs/met_files/accola-1990-2020.met</filename>
+    </metfile>
+    <clock>
+      <start_date type="date" description="Enter the start date of the simulation">01/01/2016</start_date>
+      <end_date type="date" description="Enter the end date of the simulation">31/12/2019</end_date>
+    </clock>
+    <summaryfile/>
+    <area name="paddock">
+      <Soil>
+        <InitialWater name="Initial Water">
+          <FractionFull>1</FractionFull>
+          <PercentMethod>FilledFromTop</PercentMethod>
+        </InitialWater>
+        <Water>
+          <SoilCrop name="maize">
+            <Thickness>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>50.0</double>
+              <double>50.0</double>
+              <double>50.0</double>
+              <double>50.0</double>
+              <double>100.0</double>
+              <double>100.0</double>
+              <double>100.0</double>
+              <double>300.0</double>
+              <double>300.0</double>
+              <double>300.0</double>
+              <double>500.0</double>
+            </Thickness>
+            <LL>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.216</double>
+              <double>0.216</double>
+              <double>0.216</double>
+              <double>0.216</double>
+              <double>0.203</double>
+              <double>0.152</double>
+              <double>0.114</double>
+              <double>0.103</double>
+              <double>0.103</double>
+            </LL>
+            <KL>
+              <double>0.08</double>
+              <double>0.079</double>
+              <double>0.078</double>
+              <double>0.077</double>
+              <double>0.076</double>
+              <double>0.075</double>
+              <double>0.073</double>
+              <double>0.07</double>
+              <double>0.068</double>
+              <double>0.066</double>
+              <double>0.062</double>
+              <double>0.058</double>
+              <double>0.054</double>
+              <double>0.044</double>
+              <double>0.036</double>
+              <double>0.03</double>
+            </KL>
+            <XF>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+              <double>0.154508211193151</double>
+            </XF>
+          </SoilCrop>
+          <SoilCrop name="soybean">
+            <Thickness>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>50.0</double>
+              <double>50.0</double>
+              <double>50.0</double>
+              <double>50.0</double>
+              <double>100.0</double>
+              <double>100.0</double>
+              <double>100.0</double>
+              <double>300.0</double>
+              <double>300.0</double>
+              <double>300.0</double>
+              <double>500.0</double>
+            </Thickness>
+            <LL>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.216</double>
+              <double>0.216</double>
+              <double>0.216</double>
+              <double>0.216</double>
+              <double>0.203</double>
+              <double>0.152</double>
+              <double>0.114</double>
+              <double>0.103</double>
+              <double>0.103</double>
+            </LL>
+            <KL>
+              <double>0.08</double>
+              <double>0.079</double>
+              <double>0.078</double>
+              <double>0.077</double>
+              <double>0.076</double>
+              <double>0.075</double>
+              <double>0.073</double>
+              <double>0.07</double>
+              <double>0.068</double>
+              <double>0.066</double>
+              <double>0.062</double>
+              <double>0.058</double>
+              <double>0.054</double>
+              <double>0.044</double>
+              <double>0.036</double>
+              <double>0.03</double>
+            </KL>
+            <XF>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+            </XF>
+          </SoilCrop>
+          <SoilCrop name="wheat">
+            <Thickness>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>20.0</double>
+              <double>50.0</double>
+              <double>50.0</double>
+              <double>50.0</double>
+              <double>50.0</double>
+              <double>100.0</double>
+              <double>100.0</double>
+              <double>100.0</double>
+              <double>300.0</double>
+              <double>300.0</double>
+              <double>300.0</double>
+              <double>500.0</double>
+            </Thickness>
+            <LL>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.194</double>
+              <double>0.216</double>
+              <double>0.216</double>
+              <double>0.216</double>
+              <double>0.216</double>
+              <double>0.203</double>
+              <double>0.152</double>
+              <double>0.114</double>
+              <double>0.103</double>
+              <double>0.103</double>
+            </LL>
+            <KL>
+              <double>0.08</double>
+              <double>0.079</double>
+              <double>0.078</double>
+              <double>0.077</double>
+              <double>0.076</double>
+              <double>0.075</double>
+              <double>0.073</double>
+              <double>0.07</double>
+              <double>0.068</double>
+              <double>0.066</double>
+              <double>0.062</double>
+              <double>0.058</double>
+              <double>0.054</double>
+              <double>0.044</double>
+              <double>0.036</double>
+              <double>0.03</double>
+            </KL>
+            <XF>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+              <double>1.0</double>
+            </XF>
+          </SoilCrop>
+          <Thickness>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>100.0</double>
+            <double>100.0</double>
+            <double>100.0</double>
+            <double>300.0</double>
+            <double>300.0</double>
+            <double>300.0</double>
+            <double>500.0</double>
+          </Thickness>
+          <BD>
+            <double>1.05</double>
+            <double>1.05</double>
+            <double>1.05</double>
+            <double>1.05</double>
+            <double>1.05</double>
+            <double>1.05</double>
+            <double>1.05</double>
+            <double>1.25</double>
+            <double>1.25</double>
+            <double>1.25</double>
+            <double>1.25</double>
+            <double>1.27</double>
+            <double>1.35</double>
+            <double>1.542</double>
+            <double>1.6</double>
+            <double>1.6</double>
+          </BD>
+          <AirDry>
+            <double>0.097</double>
+            <double>0.097</double>
+            <double>0.097</double>
+            <double>0.097</double>
+            <double>0.097</double>
+            <double>0.097</double>
+            <double>0.097</double>
+            <double>0.216</double>
+            <double>0.216</double>
+            <double>0.216</double>
+            <double>0.216</double>
+            <double>0.203</double>
+            <double>0.152</double>
+            <double>0.108</double>
+            <double>0.095</double>
+            <double>0.095</double>
+          </AirDry>
+          <LL15>
+            <double>0.194</double>
+            <double>0.194</double>
+            <double>0.194</double>
+            <double>0.194</double>
+            <double>0.194</double>
+            <double>0.194</double>
+            <double>0.194</double>
+            <double>0.216</double>
+            <double>0.216</double>
+            <double>0.216</double>
+            <double>0.216</double>
+            <double>0.203</double>
+            <double>0.152</double>
+            <double>0.108</double>
+            <double>0.095</double>
+            <double>0.095</double>
+          </LL15>
+          <DUL>
+            <double>0.315</double>
+            <double>0.315</double>
+            <double>0.315</double>
+            <double>0.315</double>
+            <double>0.315</double>
+            <double>0.315</double>
+            <double>0.315</double>
+            <double>0.328</double>
+            <double>0.328</double>
+            <double>0.328</double>
+            <double>0.328</double>
+            <double>0.32</double>
+            <double>0.29</double>
+            <double>0.256</double>
+            <double>0.246</double>
+            <double>0.246</double>
+          </DUL>
+          <SAT>
+            <double>0.554</double>
+            <double>0.554</double>
+            <double>0.554</double>
+            <double>0.554</double>
+            <double>0.554</double>
+            <double>0.554</double>
+            <double>0.554</double>
+            <double>0.478</double>
+            <double>0.478</double>
+            <double>0.478</double>
+            <double>0.478</double>
+            <double>0.471</double>
+            <double>0.441</double>
+            <double>0.368</double>
+            <double>0.346</double>
+            <double>0.346</double>
+          </SAT>
+          <KS>
+            <double>243.648</double>
+            <double>243.648</double>
+            <double>243.648</double>
+            <double>243.648</double>
+            <double>243.648</double>
+            <double>243.648</double>
+            <double>243.648</double>
+            <double>243.648</double>
+            <double>243.648</double>
+            <double>243.648</double>
+            <double>243.648</double>
+            <double>353.376</double>
+            <double>792.288</double>
+            <double>792.288</double>
+            <double>792.288</double>
+            <double>792.288</double>
+          </KS>
+        </Water>
+        <SoilWater>
+          <SummerCona>4.0</SummerCona>
+          <SummerU>9.0</SummerU>
+          <SummerDate>1-Jun</SummerDate>
+          <WinterCona>4.0</WinterCona>
+          <WinterU>9.0</WinterU>
+          <WinterDate>1-Dec</WinterDate>
+          <DiffusConst>88</DiffusConst>
+          <DiffusSlope>35</DiffusSlope>
+          <Salb>0.13</Salb>
+          <CN2Bare>73</CN2Bare>
+          <CNRed>20</CNRed>
+          <CNCov>0.8</CNCov>
+          <Slope>NaN</Slope>
+          <DischargeWidth>NaN</DischargeWidth>
+          <CatchmentArea>NaN</CatchmentArea>
+          <MaxPond>NaN</MaxPond>
+          <Thickness>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>100.0</double>
+            <double>100.0</double>
+            <double>100.0</double>
+            <double>300.0</double>
+            <double>300.0</double>
+            <double>300.0</double>
+            <double>500.0</double>
+          </Thickness>
+          <SWCON>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+            <double>0.5</double>
+          </SWCON>
+        </SoilWater>
+        <SoilOrganicMatter>
+          <RootCN>40</RootCN>
+          <RootWt>1000</RootWt>
+          <SoilCN>12</SoilCN>
+          <EnrACoeff>7.4</EnrACoeff>
+          <EnrBCoeff>0.2</EnrBCoeff>
+          <Thickness>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>100.0</double>
+            <double>100.0</double>
+            <double>100.0</double>
+            <double>300.0</double>
+            <double>300.0</double>
+            <double>300.0</double>
+            <double>500.0</double>
+          </Thickness>
+          <OC>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>2.9</double>
+            <double>2.9</double>
+            <double>2.9</double>
+            <double>2.9</double>
+            <double>2.494</double>
+            <double>0.87</double>
+            <double>0.314</double>
+            <double>0.145</double>
+            <double>0.145</double>
+          </OC>
+          <FBiom>
+            <double>0.035</double>
+            <double>0.035</double>
+            <double>0.035</double>
+            <double>0.035</double>
+            <double>0.035</double>
+            <double>0.035</double>
+            <double>0.035</double>
+            <double>0.02</double>
+            <double>0.02</double>
+            <double>0.02</double>
+            <double>0.02</double>
+            <double>0.019</double>
+            <double>0.015</double>
+            <double>0.011</double>
+            <double>0.01</double>
+            <double>0.01</double>
+          </FBiom>
+          <FInert>
+            <double>0.4</double>
+            <double>0.4</double>
+            <double>0.4</double>
+            <double>0.4</double>
+            <double>0.4</double>
+            <double>0.4</double>
+            <double>0.4</double>
+            <double>0.48</double>
+            <double>0.48</double>
+            <double>0.48</double>
+            <double>0.48</double>
+            <double>0.52</double>
+            <double>0.68</double>
+            <double>0.849</double>
+            <double>0.9</double>
+            <double>0.9</double>
+          </FInert>
+        </SoilOrganicMatter>
+        <Analysis>
+          <Thickness>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>100.0</double>
+            <double>100.0</double>
+            <double>100.0</double>
+            <double>300.0</double>
+            <double>300.0</double>
+            <double>300.0</double>
+            <double>500.0</double>
+          </Thickness>
+          <PH>
+            <double>6.5</double>
+            <double>6.5</double>
+            <double>6.5</double>
+            <double>6.5</double>
+            <double>6.5</double>
+            <double>6.5</double>
+            <double>6.5</double>
+            <double>6.9</double>
+            <double>6.9</double>
+            <double>6.9</double>
+            <double>6.9</double>
+            <double>6.98</double>
+            <double>7.3</double>
+            <double>7.837</double>
+            <double>8.0</double>
+            <double>8.0</double>
+          </PH>
+        </Analysis>
+        <Sample name="Initial nitrogen">
+          <Date type="date" description="Sample Date:"/>
+          <Thickness>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>20.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>50.0</double>
+            <double>100.0</double>
+            <double>100.0</double>
+            <double>100.0</double>
+            <double>300.0</double>
+            <double>300.0</double>
+            <double>300.0</double>
+            <double>500.0</double>
+          </Thickness>
+          <NO3>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>2.9</double>
+            <double>2.9</double>
+            <double>2.9</double>
+            <double>2.9</double>
+            <double>2.494</double>
+            <double>0.87</double>
+            <double>0.314</double>
+            <double>0.145</double>
+            <double>0.145</double>
+          </NO3>
+          <NH4>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>4.06</double>
+            <double>2.9</double>
+            <double>2.9</double>
+            <double>2.9</double>
+            <double>2.9</double>
+            <double>2.494</double>
+            <double>0.87</double>
+            <double>0.314</double>
+            <double>0.145</double>
+            <double>0.145</double>
+          </NH4>
+        </Sample>
+      </Soil>
+      <surfaceom name="SurfaceOrganicMatter">
+        <PoolName description="Organic Matter pool name" type="text">soybean</PoolName>
+        <type description="Organic Matter type" type="text">soybean</type>
+        <mass description="Initial surface residue (kg/ha)" type="text">1250</mass>
+        <cnr description="C:N ratio of initial residue" type="text">27</cnr>
+        <standing_fraction description="Fraction of residue standing" type="text">0.0</standing_fraction>
+      </surfaceom>
+      <fertiliser/>
+      <maize>
+        <ini>
+          <filename input="yes">MaizeM1.xml</filename>
+        </ini>
+      </maize>
+      <soybean>
+        <ini>
+          <filename input="yes">SoybeanM1.xml</filename>
+        </ini>
+      </soybean>
+      <outputfile>
+        <filename name="filename" output="yes">name_AccolaDefault_mukey_2835021_rot_cfs_sim.out</filename>
+        <title>name_AccolaDefault_mukey_2835021_rot_cfs_sim</title>
+        <variables name="Output Variables">
+          <variable>title</variable>
+          <variable>dd/mm/yyyy as date</variable>
+          <variable>day</variable>
+          <variable>year</variable>
+          <variable>soybean.yield as soybean_yield</variable>
+          <variable>maize.yield as maize_yield</variable>
+          <variable>soybean.biomass as soybean_biomass</variable>
+          <variable>maize.biomass as maize_biomass</variable>
+          <variable>corn_buac</variable>
+          <variable>soy_buac</variable>
+          <variable>fertiliser</variable>
+          <variable>surfaceom_c</variable>
+          <variable>leach_no3</variable>
+          <variable>lch_no3n</variable>
+          <constants>
+            <constant name="precision">5</constant>
+          </constants>
+        </variables>
+        <events name="Output variable events">
+          <event>daily</event>
+        </events>
+        <Graph name="no3">
+          <Legend>
+            <CheckedTitles/>
+          </Legend>
+          <Plot>
+            <SeriesType>Solid line</SeriesType>
+            <PointType>Circle</PointType>
+            <colour/>
+            <X>Date</X>
+            <Y>Cumulative subsurface_drain</Y>
+            <Y>Cumulative subsurface_drain_no3</Y>
+            <Y>Cumulative leach_no3</Y>
+            <Y>Cumulative lch_no3n</Y>
+            <GDApsimFileReader name="ApsimFileReader"/>
+          </Plot>
+        </Graph>
+        <Graph name="yield">
+          <Legend>
+            <CheckedTitles/>
+          </Legend>
+          <Plot>
+            <SeriesType>Solid line</SeriesType>
+            <PointType>Circle</PointType>
+            <colour/>
+            <X>Date</X>
+            <Y>soybean_yield</Y>
+            <Y>maize_yield</Y>
+            <Y>soybean_biomass</Y>
+            <Y>maize_biomass</Y>
+            <Y>soy_buac</Y>
+            <Y>corn_buac</Y>
+            <GDApsimFileReader name="ApsimFileReader"/>
+          </Plot>
+        </Graph>
+        <Graph name="all outputs">
+          <Legend>
+            <CheckedTitles/>
+          </Legend>
+          <Plot>
+            <SeriesType>Solid line</SeriesType>
+            <PointType>Circle</PointType>
+            <colour/>
+            <X>Date</X>
+            <Y>soybean_yield</Y>
+            <Y>maize_yield</Y>
+            <Y>soybean_biomass</Y>
+            <Y>maize_biomass</Y>
+            <Y>corn_buac</Y>
+            <Y>soy_buac</Y>
+            <Y>fertiliser</Y>
+            <Y>surfaceom_c</Y>
+            <Y>subsurface_drain</Y>
+            <Y>subsurface_drain_no3</Y>
+            <Y>leach_no3</Y>
+            <Y>lch_no3n</Y>
+            <GDApsimFileReader name="ApsimFileReader"/>
+          </Plot>
+        </Graph>
+      </outputfile>
+      <folder name="Manager folder">
+        <operations name="Operations Schedule">
+          <operation condition="start_of_day">
+            <date>28/4/2016</date>
+            <action>SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 88.0 (mm)</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>16/5/2016</date>
+            <action>SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.33 (0-1), tillage_depth = 75.8 (mm)</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>18/5/2016</date>
+            <action>soybean sow plants = 34 (plants/m2), sowing_depth = 51 (mm), cultivar = MG_2, row_spacing = 762 (mm), crop_class = plant</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>15/5/2016</date>
+            <action>Fertiliser apply amount = 2.8 (kg/ha), depth = 0.0 (mm), type = nh4so4_n ()</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>24/9/2016</date>
+            <action>soybean end_crop</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>28/4/2018</date>
+            <action>SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 88.0 (mm)</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>16/5/2018</date>
+            <action>SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.33 (0-1), tillage_depth = 75.8 (mm)</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>18/5/2018</date>
+            <action>soybean sow plants = 34 (plants/m2), sowing_depth = 51 (mm), cultivar = MG_2, row_spacing = 762 (mm), crop_class = plant</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>15/5/2018</date>
+            <action>Fertiliser apply amount = 2.8 (kg/ha), depth = 0.0 (mm), type = nh4so4_n ()</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>24/9/2018</date>
+            <action>soybean end_crop</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>16/4/2017</date>
+            <action>SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 57 (mm)</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>23/4/2017</date>
+            <action>SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.2 (0-1), tillage_depth = 76 (mm)</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>18/5/2017</date>
+            <action>maize sow plants = 8 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>21/4/2017</date>
+            <action>Fertiliser apply amount = 112.09 (kg/ha), depth = 50.0 (mm), type = uan_n ()</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>28/6/2017</date>
+            <action>Fertiliser apply amount = 56.04 (kg/ha), depth = 50.0 (mm), type = uan_n ()</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>15/10/2017</date>
+            <action>maize end_crop</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>16/4/2019</date>
+            <action>SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.25 (0-1), tillage_depth = 57 (mm)</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>23/4/2019</date>
+            <action>SurfaceOrganicMatter tillage type = user_defined, f_incorp = 0.2 (0-1), tillage_depth = 76 (mm)</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>18/5/2019</date>
+            <action>maize sow plants = 8 (plants/m2), sowing_depth = 51 (mm), cultivar = B_105, row_spacing = 762 (mm), crop_class = plant</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>21/4/2019</date>
+            <action>Fertiliser apply amount = 112.09 (kg/ha), depth = 50.0 (mm), type = uan_n ()</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>28/6/2019</date>
+            <action>Fertiliser apply amount = 56.04 (kg/ha), depth = 50.0 (mm), type = uan_n ()</action>
+          </operation>
+          <operation condition="start_of_day">
+            <date>15/10/2019</date>
+            <action>maize end_crop</action>
+          </operation>
+        </operations>
+        <manager name="Empty manager">
+          <script>
+            <text/>
+            <event>init</event>
+          </script>
+          <script>
+            <text>
+        corn_buac   = maize.yield * 0.0159/0.85  ! corn yield in bushels/acre@15% moisture
+        soy_buac   = soybean.yield * 0.0149/0.87  !  soybean yield in bushels/acre
+        lch_no3n   = leach_no3 * 0.2259  !  leach_no3 as NO3-N
+        !bbc_gradient = -1
+        !bbc_potential = 200 - 100
+        </text>
+            <event>start_of_day</event>
+          </script>
+          <script>
+            <text/>
+            <event>end_of_day</event>
+          </script>
+        </manager>
+      </folder>
+    </area>
+  </simulation>
+</folder>
